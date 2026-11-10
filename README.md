@@ -1,12 +1,36 @@
 # Wind Field Simulation
 
-本项目是一个用于测试和评估 **PX4 SITL 在风场中飞行表现** 的开源仿真项目。
+**简体中文** | [English](README.en.md)
+
+本项目是一个用于测试和评估 **PX4 SITL 在风场中飞行表现** 的仿真项目。
 项目采用 MuJoCo 模拟无人机动力学，通过 MAVLink 与 PX4 SITL 进行闭环交互，
 支持开展无风基线与风扰条件下的飞行测试，观察无人机稳定性和轨迹跟踪表现。
 
 项目提供可配置风场、交互控制面板和预定义轨迹，包含 X4-950 四旋翼、Airbot Play
 机械臂及场景资源，默认使用 X4-950 PINN 气动代理生成外部风扰，
 并保留解析气动参考与旧 PINN 的显式回退，为风扰测试和仿真开发提供基础。
+
+## 展示
+
+**[观看／下载演示视频（MP4，约 86 秒，17.6 MB）](docs/media/videos/Wind%20field%20simulation%20Demo.mp4)**
+
+| X4-950 + Airbot Play 模型 | 交互控制面板 |
+| --- | --- |
+| ![MuJoCo 中的四旋翼与机械臂](docs/media/images/MJCF%20model.png) | ![飞行、轨迹与水平风设置面板](docs/media/images/Control%20UI.png) |
+
+<details>
+<summary>查看圆轨迹跟踪示例</summary>
+
+![圆轨迹目标与实际 XY 轨迹示例](docs/media/images/Motion%20tracking.png)
+
+</details>
+
+以上为功能展示，截图未标注完整实验条件，不作为定量气动精度或闭环性能结论。
+视频链接可打开 GitHub 文件页，不能内嵌播放时可下载后观看。
+
+新读者请先看 **[完整安装与依赖版本（中文）](docs/INSTALL.zh-CN.md)**，其中包括
+Ubuntu 24.04 系统库、Python 环境、依赖检查、双终端启动及常见问题。
+[English installation guide](docs/INSTALL.en.md) 也已提供；详细研究记录保留原文语言。
 
 ## 项目结构
 
@@ -39,7 +63,12 @@ Wind_field_simulation/
 
 参考环境为 Python 3.12，MuJoCo 3.6.0、NumPy 2.4.4、PyTorch 2.11.0、Matplotlib
 3.10.9。Python 解释器、这些通用库、GPU 驱动和操作系统动态库通过环境安装；不复制
-原 Conda 环境。项目专用代码、模型资源、权重和 PX4 源码均已复制。
+原 Conda 环境。项目专用代码、模型资源和权重随仓库提供；PX4 完整源码仅保留在本地开发目录。
+
+已测宿主为 Ubuntu 24.04.5 LTS / x86-64、glibc 2.39、Python 3.12.13。
+Python 依赖锁定与系统动态库 ABI、CPU 版 PyTorch 安装方法见
+[安装文档的版本表](docs/INSTALL.zh-CN.md#依赖版本与验证边界)。CUDA 不作为运行要求。
+下面的简短命令以已经取得仓库且安装好系统依赖为前提。
 
 ```bash
 python3.12 -m venv .venv
@@ -72,7 +101,25 @@ Protobuf 与标准 C/C++ 库；依赖满足后可直接采用下面的双终端�
 [PX4 说明](docs/px4.md)。更换平台或重编译时需另行取得匹配的完整源码；
 本地构建脚本和源码/补丁记录保留，但源码不随首版仓库上传。
 
-以下为本机的完整启动命令，两个终端均显式激活 `env_uav`。若仍有旧仿真实例运行，
+新机器按照安装文档创建 `.venv` 后，两个终端分别运行：
+
+**终端一：**
+
+```bash
+cd ~/Wind_field_simulation
+source .venv/bin/activate
+bash scripts/run_px4_sitl.sh
+```
+
+**终端二：**
+
+```bash
+cd ~/Wind_field_simulation
+source .venv/bin/activate
+python scripts/run_simulation.py
+```
+
+以下为原开发机的完整启动命令，两个终端均显式激活 `env_uav`。若仍有旧仿真实例运行，
 先在对应终端使用 `Ctrl+C` 结束它，再重新启动。
 
 ### 终端一：启动 PX4 SITL
@@ -155,7 +202,7 @@ X、Y 分量的正负号表示水平气流吹向，例如：
 整组参数；提交成功前 `Wind ON/OFF` 始终禁用。下方 `Set` 显示仿真已接受的 X、Y 风速，
 `Speed` 显示合风速；应用设置不会自动开启风扰。全零向量也属于有效配置。
 关闭风扰会保留已接受的参数，之后可再次开启，无需重复 Apply。
-两个后端均要求水平合风速 **≤3 m/s**；`[3,3,0]` 超域。
+三个后端均要求水平合风速 **≤3 m/s**；`[3,3,0]` 超域。
 空值、非数字、NaN、无穷值或超出风域的输入会显示红色提示并保留
 上一组有效设置。状态刷新会保留尚未提交的输入。新风速经过所选后端、原 EMA
 滤波及限幅流程转换为风扰外力。
@@ -203,8 +250,8 @@ MAVLink 消息和无窗口图形后端，不启动 SITL、不建立真实飞控�
 均带明确假设；不能据合成结果宣称真实飞机气动精度。
 
 ```bash
-/home/raids/miniconda3/envs/env_uav/bin/python scripts/export_x4_950_parameters.py
-/home/raids/miniconda3/envs/env_uav/bin/python scripts/check_x4_950_reference.py
+python scripts/export_x4_950_parameters.py
+python scripts/check_x4_950_reference.py
 ```
 
 Task 1–2 的接口、29 个几何代理选择、行为/计算成本检查及复现命令见
@@ -233,7 +280,8 @@ pilot 阶段未替换旧权重；随后完成接入和对照，现已按用户�
 
 新 `pinn-x4` 已设为默认。其权重与参考打包在
 `src/wind_field_simulation/assets/checkpoints/x4_950_wind_v1/`，原旧模型文件未覆盖。
-默认启动无需传模型路径；也可显式覆盖路径来复现原实验版本：
+默认启动无需传模型路径；也可显式覆盖路径来复现原实验版本。
+以下 `outputs/` 路径是原开发机实验产物，不随公开仓库提供；普通使用无需这些覆盖参数：
 
 ```bash
 python scripts/run_simulation.py --wind-backend pinn-x4 \
@@ -341,13 +389,12 @@ y_wind^W = P_xy · [F_ref^W(s,w) − F_ref^W(s,0)] / m_total
 
 ### 复现 pilot
 
-正常使用仿真无需重新训练。以下流程在 `env_uav` 中离线生成数据、试训练和评估，
+正常使用仿真无需重新训练。以下流程在安装好的 `.venv` 中离线生成数据、试训练和评估，
 不启动 PX4。当前入口限定 3,000 对 pilot；输出目录必须使用新名字，已有目录会拒绝覆盖。
 
 ```bash
-source /home/raids/miniconda3/etc/profile.d/conda.sh
-conda activate env_uav
-cd /home/raids/Wind_field_simulation
+cd ~/Wind_field_simulation
+source .venv/bin/activate
 
 # 导出并检查配置文件所引用的独立参考
 python scripts/export_x4_950_parameters.py
@@ -381,6 +428,6 @@ python scripts/evaluate_x4_wind_pinn.py \
 目录。首版仓库只提供已编译PX4运行包；飞控源码的官方基线、精简后补丁与校验清单，以及原始迁移记录，均位于
 [docs/provenance](docs/provenance)；历史归档记录不代表当前精简后源码。
 
-本目录尚未发布，也未替所有材料指定统一开源许可证。已有 XML 标有 RAIDS Lab
-版权声明，PINN 代码和权重的上游目录未找到顶层许可证；发布前需要权利人确定
-授权。第三方材料沿用其已有许可证，详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+仓库已公开，但尚未替所有材料指定统一开源许可证。已有 XML 标有 RAIDS Lab
+版权声明，PINN 代码和权重的上游目录未找到顶层许可证；相应材料的再分发、修改等授权
+仍需权利人明确。第三方材料沿用其已有许可证，详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
