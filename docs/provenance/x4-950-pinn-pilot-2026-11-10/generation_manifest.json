@@ -1,0 +1,136 @@
+{
+  "kind": "x4_950_pilot_pairs_v1",
+  "purpose": "offline synthetic pilot, not final test",
+  "config": {
+    "reference_config": "outputs/pinn/x4_950_wind_v1/reference_config.json",
+    "sampling_seed": 7,
+    "split_counts": [
+      2000,
+      500,
+      500
+    ]
+  },
+  "reference_sha256": "613e8c2840f524ec5caf742a7d03a00dff930fc006669612953d1abc897f5e1a",
+  "mass_total_kg": 8.000399999999999,
+  "arm_pose": {
+    "main_joint": {
+      "qpos": [
+        0.0,
+        0.0,
+        0.48,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "type": 0
+    },
+    "rotor_joint_a00": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "rotor_joint_a10": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "rotor_joint_a20": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "rotor_joint_a30": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint1": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint2": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint3": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint4": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint5": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint6": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "endleft": {
+      "qpos": [
+        0.0
+      ],
+      "type": 2
+    },
+    "endright": {
+      "qpos": [
+        0.0
+      ],
+      "type": 2
+    }
+  },
+  "reference_bundle": "reference/reference_config.json",
+  "archive": "pairs.npz",
+  "archive_sha256": "0d31bdc0dd6f117ea035b5437c8a3628bdf6570624781082feaf91e48976eeb0",
+  "split_names": [
+    "train",
+    "validation",
+    "pilot_holdout"
+  ],
+  "split_counts": [
+    2000,
+    500,
+    500
+  ],
+  "group_size": 10,
+  "leakage_audit": {
+    "cross_split_core_duplicates": 0,
+    "within_split_repeated_core_evaluations": 410,
+    "groups": 300
+  },
+  "coordinate_units": "W ENU-like, B FLU about root O; WXYZ B\u2192W; SI",
+  "generation_seconds": 0.10757212905446067,
+  "array_memory_bytes": 1416000,
+  "force_abs_max_n": 3.420725064675516,
+  "label_abs_max_m_s2": 0.3223840983240112,
+  "source_sha256": {
+    "src/wind_field_simulation/training/sampling.py": "5efaa72f6961337b9472482219e9b92fb4f035c7dee81ae2d2726199df302c87",
+    "src/wind_field_simulation/training/dataset_v1.py": "3e8618ff7a5a9fd5804e775f421464ae912449c28a5801932e78b98c87ea4174",
+    "src/wind_field_simulation/training/train_v1.py": "4c0bc8041a1e8b157dac26de577f6e4cda74ba4a701262dcaaf8ac4ccadd9f7d",
+    "src/wind_field_simulation/training/xml_parameters.py": "51e3f1d4f6c0021f7e4e751cdf0dff0c47e5fc05eb5f7a538ab2fc250db54a71",
+    "src/wind_field_simulation/training/__init__.py": "1a731d4be42e7570cbd1aa340a81b41f11e8649ba4ed8b03f3f1c6ff886f6b32",
+    "src/wind_field_simulation/training/reference_aerodynamics.py": "06b39cf649961714a919a2f63c32bb9c4a8e30f30b6d378c60c4c1ab305208cb",
+    "src/wind_field_simulation/training/evaluate_v1.py": "0e7b230b1e55b6c6825bfeb336d8778945b7b0df48171e6c412ba93e41588e51",
+    "src/wind_field_simulation/training/model_v1.py": "f54d06d0e3d8e3bf025ff6e62a9cd55c6a0d190217f5317cf4070b18014eb78a"
+  },
+  "manifest_sha256": "dc84c9c2ed396644602d7859f94ae8e7ea7004f234889b1398da79ed50604ea6"
+}

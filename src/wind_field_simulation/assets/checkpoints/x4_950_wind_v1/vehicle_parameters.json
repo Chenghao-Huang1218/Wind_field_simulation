@@ -1,0 +1,1468 @@
+{
+  "kind": "x4_950_vehicle_parameters_v1",
+  "scene": "src/wind_field_simulation/assets/scenes/default/robot_quadrotor_950_with_arm.xml",
+  "mujoco_version": "3.6.0",
+  "coordinates": {
+    "root": "quadrotor_950_pos O (not CoM), FLU",
+    "world": "existing ENU-like world",
+    "quaternion": "WXYZ body to world",
+    "units": "SI"
+  },
+  "mass_total_kg": 8.000399999999999,
+  "base_body_mass_kg": 6.5,
+  "com_body_m": [
+    4.532879449773204e-08,
+    -1.0569623836505342e-08,
+    -0.058724719567729566
+  ],
+  "inertia_com_body_kg_m2": [
+    [
+      0.34564483589640066,
+      0.0006196425794341746,
+      0.0015230373816775013
+    ],
+    [
+      0.0006196425794341746,
+      0.37601561519206517,
+      3.2679465172631185e-05
+    ],
+    [
+      0.0015230373816775013,
+      3.2679465172631185e-05,
+      0.35137764074916683
+    ]
+  ],
+  "bodies": [
+    {
+      "name": "quadrotor_950_pos",
+      "mass_kg": 0.0,
+      "com_body_m": [
+        0.0,
+        0.0,
+        0.48
+      ],
+      "origin_body_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_root_from_body": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inertia_at_own_com_root_axes_kg_m2": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "name": "quadrotor_950",
+      "mass_kg": 6.5,
+      "com_body_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_body_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_root_from_body": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inertia_at_own_com_root_axes_kg_m2": [
+        [
+          0.2198,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.2198,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.3197
+        ]
+      ]
+    },
+    {
+      "name": "rotor-a00",
+      "mass_kg": 0.0001,
+      "com_body_m": [
+        0.336,
+        0.336,
+        0.07573999999999992
+      ],
+      "origin_body_m": [
+        0.336,
+        0.336,
+        0.06499999999999995
+      ],
+      "rotation_root_from_body": [
+        [
+          0.7071067811847431,
+          -0.7071067811883518,
+          0.0
+        ],
+        [
+          0.7071067811883518,
+          0.7071067811847431,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inertia_at_own_com_root_axes_kg_m2": [
+        [
+          9.999999999999997e-07,
+          -1.3064389031916834e-23,
+          0.0
+        ],
+        [
+          -6.648514391329251e-24,
+          9.999999999999997e-07,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1e-06
+        ]
+      ]
+    },
+    {
+      "name": "rotor-a10",
+      "mass_kg": 0.0001,
+      "com_body_m": [
+        0.336,
+        -0.336,
+        0.07573999999999992
+      ],
+      "origin_body_m": [
+        0.336,
+        -0.336,
+        0.06499999999999995
+      ],
+      "rotation_root_from_body": [
+        [
+          -0.7071067811919604,
+          -0.7071067811811345,
+          0.0
+        ],
+        [
+          0.7071067811811345,
+          -0.7071067811919604,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.9999999999999999
+        ]
+      ],
+      "inertia_at_own_com_root_axes_kg_m2": [
+        [
+          9.999999999999997e-07,
+          2.760710917889321e-23,
+          0.0
+        ],
+        [
+          5.049151342332399e-23,
+          9.999999999999995e-07,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          9.999999999999995e-07
+        ]
+      ]
+    },
+    {
+      "name": "rotor-a20",
+      "mass_kg": 0.0001,
+      "com_body_m": [
+        -0.336,
+        0.336,
+        0.07573999999999992
+      ],
+      "origin_body_m": [
+        -0.336,
+        0.336,
+        0.06499999999999995
+      ],
+      "rotation_root_from_body": [
+        [
+          -0.7071067811919604,
+          -0.7071067811811345,
+          0.0
+        ],
+        [
+          0.7071067811811345,
+          -0.7071067811919604,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.9999999999999999
+        ]
+      ],
+      "inertia_at_own_com_root_axes_kg_m2": [
+        [
+          9.999999999999997e-07,
+          2.760710917889321e-23,
+          0.0
+        ],
+        [
+          5.049151342332399e-23,
+          9.999999999999995e-07,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          9.999999999999995e-07
+        ]
+      ]
+    },
+    {
+      "name": "rotor-a30",
+      "mass_kg": 0.0001,
+      "com_body_m": [
+        -0.336,
+        -0.336,
+        0.07573999999999992
+      ],
+      "origin_body_m": [
+        -0.336,
+        -0.336,
+        0.06499999999999995
+      ],
+      "rotation_root_from_body": [
+        [
+          0.7071067811847431,
+          -0.7071067811883518,
+          0.0
+        ],
+        [
+          0.7071067811883518,
+          0.7071067811847431,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inertia_at_own_com_root_axes_kg_m2": [
+        [
+          9.999999999999997e-07,
+          -1.3064389031916834e-23,
+          0.0
+        ],
+        [
+          -6.648514391329251e-24,
+          9.999999999999997e-07,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1e-06
+        ]
+      ]
+    },
+    {
+      "name": "airbot_play_pose",
+      "mass_kg": 0.0,
+      "com_body_m": [
+        0.011122,
+        6.698724142658458e-09,
+        -1.3150952549167982e-10
+      ],
+      "origin_body_m": [
+        0.005561,
+        -0.002454,
+        -0.125
+      ],
+      "rotation_root_from_body": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.9999999999999987,
+          -5.3589793170057245e-08
+        ],
+        [
+          0.0,
+          5.3589793170057245e-08,
+          -0.9999999999999987
+        ]
+      ],
+      "inertia_at_own_com_root_axes_kg_m2": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "name": "arm_base",
+      "mass_kg": 0.0830385,
+      "com_body_m": [
+        -0.010439,
+        -0.0024540020364121405,
+        -0.16299999999999992
+      ],
+      "origin_body_m": [
+        0.005561,
+        -0.002454,
+        -0.125
+      ],
+      "rotation_root_from_body": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.9999999999999987,
+          -5.3589793170057245e-08
+        ],
+        [
+          0.0,
+          5.3589793170057245e-08,
+          -0.9999999999999987
+        ]
+      ],
+      "inertia_at_own_com_root_axes_kg_m2": [
+        [
+          0.000143,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00025550000000000014,
+          1.7148733814418288e-12
+        ],
+        [
+          0.0,
+          1.7148733814418304e-12,
+          0.00028749999999999994
+        ]
+      ]
+    },
+    {
+      "name": "link1",
+      "mass_kg": 0.273195,
+      "com_body_m": [
+        0.005640126,
+        7.29939409182625e-05,
+        -0.23806410013542129
+      ],
+      "origin_body_m": [
+        0.005561,
+        -0.0024540062807237597,
+        -0.24219999999999986
+      ],
+      "rotation_root_from_body": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.9999999999999987,
+          -5.3589793170057245e-08
+        ],
+        [
+          0.0,
+          5.3589793170057245e-08,
+          -0.9999999999999987
+        ]
+      ],
+      "inertia_at_own_com_root_axes_kg_m2": [
+        [
+          0.00017309982792688955,
+          1.9785414735181898e-12,
+          6.999722764446491e-07
+        ],
+        [
+          1.978541473603241e-12,
+          0.00014314993501758728,
+          -5.500152894189237e-07
+        ],
+        [
+          6.999722764446475e-07,
+          -5.500152894189225e-07,
+          0.0001627502370555235
+        ]
+      ]
+    },
+    {
+      "name": "link2",
+      "mass_kg": 0.323105,
+      "com_body_m": [
+        -0.20456010823805085,
+        0.005569193882992301,
+        -0.3226076768682957
+      ],
+      "origin_body_m": [
+        0.005561,
+        -0.0024540062807237597,
+        -0.24219999999999986
+      ],
+      "rotation_root_from_body": [
+        [
+          -0.9261611676403025,
+          -0.3771279511670034,
+          1.931328237170238e-06
+        ],
+        [
+          8.241858947821701e-07,
+          3.0970901596649725e-06,
+          0.9999999999948644
+        ],
+        [
+          -0.3771279511710481,
+          0.9261611676371378,
+          -2.557581100681716e-06
+        ]
+      ],
+      "inertia_at_own_com_root_axes_kg_m2": [
+        [
+          0.0007511812037935334,
+          0.00011827923145708817,
+          -0.000981520142019431
+        ],
+        [
+          0.00011827923145708813,
+          0.0025525986994497144,
+          3.223620955924163e-05
+        ],
+        [
+          -0.0009815201420194312,
+          3.223620955924155e-05,
+          0.002013418096756752
+        ]
+      ]
+    },
+    {
+      "name": "link3",
+      "mass_kg": 0.134145,
+      "com_body_m": [
+        -0.07645586378047067,
+        0.0006642917518215499,
+        -0.3440028150018901
+      ],
+      "origin_body_m": [
+        -0.24458586976796928,
+        -0.002453783676355438,
+        -0.3440584883317882
+      ],
+      "rotation_root_from_body": [
+        [
+          0.999999999997939,
+          6.263286072318961e-07,
+          1.9313282371871306e-06
+        ],
+        [
+          -1.9313266352942264e-06,
+          -2.5575823103009054e-06,
+          0.9999999999948646
+        ],
+        [
+          6.263335467596144e-07,
+          -0.9999999999965334,
+          -2.5575811006505123e-06
+        ]
+      ],
+      "inertia_at_own_com_root_axes_kg_m2": [
+        [
+          0.00012249963579877664,
+          -6.314621932337775e-05,
+          1.9914431802127968e-07
+        ],
+        [
+          -6.314621932337775e-05,
+          0.0015447519507814007,
+          5.0015998645327974e-08
+        ],
+        [
+          1.991443180212797e-07,
+          5.001599864532799e-08,
+          0.0015763499134198258
+        ]
+      ]
+    },
+    {
+      "name": "link4",
+      "mass_kg": 0.17438,
+      "com_body_m": [
+        0.013284132935845051,
+        -0.002449174025867801,
+        -0.3436539696903075
+      ],
+      "origin_body_m": [
+        0.045564130231432715,
+        -0.0024543440507786684,
+        -0.34405830660110964
+      ],
+      "rotation_root_from_body": [
+        [
+          -2.3113141372210766e-06,
+          6.7200753643414934e-06,
+          0.9999999999747493
+        ],
+        [
+          0.9999999999940583,
+          2.557597848312776e-06,
+          2.311296949941699e-06
+        ],
+        [
+          -2.5575823161538835e-06,
+          0.9999999999741497,
+          -6.7200812756962325e-06
+        ]
+      ],
+      "inertia_at_own_com_root_axes_kg_m2": [
+        [
+          6.345023525143549e-05,
+          2.349649907513612e-06,
+          -4.904801879156138e-08
+        ],
+        [
+          2.349649907513612e-06,
+          0.00021174978150321464,
+          -3.0582738806595056e-11
+        ],
+        [
+          -4.904801879156138e-08,
+          -3.058273880659171e-11,
+          0.00020599998324535
+        ]
+      ]
+    },
+    {
+      "name": "link5",
+      "mass_kg": 0.18066,
+      "com_body_m": [
+        0.07171210252966963,
+        -0.002445957273229127,
+        -0.34658359327555943
+      ],
+      "origin_body_m": [
+        0.045564130231432715,
+        -0.0024543440507786684,
+        -0.34405830660110964
+      ],
+      "rotation_root_from_body": [
+        [
+          -2.311314137227193e-06,
+          0.9999999999372386,
+          -1.0962717738361331e-05
+        ],
+        [
+          0.9999999999940585,
+          2.3112860990320736e-06,
+          -2.5576076542059365e-06
+        ],
+        [
+          -2.557582316068301e-06,
+          -1.0962723649730922e-05,
+          -0.999999999936639
+        ]
+      ],
+      "inertia_at_own_com_root_axes_kg_m2": [
+        [
+          0.00023384999999605512,
+          5.099272116081037e-10,
+          -2.523445384138094e-10
+        ],
+        [
+          5.099272116081038e-10,
+          9.125021151571545e-05,
+          1.6450136708169514e-05
+        ],
+        [
+          -2.5234453841380884e-10,
+          1.6450136708169514e-05,
+          0.00021429978848822967
+        ]
+      ]
+    },
+    {
+      "name": "link6",
+      "mass_kg": 0.269275,
+      "com_body_m": [
+        0.15908407851654882,
+        -0.0025274401666918215,
+        -0.3487648511960143
+      ],
+      "origin_body_m": [
+        0.2820141302165928,
+        -0.0024537975471805524,
+        -0.34406089873711665
+      ],
+      "rotation_root_from_body": [
+        [
+          1.0962718983487107e-05,
+          -1.6887297133964768e-06,
+          0.9999999999384837
+        ],
+        [
+          -1.4423923457311495e-06,
+          -0.9999999999975342,
+          -1.6887139009542458e-06
+        ],
+        [
+          0.9999999999388693,
+          -1.442373832746479e-06,
+          -1.0962721419316424e-05
+        ]
+      ],
+      "inertia_at_own_com_root_axes_kg_m2": [
+        [
+          1.9250000000707446e-05,
+          9.710104929889595e-12,
+          6.303564815605325e-11
+        ],
+        [
+          9.71010492988959e-12,
+          2.4999999999983623e-05,
+          -1.0644917529330654e-16
+        ],
+        [
+          6.303564815605326e-11,
+          -1.0644917529611174e-16,
+          2.4999999999308968e-05
+        ]
+      ]
+    },
+    {
+      "name": "eye_in_hand_camera_mount",
+      "mass_kg": 0.0,
+      "com_body_m": [
+        0.04201643240234325,
+        -0.0024536951582369267,
+        -0.1340582676968134
+      ],
+      "origin_body_m": [
+        0.16201528130946802,
+        -0.0024537463527087395,
+        -0.23905958321696502
+      ],
+      "rotation_root_from_body": [
+        [
+          1.0962718983487107e-05,
+          -1.6887297133964768e-06,
+          0.9999999999384837
+        ],
+        [
+          -1.4423923457311495e-06,
+          -0.9999999999975342,
+          -1.6887139009542458e-06
+        ],
+        [
+          0.9999999999388693,
+          -1.442373832746479e-06,
+          -1.0962721419316424e-05
+        ]
+      ],
+      "inertia_at_own_com_root_axes_kg_m2": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "name": "left",
+      "mass_kg": 0.0313,
+      "com_body_m": [
+        0.28245679959759745,
+        -0.01209062799054085,
+        -0.39280291749304674
+      ],
+      "origin_body_m": [
+        0.2820141302165928,
+        -0.0024537975471805524,
+        -0.34406089873711665
+      ],
+      "rotation_root_from_body": [
+        [
+          1.0962718983487107e-05,
+          -1.6887297133964768e-06,
+          0.9999999999384837
+        ],
+        [
+          -1.4423923457311495e-06,
+          -0.9999999999975342,
+          -1.6887139009542458e-06
+        ],
+        [
+          0.9999999999388693,
+          -1.442373832746479e-06,
+          -1.0962721419316424e-05
+        ]
+      ],
+      "inertia_at_own_com_root_axes_kg_m2": [
+        [
+          6.123991120287761e-06,
+          -1.0373355778415591e-07,
+          -3.4125574409514006e-07
+        ],
+        [
+          -1.0373355778415595e-07,
+          1.386097833605318e-05,
+          -6.714889702648262e-07
+        ],
+        [
+          -3.412557440951403e-07,
+          -6.714889702648262e-07,
+          9.574980543659089e-06
+        ]
+      ]
+    },
+    {
+      "name": "right",
+      "mass_kg": 0.0309015,
+      "com_body_m": [
+        0.28240228895661684,
+        0.007222672529904513,
+        -0.3930998890381232
+      ],
+      "origin_body_m": [
+        0.2820141302165928,
+        -0.0024537975471805524,
+        -0.34406089873711665
+      ],
+      "rotation_root_from_body": [
+        [
+          1.0962718983487107e-05,
+          -1.6887297133964768e-06,
+          0.9999999999384837
+        ],
+        [
+          -1.4423923457311495e-06,
+          -0.9999999999975342,
+          -1.6887139009542458e-06
+        ],
+        [
+          0.9999999999388693,
+          -1.442373832746479e-06,
+          -1.0962721419316424e-05
+        ]
+      ],
+      "inertia_at_own_com_root_axes_kg_m2": [
+        [
+          5.990485864401072e-06,
+          1.0402502653790713e-07,
+          -3.2760202098887805e-07
+        ],
+        [
+          1.0402502653790714e-07,
+          1.3638498280318498e-05,
+          6.584012287965212e-07
+        ],
+        [
+          -3.2760202098887827e-07,
+          6.584012287965212e-07,
+          9.473015855280453e-06
+        ]
+      ]
+    }
+  ],
+  "initial_joints": {
+    "main_joint": {
+      "qpos": [
+        0.0,
+        0.0,
+        0.48,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "type": 0
+    },
+    "rotor_joint_a00": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "rotor_joint_a10": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "rotor_joint_a20": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "rotor_joint_a30": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint1": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint2": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint3": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint4": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint5": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint6": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "endleft": {
+      "qpos": [
+        0.0
+      ],
+      "type": 2
+    },
+    "endright": {
+      "qpos": [
+        0.0
+      ],
+      "type": 2
+    }
+  },
+  "actuators": [
+    {
+      "name": "rotor0",
+      "transmission_type": 4,
+      "transmission_ids": [
+        8,
+        -1
+      ],
+      "ctrlrange": [
+        0.0,
+        61.2915625
+      ],
+      "gear": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -0.05
+      ]
+    },
+    {
+      "name": "rotor1",
+      "transmission_type": 4,
+      "transmission_ids": [
+        9,
+        -1
+      ],
+      "ctrlrange": [
+        0.0,
+        61.2915625
+      ],
+      "gear": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -0.05
+      ]
+    },
+    {
+      "name": "rotor2",
+      "transmission_type": 4,
+      "transmission_ids": [
+        10,
+        -1
+      ],
+      "ctrlrange": [
+        0.0,
+        61.2915625
+      ],
+      "gear": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.05
+      ]
+    },
+    {
+      "name": "rotor3",
+      "transmission_type": 4,
+      "transmission_ids": [
+        11,
+        -1
+      ],
+      "ctrlrange": [
+        0.0,
+        61.2915625
+      ],
+      "gear": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.05
+      ]
+    },
+    {
+      "name": "rotor_a00_spin",
+      "transmission_type": 0,
+      "transmission_ids": [
+        1,
+        -1
+      ],
+      "ctrlrange": [
+        -500.0,
+        500.0
+      ],
+      "gear": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rotor_a10_spin",
+      "transmission_type": 0,
+      "transmission_ids": [
+        2,
+        -1
+      ],
+      "ctrlrange": [
+        -500.0,
+        500.0
+      ],
+      "gear": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rotor_a20_spin",
+      "transmission_type": 0,
+      "transmission_ids": [
+        3,
+        -1
+      ],
+      "ctrlrange": [
+        -500.0,
+        500.0
+      ],
+      "gear": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "rotor_a30_spin",
+      "transmission_type": 0,
+      "transmission_ids": [
+        4,
+        -1
+      ],
+      "ctrlrange": [
+        -500.0,
+        500.0
+      ],
+      "gear": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "joint1",
+      "transmission_type": 0,
+      "transmission_ids": [
+        5,
+        -1
+      ],
+      "ctrlrange": [
+        -3.151,
+        2.089
+      ],
+      "gear": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "joint2",
+      "transmission_type": 0,
+      "transmission_ids": [
+        6,
+        -1
+      ],
+      "ctrlrange": [
+        -2.963,
+        0.181
+      ],
+      "gear": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "joint3",
+      "transmission_type": 0,
+      "transmission_ids": [
+        7,
+        -1
+      ],
+      "ctrlrange": [
+        -0.094,
+        3.161
+      ],
+      "gear": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "joint4",
+      "transmission_type": 0,
+      "transmission_ids": [
+        8,
+        -1
+      ],
+      "ctrlrange": [
+        -3.012,
+        3.012
+      ],
+      "gear": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "joint5",
+      "transmission_type": 0,
+      "transmission_ids": [
+        9,
+        -1
+      ],
+      "ctrlrange": [
+        -1.859,
+        1.859
+      ],
+      "gear": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "joint6",
+      "transmission_type": 0,
+      "transmission_ids": [
+        10,
+        -1
+      ],
+      "ctrlrange": [
+        -3.017,
+        3.017
+      ],
+      "gear": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "gripper",
+      "transmission_type": 3,
+      "transmission_ids": [
+        0,
+        -1
+      ],
+      "ctrlrange": [
+        0.0,
+        0.05
+      ],
+      "gear": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "rotors": [
+    {
+      "name": "rotor0",
+      "transmission_type": 4,
+      "transmission_ids": [
+        8,
+        -1
+      ],
+      "ctrlrange": [
+        0.0,
+        61.2915625
+      ],
+      "gear": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -0.05
+      ],
+      "site_name": "rotor0",
+      "position_body_m": [
+        0.3358757,
+        -0.3358757,
+        0.06499999999999995
+      ],
+      "rotation_body_from_site": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "rotor1",
+      "transmission_type": 4,
+      "transmission_ids": [
+        9,
+        -1
+      ],
+      "ctrlrange": [
+        0.0,
+        61.2915625
+      ],
+      "gear": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -0.05
+      ],
+      "site_name": "rotor1",
+      "position_body_m": [
+        -0.3358757,
+        0.3358757,
+        0.06499999999999995
+      ],
+      "rotation_body_from_site": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "rotor2",
+      "transmission_type": 4,
+      "transmission_ids": [
+        10,
+        -1
+      ],
+      "ctrlrange": [
+        0.0,
+        61.2915625
+      ],
+      "gear": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.05
+      ],
+      "site_name": "rotor2",
+      "position_body_m": [
+        0.3358757,
+        0.3358757,
+        0.06499999999999995
+      ],
+      "rotation_body_from_site": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "rotor3",
+      "transmission_type": 4,
+      "transmission_ids": [
+        11,
+        -1
+      ],
+      "ctrlrange": [
+        0.0,
+        61.2915625
+      ],
+      "gear": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.05
+      ],
+      "site_name": "rotor3",
+      "position_body_m": [
+        -0.3358757,
+        -0.3358757,
+        0.06499999999999995
+      ],
+      "rotation_body_from_site": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "options": {
+    "timestep_s": 0.005,
+    "gravity_world_m_s2": [
+      0.0,
+      0.0,
+      -9.81
+    ],
+    "density_kg_m3": 0.0,
+    "viscosity_pa_s": 0.0
+  },
+  "bridge_thrust_mapping": {
+    "source": "src/wind_field_simulation/assets/configs/X4-950.params",
+    "sha256": "c617918cb608402c40d3732a56647295723e0129e5e9902553894eda1e4b5071",
+    "MPC_THR_HOVER": 0.5,
+    "full_scale_per_motor_n": 39.241962,
+    "rpm": "unknown; visual spin is not calibrated RPM"
+  },
+  "dependencies": {
+    "xml_sha256": {
+      "src/wind_field_simulation/assets/robot_models/airbot_play/airbot_play.xml": "8b2ef8a853969ac063762e411bd0b5e5a70c23f9d21ca1d317836d826595956d",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/airbot_play_appendix.xml": "e0cf2bec6d363e6da84a4cf1f0bfddc4fca4ff3035c879aa4bb5d04e08b90ce8",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/airbot_play_control.xml": "9bc045389358c231d43ff7c14cef310c036388cd0ee189d564e036156224af1a",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/airbot_play_dependencies.xml": "2f5b9346e1d363226b4916321016b9d22fd71f3b8912d8bf8aebd322065450ed",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/airbot_play_sensor.xml": "befd07eafc29db0b5ca917e1c6d198f0c717b2d9cbda98d96a4e84e82fd580a6",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/quadrotor_950.xml": "bbbd3d251b816a0d07504b09c9f5f80b31d9b0812840c4d1173d2451430f78b7",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/quadrotor_950_control.xml": "b0377f309b4e3a3b4faf6309352f9e27ab993af10d3982df6937ad537195b7d0",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/quadrotor_950_dependencies.xml": "08dc1a18a2cdcdcdbc26c25a33ed4d1eb29a7b57f3a9e10026925e02e9bb8d89",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/quadrotor_950_sensor.xml": "aee0a15233516dc3395d8f09adec95a9f0da8032a6bb0c4576137e249e48d2f9",
+      "src/wind_field_simulation/assets/robot_models/scenes/ground.xml": "892768a6a5d5a4885daf853305c2cfbf84f9ca63cb6ff4f591d65b7b1bf8c66b",
+      "src/wind_field_simulation/assets/scenes/default/robot_quadrotor_950_with_arm.xml": "fe4171409c7230e1d888ad1ac3f5f2997b5160e6bfd2669bd68e571e3cec721c"
+    },
+    "mesh_sha256": {
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/arm_base_0.obj": "a8f4b3bd86b7b42f484f80b0d8abaf05bc32c3e769874539cd66db045291f2bc",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/arm_base_1.obj": "ef0ef26d2cf82e2fa82f8147ef47d37bdc76957e0c0c227a63d15cf38bb18d8d",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/left.obj": "ce1568a90e985b0c84964329998ce5155848d084ce203c5bb51d3bfa9cc3acd6",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link1.obj": "d448e9742660b9f96f3d9510f23f94c8079aa52a0697aa21756094fc18688c2a",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link2_0.obj": "fd147d883a2af6484ca8c4060eaf2d2a03d70e89598f367d143e15298b3a0717",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link2_1.obj": "b148bceb4e4277a7ce753ef904103df43302789f9b64d386fd24ded0232871b8",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link3_0.obj": "125db0b6739af668565a20dcfff16f9aa8202388b83e419d75520a7cf1d58edd",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link3_1.obj": "962261b0c1713e575cbcf3dfb4833b589bb0c35f2ffd395398e8e297d9126c1b",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link4.obj": "890ae19b7f80cd60ed44611e8be4da97f631acb44f5b9fee18668890c2c2603f",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link5_0.obj": "d1415fee7d55699d3c7650633e1e5f8d97d8d44396b26e1b9758706df207b85b",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link5_1.obj": "364754f401e71b72ede3148e49385a7571c5ad07d230ab9c6295d1a85c2dd010",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link6.obj": "82b583ceb042427ed87afa714177a7377c17487689f9af5a03fd386f724b83d4",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/right.obj": "91ac8322536db80bfd2db398e30d23dd1f15360f6b8158ad02fb62fb8cfcc709",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/meshes/quadrotor_950.stl": "9290469d593292a58d838555c8d5a84847b2a09b9c563b3c2ae442d51e32f568",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/meshes/rotor_link_1.STL": "4cdf6d923debd2511011af5acd31b28fe8fb109d4e43e4cb04c9668bdb40c64e",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/meshes/rotor_link_2.STL": "4cdf6d923debd2511011af5acd31b28fe8fb109d4e43e4cb04c9668bdb40c64e",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/meshes/rotor_link_3.STL": "4cdf6d923debd2511011af5acd31b28fe8fb109d4e43e4cb04c9668bdb40c64e",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/meshes/rotor_link_4.STL": "4cdf6d923debd2511011af5acd31b28fe8fb109d4e43e4cb04c9668bdb40c64e"
+    }
+  },
+  "dependency_sha256": "1a5216b82c65cefcec4b87512fd25e30c329a55188540b4602e4c4deaa11dac2"
+}

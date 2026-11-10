@@ -1,0 +1,154 @@
+{
+  "date": "2026-11-10",
+  "purpose": "read-only XML parameter audit for a proposed retraining plan; no training performed",
+  "scene": "src/wind_field_simulation/assets/scenes/default/robot_quadrotor_950_with_arm.xml",
+  "xml_sha256": {
+    "src/wind_field_simulation/assets/scenes/default/robot_quadrotor_950_with_arm.xml": "fe4171409c7230e1d888ad1ac3f5f2997b5160e6bfd2669bd68e571e3cec721c",
+    "src/wind_field_simulation/assets/robot_models/quadrotor_950/quadrotor_950_dependencies.xml": "08dc1a18a2cdcdcdbc26c25a33ed4d1eb29a7b57f3a9e10026925e02e9bb8d89",
+    "src/wind_field_simulation/assets/robot_models/quadrotor_950/quadrotor_950.xml": "bbbd3d251b816a0d07504b09c9f5f80b31d9b0812840c4d1173d2451430f78b7",
+    "src/wind_field_simulation/assets/robot_models/quadrotor_950/quadrotor_950_sensor.xml": "aee0a15233516dc3395d8f09adec95a9f0da8032a6bb0c4576137e249e48d2f9",
+    "src/wind_field_simulation/assets/robot_models/quadrotor_950/quadrotor_950_control.xml": "b0377f309b4e3a3b4faf6309352f9e27ab993af10d3982df6937ad537195b7d0",
+    "src/wind_field_simulation/assets/robot_models/airbot_play/airbot_play_dependencies.xml": "2f5b9346e1d363226b4916321016b9d22fd71f3b8912d8bf8aebd322065450ed",
+    "src/wind_field_simulation/assets/robot_models/airbot_play/airbot_play_sensor.xml": "befd07eafc29db0b5ca917e1c6d198f0c717b2d9cbda98d96a4e84e82fd580a6",
+    "src/wind_field_simulation/assets/robot_models/airbot_play/airbot_play_appendix.xml": "e0cf2bec6d363e6da84a4cf1f0bfddc4fca4ff3035c879aa4bb5d04e08b90ce8",
+    "src/wind_field_simulation/assets/robot_models/airbot_play/airbot_play.xml": "8b2ef8a853969ac063762e411bd0b5e5a70c23f9d21ca1d317836d826595956d",
+    "src/wind_field_simulation/assets/robot_models/airbot_play/airbot_play_control.xml": "9bc045389358c231d43ff7c14cef310c036388cd0ee189d564e036156224af1a",
+    "src/wind_field_simulation/assets/robot_models/scenes/ground.xml": "892768a6a5d5a4885daf853305c2cfbf84f9ca63cb6ff4f591d65b7b1bf8c66b",
+    "src/wind_field_simulation/assets/robot_models/scenes/cabinet/cabinet.xml": "990816d13deb6d2fc6dfed7224b47964cdbbea7765e7a19366bc0082e3c1b442"
+  },
+  "base_body_mass_kg": 6.5,
+  "base_body_principal_inertia_kg_m2": [
+    0.2198,
+    0.2198,
+    0.3197
+  ],
+  "aircraft_subtree_mass_kg": 8.000399999999999,
+  "assembly_com_body_m": [
+    4.532879449773204e-08,
+    -1.0569623836505342e-08,
+    -0.058724719567729566
+  ],
+  "assembly_inertia_about_com_body_kg_m2": [
+    [
+      0.3456448358964007,
+      0.0006196425794341746,
+      0.0015230373816775072
+    ],
+    [
+      0.0006196425794341745,
+      0.3760156151920653,
+      3.267946517263115e-05
+    ],
+    [
+      0.0015230373816775037,
+      3.267946517263115e-05,
+      0.35137764074916683
+    ]
+  ],
+  "arm_joint_initial_rad": {
+    "joint1": 0.0,
+    "joint2": 0.0,
+    "joint3": 0.0,
+    "joint4": 0.0,
+    "joint5": 0.0,
+    "joint6": 0.0
+  },
+  "rotors": [
+    {
+      "name": "rotor0",
+      "site_position_body_m": [
+        0.3358757,
+        -0.3358757,
+        0.06499999999999995
+      ],
+      "ctrlrange": [
+        0.0,
+        61.2915625
+      ],
+      "gear": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -0.05
+      ]
+    },
+    {
+      "name": "rotor1",
+      "site_position_body_m": [
+        -0.3358757,
+        0.3358757,
+        0.06499999999999995
+      ],
+      "ctrlrange": [
+        0.0,
+        61.2915625
+      ],
+      "gear": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -0.05
+      ]
+    },
+    {
+      "name": "rotor2",
+      "site_position_body_m": [
+        0.3358757,
+        0.3358757,
+        0.06499999999999995
+      ],
+      "ctrlrange": [
+        0.0,
+        61.2915625
+      ],
+      "gear": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.05
+      ]
+    },
+    {
+      "name": "rotor3",
+      "site_position_body_m": [
+        -0.3358757,
+        -0.3358757,
+        0.06499999999999995
+      ],
+      "ctrlrange": [
+        0.0,
+        61.2915625
+      ],
+      "gear": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.05
+      ]
+    }
+  ],
+  "option": {
+    "timestep_s": 0.005,
+    "gravity_world_m_s2": [
+      0.0,
+      0.0,
+      -9.81
+    ],
+    "fluid_density_kg_m3": 0.0,
+    "fluid_viscosity_pa_s": 0.0
+  },
+  "state_dimensions": {
+    "nq": 19,
+    "nv": 18,
+    "nu": 15
+  },
+  "interpretation": "Assembly inertia is an initial-pose rigid aggregate audit; the actual model remains articulated. Rotor visual spin actuator speeds are not calibrated rotor RPM."
+}

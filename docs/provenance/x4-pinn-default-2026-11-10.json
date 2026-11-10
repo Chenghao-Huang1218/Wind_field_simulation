@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-10",
+  "user_authorized_default": "pinn-x4",
+  "fallbacks": [
+    "analytic",
+    "pinn"
+  ],
+  "bundled_directory": "src/wind_field_simulation/assets/checkpoints/x4_950_wind_v1",
+  "bundled_sha256": {
+    "candidate.pt": "d7fb92c96b275245047e76cfdb4317d4ca72c5ef81529c854f686e221ad5996b",
+    "reference_config.json": "30370c6a42a9a0ba6e8aa12c80970abdc69cbb6a6c2cae544391e613976f8e23",
+    "vehicle_parameters.json": "bf3d6410d41246b0f13aa159586ea6d861d8e9838acb00f7645edf68aae3af47",
+    "geometry_manifest.json": "0a431853846d20f9306477f6b778a68caa4213adcb85abcafcd3a97bdb95a764"
+  },
+  "byte_identical_to_verified_trial_reference": true,
+  "old_weights_and_px4_protected_files_unchanged": true,
+  "force_filter_ast_unchanged": true,
+  "offline_validation": {
+    "passed": 221,
+    "skipped": 0,
+    "seconds": 28.86,
+    "includes_real_no_argument_default_load": true
+  },
+  "new_training": false,
+  "new_sitl_round": false,
+  "prior_sitl_evidence": "docs/provenance/x4-pinn-sitl-2026-11-10/summary.json",
+  "note": "Default/path selection only. Original SITL source/artifact fingerprints retained without rewriting history."
+}

@@ -1,0 +1,86 @@
+<!-- Copyright (c) 2026 Polyu-ISE RAIDS Lab. All rights reserved. -->
+
+<mujocoinclude>
+  <!-- ======= QUADROTOR 950 ======= -->
+  <body name="quadrotor_950" pos="0 0 0" childclass="rcdrone">
+    <inertial pos="0 0 0" quat="1 0 0 0" mass="6.5" diaginertia="0.2198 0.2198 0.3197"/>
+
+    <geom mesh="quadrotor_950_base" pos="-0.00298 -0.009546 0" material="paint_metallic_dark" class="drone_visual" />
+    <body name="rotor-a00" pos="0.336 0.336 0.065" euler="0 0 0.7853981634">
+      <inertial pos="0 0 0.01074" quat="1 0 0 0" mass="0.0001" diaginertia="1e-6 1e-6 1e-6"/>
+      <joint name="rotor_joint_a00" type="hinge" axis="0 0 1" damping="0" armature="0" limited="false"/>
+      <geom name="rotor-link-a00" mesh="quadrotor_950_rotor_link_1" class="drone_visual"/>
+    </body>
+    <body name="rotor-a10" pos="0.336 -0.336 0.065" euler="0 0 2.3561944902">
+      <inertial pos="0 0 0.01074" quat="1 0 0 0" mass="0.0001" diaginertia="1e-6 1e-6 1e-6"/>
+      <joint name="rotor_joint_a10" type="hinge" axis="0 0 1" damping="0" armature="0" limited="false"/>
+      <geom name="rotor-link-a10" mesh="quadrotor_950_rotor_link_2" class="drone_visual"/>
+    </body>
+    <body name="rotor-a20" pos="-0.336 0.336 0.065" euler="0 0 2.3561944902">
+      <inertial pos="0 0 0.01074" quat="1 0 0 0" mass="0.0001" diaginertia="1e-6 1e-6 1e-6"/>
+      <joint name="rotor_joint_a20" type="hinge" axis="0 0 1" damping="0" armature="0" limited="false"/>
+      <geom name="rotor-link-a20" mesh="quadrotor_950_rotor_link_3" class="drone_visual"/>
+    </body>
+    <body name="rotor-a30" pos="-0.336 -0.336 0.065" euler="0 0 0.7853981634">
+      <inertial pos="0 0 0.01074" quat="1 0 0 0" mass="0.0001" diaginertia="1e-6 1e-6 1e-6"/>
+      <joint name="rotor_joint_a30" type="hinge" axis="0 0 1" damping="0" armature="0" limited="false"/>
+      <geom name="rotor-link-a30" mesh="quadrotor_950_rotor_link_4" class="drone_visual"/>
+    </body>
+    <camera name="eye_to_hand_cam" pos="0.15 0 -0.19" euler="0 -1.39626340 -1.57079633" fovy="40"/>
+
+    <!-- Collision proxy migrated from quadrotor_simple; STL mesh stays visual-only. -->
+    <geom name="collision-core-battery" type="box" pos="0 0 0" quat="1 0 0 0" size="0.13 0.13 0.08" class="drone_collision"/>
+    <geom name="collision-core-fly" type="box" pos="0 0 0.098" quat="1 0 0 0" size="0.115 0.115 0.018" class="drone_collision"/>
+
+    <geom name="collision-motor-a00" type="cylinder" pos="0.336 0.336 0.092" quat="1 0 0 0" size="0.035 0.032" class="drone_collision"/>
+    <geom name="collision-arm-a00" type="capsule" fromto="0 0 0.07 0.336 0.336 0.07" size="0.01" class="drone_collision"/>
+    <geom name="collision-motor-a10" type="cylinder" pos="0.336 -0.336 0.092" quat="1 0 0 0" size="0.035 0.032" class="drone_collision"/>
+    <geom name="collision-arm-a10" type="capsule" fromto="0 0 0.07 0.336 -0.336 0.07" size="0.01" class="drone_collision"/>
+    <geom name="collision-motor-a20" type="cylinder" pos="-0.336 0.336 0.092" quat="1 0 0 0" size="0.035 0.032" class="drone_collision"/>
+    <geom name="collision-arm-a20" type="capsule" fromto="0 0 0.07 -0.336 0.336 0.07" size="0.01" class="drone_collision"/>
+    <geom name="collision-motor-a30" type="cylinder" pos="-0.336 -0.336 0.092" quat="1 0 0 0" size="0.035 0.032" class="drone_collision"/>
+    <geom name="collision-arm-a30" type="capsule" fromto="0 0 0.07 -0.336 -0.336 0.07" size="0.01" class="drone_collision"/>
+
+    <geom name="collision-skid-a30-a10" type="capsule" fromto="-0.255 -0.26 -0.44 0.255 -0.26 -0.44" size="0.014" class="drone_collision"/>
+    <geom name="collision-skid-a20-a00" type="capsule" fromto="-0.255 0.26 -0.44 0.255 0.26 -0.44" size="0.014" class="drone_collision"/>
+    <geom name="collision-leg-a30" type="capsule" fromto="-0.065 -0.12 0.04 -0.065 -0.26 -0.44" size="0.01" class="drone_collision"/>
+    <geom name="collision-leg-a10" type="capsule" fromto="0.065 -0.12 0.04 0.065 -0.26 -0.44" size="0.01" class="drone_collision"/>
+    <geom name="collision-leg-a20" type="capsule" fromto="-0.065 0.12 0.04 -0.065 0.26 -0.44" size="0.01" class="drone_collision"/>
+    <geom name="collision-leg-a00" type="capsule" fromto="0.065 0.12 0.04 0.065 0.26 -0.44" size="0.01" class="drone_collision"/>
+
+    <!-- optional, visualization of the coordinate frame -->
+    <site name="qcX" type="box" pos="0.1 0 0" size="0.15 0.005 0.005"  quat = "1 0 0 0" rgba="1 0 0 0" />
+    <site name="qcY" type="box" pos="0 0.1 0" size="0.15 0.005 0.005"  quat = "0.707 0 0 0.707" rgba="0 1 0 0" />
+    <site name="qcZ" type="box" pos="0 0 0.1" size="0.15 0.005 0.005"  quat = "-0.707 0 0.707 0" rgba="0 0 1 0" />
+
+    <!-- sets thruster geoms for collisions since site's are excluded from collision checking -->
+    <geom name="thruster-a00" type="cylinder" pos="0.336 0.336 0.065" size="0.28 0.0025"  quat = "1.0 0.0 0.0 0.0" class="drone_collision"/>
+    <geom name="thruster-a10" type="cylinder" pos="0.336 -0.336 0.065" size="0.28 0.0025"  quat = "1.0 0.0 0.0 0.0" class="drone_collision"/>
+    <geom name="thruster-a20" type="cylinder" pos="-0.336 0.336 0.065" size="0.28 0.0025"  quat = "1.0 0.0 0.0 0.0" class="drone_collision"/>
+    <geom name="thruster-a30" type="cylinder" pos="-0.336 -0.336 0.065" size="0.28 0.0025"  quat = "1.0 0.0 0.0 0.0" class="drone_collision"/>
+
+    <geom name="chassis-a00" type="cylinder" pos="0.336 0.336 -0.48" size="0.01 0.001"  quat = "1.0 0.0 0.0 0.0" class="drone_collision"/>
+    <geom name="chassis-a10" type="cylinder" pos="0.336 -0.336 -0.48" size="0.01 0.001"  quat = "1.0 0.0 0.0 0.0" class="drone_collision"/>
+    <geom name="chassis-a20" type="cylinder" pos="-0.336 0.336 -0.48" size="0.01 0.001"  quat = "1.0 0.0 0.0 0.0" class="drone_collision"/>
+    <geom name="chassis-a30" type="cylinder" pos="-0.336 -0.336 -0.48" size="0.01 0.001"  quat = "1.0 0.0 0.0 0.0" class="drone_collision"/>
+
+    <!-- PX4 per-rotor thrust sites retained for robot_control_agent_with_px4.py. -->
+    <site name="rotor0" type="box" pos="0.3358757 -0.3358757 0.065" size="0.01 0.01 0.01" quat="1.0 0.0 0.0 0.0" rgba="0 1 1 0"/>
+    <site name="rotor1" type="box" pos="-0.3358757 0.3358757 0.065" size="0.01 0.01 0.01" quat="1.0 0.0 0.0 0.0" rgba="0 1 1 0"/>
+    <site name="rotor2" type="box" pos="0.3358757 0.3358757 0.065" size="0.01 0.01 0.01" quat="1.0 0.0 0.0 0.0" rgba="0 1 1 0"/>
+    <site name="rotor3" type="box" pos="-0.3358757 -0.3358757 0.065" size="0.01 0.01 0.01" quat="1.0 0.0 0.0 0.0" rgba="0 1 1 0"/>
+
+  </body>
+
+  <joint name="main_joint" type="free" pos="0 0 0" />
+
+  <!-- sets actuator sites to attach actuators and makes it invisible -->
+  <site name="thrust" type="box" pos="0 0 0" size="0.01 0.01 0.01" quat = "1.0 0.0 0.0 0.0" rgba="0 1 1 0" />
+  <site name="rateX"  type="box" pos="0 0 0" quat = "1.0 0.0 0.0 0.0" size="0.01 0.01 0.01" rgba="0 1 1 0"/>
+  <site name="rateY"  type="box" pos="0 0 0" quat = "1.0 0.0 0.0 0.0" size="0.01 0.01 0.01" rgba="0 1 1 0"/>
+  <site name="rateZ"  type="box" pos="0 0 0" quat = "1.0 0.0 0.0 0.0" size="0.01 0.01 0.01" rgba="0 1 1 0"/>
+
+  <!-- sets sensor sites to attach sensors and makes it invisible -->
+  <site name="main_center" type="box" pos="0 0 0" size="0.01 0.01 0.01" quat = "1.0 0.0 0.0 0.0" rgba="0 1 1 0" />
+
+</mujocoinclude>

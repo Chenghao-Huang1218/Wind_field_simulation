@@ -1,0 +1,13 @@
+<!-- Copyright (c) 2026 Polyu-ISE RAIDS Lab. All rights reserved. -->
+
+<mujocoinclude>
+  <motor name="rotor0" ctrllimited="true" ctrlrange="0 61.2915625" gear="0.0 0.0 1.0 0.0 0.0 -0.05" site="rotor0"/>
+  <motor name="rotor1" ctrllimited="true" ctrlrange="0 61.2915625" gear="0.0 0.0 1.0 0.0 0.0 -0.05" site="rotor1"/>
+  <motor name="rotor2" ctrllimited="true" ctrlrange="0 61.2915625" gear="0.0 0.0 1.0 0.0 0.0 0.05" site="rotor2"/>
+  <motor name="rotor3" ctrllimited="true" ctrlrange="0 61.2915625" gear="0.0 0.0 1.0 0.0 0.0 0.05" site="rotor3"/>
+
+  <velocity name="rotor_a00_spin" joint="rotor_joint_a00" kv="1e-5" ctrllimited="true" ctrlrange="-500 500"/>
+  <velocity name="rotor_a10_spin" joint="rotor_joint_a10" kv="1e-5" ctrllimited="true" ctrlrange="-500 500"/>
+  <velocity name="rotor_a20_spin" joint="rotor_joint_a20" kv="1e-5" ctrllimited="true" ctrlrange="-500 500"/>
+  <velocity name="rotor_a30_spin" joint="rotor_joint_a30" kv="1e-5" ctrllimited="true" ctrlrange="-500 500"/>
+</mujocoinclude>

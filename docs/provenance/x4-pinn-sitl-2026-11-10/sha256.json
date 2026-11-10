@@ -1,0 +1,18 @@
+{
+  "docs/provenance/x4-pinn-sitl-2026-11-10/default_state_sha256.json": "6c8476ac0facc6088ecb0edd5e8d078f738bdb163774f0dbbb7268316366ac6b",
+  "docs/provenance/x4-pinn-sitl-2026-11-10/artifact_sha256.json": "784f1fb6d3cc794d6486ece792e69748f5b526c1d533f6e0712419df48e7a448",
+  "docs/provenance/x4-pinn-sitl-2026-11-10/planned_cases.json": "4a3713f5733bb5ed308ee3b86aed20a692ab379b062a62889cc86afd1fb42012",
+  "docs/provenance/x4-pinn-sitl-2026-11-10/verification.json": "9da2056956feef07f543aece53df016d4e8ce3d64d03589a066bd004bd482734",
+  "docs/provenance/x4-pinn-sitl-2026-11-10/offline_check.json": "e007b9ac099ea5c6e29a1ebc98110f34ea82aab1b049e4a69bec38921a80b1c3",
+  "docs/provenance/x4-pinn-sitl-2026-11-10/review.md": "f1bc9e28261a6f877fc164c586a10cb1386ebfde32d2e059025e03f674abfd8b",
+  "docs/provenance/x4-pinn-sitl-2026-11-10/integrity.json": "4c8a2fa4351aba8642cd2eb5cf00e836970a3ddaf4a00e24929549754eb50e61",
+  "docs/provenance/x4-pinn-sitl-2026-11-10/per_run_metrics.csv": "2fac9b04ea4d92788ceca0be9b40ba1de4127d4ecde4e3041c40f1f7d70a942b",
+  "docs/provenance/x4-pinn-sitl-2026-11-10/before_sha256.json": "96680ee7e0af1993a6a1298ba812ee77b449f7dffedd7a80d02e5210003dcc28",
+  "docs/provenance/x4-pinn-sitl-2026-11-10/summary.json": "21aecd70febeb7215caa10f56ab6bff6e529fd177bdf8746b4897716da3c3e84",
+  "docs/provenance/x4-pinn-sitl-2026-11-10/protocol.json": "7c14b02c721d20676b7fa5cb5d9d58e4c33d507020340f7d370d07aebacad034",
+  "docs/X4_PINN_INTEGRATION_2026-11-10.md": "91d8b69276ea17dca8866771f705ac7702406fbad7c69ffa2fd7cd07cc780fc5",
+  "docs/models/x4-950-pinn-pilot-v1.md": "1d0098ed6cbac54636071668715f42a8667916b194db0f795547466445f56551",
+  "docs/figures/x4-pinn-sitl-2026-11-10.svg": "04d598bdd1c63ad429bb99ee05f9d97df447423cec349c03a49bd69e71c37643",
+  "docs/figures/x4-pinn-sitl-2026-11-10.pdf": "c5650cebca41ef6364f6cb3821415962ac99d7d790b32c0e0998875907b86886",
+  "docs/figures/x4-pinn-sitl-2026-11-10.png": "f0d298de60c65df5140ad53f1d0435c515ab2b694f3e1e1a3c5dd655f9467f80"
+}

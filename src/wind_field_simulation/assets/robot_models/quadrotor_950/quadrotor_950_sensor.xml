@@ -1,0 +1,7 @@
+<!-- Copyright (c) 2026 Polyu-ISE RAIDS Lab. All rights reserved. -->
+
+<mujocoinclude>
+  <gyro name="body_gyro" site="main_center"/>
+  <accelerometer name="body_linacc" site="main_center"/>
+  <framequat name="body_quat" objtype="site" objname="main_center"/>
+</mujocoinclude>

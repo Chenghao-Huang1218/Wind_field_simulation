@@ -1,0 +1,44 @@
+<!-- Copyright (c) 2026 Polyu-ISE RAIDS Lab. All rights reserved. -->
+
+<mujoco model="robot_quadrotor_950_with_arm">
+  <compiler angle="radian" autolimits="true"/>
+  <option timestep="0.005"/>
+
+  <include file="../../robot_models/scenes/ground.xml"/>
+
+  <include file="../../robot_models/quadrotor_950/quadrotor_950_dependencies.xml"/>
+
+  <include file="../../robot_models/airbot_play/airbot_play_dependencies.xml"/>
+  <include file="../../robot_models/airbot_play/airbot_play_appendix.xml"/>
+  <visual>
+    <scale camera="0.10"/>
+  </visual>
+
+  <worldbody>
+    <body name="quadrotor_950_pos" pos="0 0 0.48">
+      <light name="follow_light_quadrotor"
+             pos="0 0 1.2"
+             dir="0 0 -1"
+             mode="targetbodycom"
+             target="quadrotor_950_pos"
+             directional="true"/>
+      <include file="../../robot_models/quadrotor_950/quadrotor_950.xml"/>
+
+      <body name="airbot_play_pose" pos="0.005561 -0.002454 -0.125" euler="3.1415926 0 0">
+        <include file="../../robot_models/airbot_play/airbot_play.xml"/>
+      </body>
+    </body>
+
+  </worldbody>
+
+  <actuator>
+    <include file="../../robot_models/quadrotor_950/quadrotor_950_control.xml"/>
+    <include file="../../robot_models/airbot_play/airbot_play_control.xml"/>
+  </actuator>
+
+  <sensor>
+    <include file="../../robot_models/quadrotor_950/quadrotor_950_sensor.xml"/>
+    <include file="../../robot_models/airbot_play/airbot_play_sensor.xml"/>
+  </sensor>
+
+</mujoco>

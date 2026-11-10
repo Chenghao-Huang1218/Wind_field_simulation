@@ -1,0 +1,1499 @@
+{
+  "kind": "x4_950_component_drag_reference_v1",
+  "assumptions": {
+    "status": "simulation assumptions, not identified physical parameters",
+    "density_kg_m3": 1.225,
+    "cd_axes": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "area_rule": "ellipsoid axial reference areas: pi * r_j * r_k",
+    "geometry_policy": "aircraft collision pieces; one body AABB for each arm part; mesh fallback only without collision",
+    "pose": "XML qpos0; fixed aerodynamic geometry, no change to multibody dynamics",
+    "wind_max_horizontal_m_s": 3.0,
+    "wind_z_m_s": 0.0,
+    "applied_force_z_n": 0.0,
+    "excluded_effects": [
+      "rotor blade drag",
+      "induced flow",
+      "wake interference",
+      "ground/wall effects",
+      "moving arm",
+      "additional payload",
+      "applied aerodynamic torque"
+    ],
+    "limitations": "Additive proxies ignore occlusion and can overlap at component junctions; collision bounds may omit physical details. Axiswise quadratic drag is an explicit approximation."
+  },
+  "inspection_state_domain": {
+    "root_horizontal_speed_max_m_s": 3.0,
+    "root_vertical_velocity_m_s": [
+      -1.0,
+      1.0
+    ],
+    "roll_pitch_max_deg": 20.0,
+    "yaw_deg": [
+      -180.0,
+      180.0
+    ],
+    "angular_speed_max_rad_s": 1.5,
+    "status": "proposed offline inspection domain; not a verified flight envelope"
+  },
+  "sources": {
+    "drag_equation": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-equation/",
+    "mjcf": "https://mujoco.readthedocs.io/en/3.6.0/XMLreference.html"
+  },
+  "mass_total_kg": 8.000399999999999,
+  "proxies": [
+    {
+      "id": "collision-core-battery",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 2,
+          "geom_name": "collision-core-battery",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.13,
+        0.13,
+        0.08
+      ],
+      "center_body_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "areas_m2": [
+        0.03267256359733385,
+        0.03267256359733385,
+        0.053092915845667506
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "collision-core-fly",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 3,
+          "geom_name": "collision-core-fly",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.115,
+        0.115,
+        0.018
+      ],
+      "center_body_m": [
+        0.0,
+        0.0,
+        0.098
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "areas_m2": [
+        0.006503096792930871,
+        0.006503096792930871,
+        0.04154756284372502
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "collision-motor-a00",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 4,
+          "geom_name": "collision-motor-a00",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.035,
+        0.035,
+        0.032
+      ],
+      "center_body_m": [
+        0.336,
+        0.336,
+        0.092
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "areas_m2": [
+        0.0035185837720205686,
+        0.0035185837720205686,
+        0.003848451000647497
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "collision-arm-a00",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 5,
+          "geom_name": "collision-arm-a00",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.01,
+        0.01,
+        0.24758787847868
+      ],
+      "center_body_m": [
+        0.168,
+        0.168,
+        0.07
+      ],
+      "rotation_body_from_proxy": [
+        [
+          0.5000000000000001,
+          -0.4999999999999998,
+          -0.7071067811865475
+        ],
+        [
+          -0.4999999999999998,
+          0.5000000000000001,
+          -0.7071067811865475
+        ],
+        [
+          0.7071067811865475,
+          0.7071067811865475,
+          3.3306690738754696e-16
+        ]
+      ],
+      "areas_m2": [
+        0.007778202601465036,
+        0.007778202601465036,
+        0.00031415926535897936
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "collision-motor-a10",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 6,
+          "geom_name": "collision-motor-a10",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.035,
+        0.035,
+        0.032
+      ],
+      "center_body_m": [
+        0.336,
+        -0.336,
+        0.092
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "areas_m2": [
+        0.0035185837720205686,
+        0.0035185837720205686,
+        0.003848451000647497
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "collision-arm-a10",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 7,
+          "geom_name": "collision-arm-a10",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.01,
+        0.01,
+        0.24758787847868
+      ],
+      "center_body_m": [
+        0.168,
+        -0.168,
+        0.07
+      ],
+      "rotation_body_from_proxy": [
+        [
+          0.5000000000000001,
+          0.4999999999999998,
+          -0.7071067811865475
+        ],
+        [
+          0.4999999999999998,
+          0.5000000000000001,
+          0.7071067811865475
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865475,
+          3.3306690738754696e-16
+        ]
+      ],
+      "areas_m2": [
+        0.007778202601465036,
+        0.007778202601465036,
+        0.00031415926535897936
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "collision-motor-a20",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 8,
+          "geom_name": "collision-motor-a20",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.035,
+        0.035,
+        0.032
+      ],
+      "center_body_m": [
+        -0.336,
+        0.336,
+        0.092
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "areas_m2": [
+        0.0035185837720205686,
+        0.0035185837720205686,
+        0.003848451000647497
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "collision-arm-a20",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 9,
+          "geom_name": "collision-arm-a20",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.01,
+        0.01,
+        0.24758787847868
+      ],
+      "center_body_m": [
+        -0.168,
+        0.168,
+        0.07
+      ],
+      "rotation_body_from_proxy": [
+        [
+          0.5000000000000001,
+          0.4999999999999998,
+          0.7071067811865475
+        ],
+        [
+          0.4999999999999998,
+          0.5000000000000001,
+          -0.7071067811865475
+        ],
+        [
+          -0.7071067811865475,
+          0.7071067811865475,
+          3.3306690738754696e-16
+        ]
+      ],
+      "areas_m2": [
+        0.007778202601465036,
+        0.007778202601465036,
+        0.00031415926535897936
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "collision-motor-a30",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 10,
+          "geom_name": "collision-motor-a30",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.035,
+        0.035,
+        0.032
+      ],
+      "center_body_m": [
+        -0.336,
+        -0.336,
+        0.092
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "areas_m2": [
+        0.0035185837720205686,
+        0.0035185837720205686,
+        0.003848451000647497
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "collision-arm-a30",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 11,
+          "geom_name": "collision-arm-a30",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.01,
+        0.01,
+        0.24758787847868
+      ],
+      "center_body_m": [
+        -0.168,
+        -0.168,
+        0.07
+      ],
+      "rotation_body_from_proxy": [
+        [
+          0.5000000000000001,
+          -0.4999999999999998,
+          0.7071067811865475
+        ],
+        [
+          -0.4999999999999998,
+          0.5000000000000001,
+          0.7071067811865475
+        ],
+        [
+          -0.7071067811865475,
+          -0.7071067811865475,
+          3.3306690738754696e-16
+        ]
+      ],
+      "areas_m2": [
+        0.007778202601465036,
+        0.007778202601465036,
+        0.00031415926535897936
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "collision-skid-a30-a10",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 12,
+          "geom_name": "collision-skid-a30-a10",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.014,
+        0.014,
+        0.269
+      ],
+      "center_body_m": [
+        0.0,
+        -0.26,
+        -0.44
+      ],
+      "rotation_body_from_proxy": [
+        [
+          2.220446049250313e-16,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          2.220446049250313e-16
+        ]
+      ],
+      "areas_m2": [
+        0.011831237933419165,
+        0.011831237933419165,
+        0.0006157521601035995
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "collision-skid-a20-a00",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 13,
+          "geom_name": "collision-skid-a20-a00",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.014,
+        0.014,
+        0.269
+      ],
+      "center_body_m": [
+        0.0,
+        0.26,
+        -0.44
+      ],
+      "rotation_body_from_proxy": [
+        [
+          2.220446049250313e-16,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          2.220446049250313e-16
+        ]
+      ],
+      "areas_m2": [
+        0.011831237933419165,
+        0.011831237933419165,
+        0.0006157521601035995
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "collision-leg-a30",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 14,
+          "geom_name": "collision-leg-a30",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.01,
+        0.01,
+        0.26
+      ],
+      "center_body_m": [
+        -0.065,
+        -0.19,
+        -0.2
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9600000000000001,
+          0.2800000000000001
+        ],
+        [
+          0.0,
+          -0.2800000000000001,
+          0.9600000000000001
+        ]
+      ],
+      "areas_m2": [
+        0.008168140899333463,
+        0.008168140899333463,
+        0.0003141592653589793
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "collision-leg-a10",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 15,
+          "geom_name": "collision-leg-a10",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.01,
+        0.01,
+        0.26
+      ],
+      "center_body_m": [
+        0.065,
+        -0.19,
+        -0.2
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9600000000000001,
+          0.2800000000000001
+        ],
+        [
+          0.0,
+          -0.2800000000000001,
+          0.9600000000000001
+        ]
+      ],
+      "areas_m2": [
+        0.008168140899333463,
+        0.008168140899333463,
+        0.0003141592653589793
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "collision-leg-a20",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 16,
+          "geom_name": "collision-leg-a20",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.01,
+        0.01,
+        0.26
+      ],
+      "center_body_m": [
+        -0.065,
+        0.19,
+        -0.2
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9600000000000001,
+          -0.2800000000000001
+        ],
+        [
+          0.0,
+          0.2800000000000001,
+          0.9600000000000001
+        ]
+      ],
+      "areas_m2": [
+        0.008168140899333463,
+        0.008168140899333463,
+        0.0003141592653589793
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "collision-leg-a00",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 17,
+          "geom_name": "collision-leg-a00",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.01,
+        0.01,
+        0.26
+      ],
+      "center_body_m": [
+        0.065,
+        0.19,
+        -0.2
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9600000000000001,
+          -0.2800000000000001
+        ],
+        [
+          0.0,
+          0.2800000000000001,
+          0.9600000000000001
+        ]
+      ],
+      "areas_m2": [
+        0.008168140899333463,
+        0.008168140899333463,
+        0.0003141592653589793
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "chassis-a00",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 22,
+          "geom_name": "chassis-a00",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.01,
+        0.01,
+        0.001
+      ],
+      "center_body_m": [
+        0.336,
+        0.336,
+        -0.48
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "areas_m2": [
+        3.141592653589793e-05,
+        3.141592653589793e-05,
+        0.0003141592653589793
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "chassis-a10",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 23,
+          "geom_name": "chassis-a10",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.01,
+        0.01,
+        0.001
+      ],
+      "center_body_m": [
+        0.336,
+        -0.336,
+        -0.48
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "areas_m2": [
+        3.141592653589793e-05,
+        3.141592653589793e-05,
+        0.0003141592653589793
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "chassis-a20",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 24,
+          "geom_name": "chassis-a20",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.01,
+        0.01,
+        0.001
+      ],
+      "center_body_m": [
+        -0.336,
+        0.336,
+        -0.48
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "areas_m2": [
+        3.141592653589793e-05,
+        3.141592653589793e-05,
+        0.0003141592653589793
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "chassis-a30",
+      "mass_owner": "quadrotor_950",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_primitive",
+      "sources": [
+        {
+          "geom_id": 25,
+          "geom_name": "chassis-a30",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.01,
+        0.01,
+        0.001
+      ],
+      "center_body_m": [
+        -0.336,
+        -0.336,
+        -0.48
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "areas_m2": [
+        3.141592653589793e-05,
+        3.141592653589793e-05,
+        0.0003141592653589793
+      ],
+      "selection_reason": "One aircraft collision primitive; visual mesh excluded."
+    },
+    {
+      "id": "arm_base",
+      "mass_owner": "arm_base",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_union_body_aabb",
+      "sources": [
+        {
+          "geom_id": 30,
+          "geom_name": "",
+          "mesh_name": null
+        },
+        {
+          "geom_id": 31,
+          "geom_name": "",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.13750029605940373,
+        0.08060050506515797,
+        0.041249999999999995
+      ],
+      "center_body_m": [
+        -0.014438999999999997,
+        -0.002454002344553451,
+        -0.16874999999999996
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.9999999999999987,
+          -5.3589793170057245e-08
+        ],
+        [
+          0.0,
+          5.3589793170057245e-08,
+          -0.9999999999999987
+        ]
+      ],
+      "areas_m2": [
+        0.010445075626768495,
+        0.017818759198624076,
+        0.034816993722267396
+      ],
+      "selection_reason": "One union AABB per arm body; collision preferred, visual fallback only without collision."
+    },
+    {
+      "id": "link1",
+      "mass_owner": "link1",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "visual_mesh_body_aabb",
+      "sources": [
+        {
+          "geom_id": 34,
+          "geom_name": "",
+          "mesh_name": "link1"
+        }
+      ],
+      "semiaxes_m": [
+        0.05249750022084839,
+        0.05250000162629214,
+        0.03569349915651909
+      ],
+      "center_body_m": [
+        0.005630501935088832,
+        -0.0024130070066678195,
+        -0.23592950165364163
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.9999999999999987,
+          -5.3589793170057245e-08
+        ],
+        [
+          0.0,
+          5.3589793170057245e-08,
+          -0.9999999999999987
+        ]
+      ],
+      "areas_m2": [
+        0.005887058005742627,
+        0.00588677751205716,
+        0.008658602722063875
+      ],
+      "selection_reason": "One union AABB per arm body; collision preferred, visual fallback only without collision."
+    },
+    {
+      "id": "link2",
+      "mass_owner": "link2",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_union_body_aabb",
+      "sources": [
+        {
+          "geom_id": 35,
+          "geom_name": "",
+          "mesh_name": null
+        },
+        {
+          "geom_id": 36,
+          "geom_name": "",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.16886641975343525,
+        0.04610132691017719,
+        0.04499999999999999
+      ],
+      "center_body_m": [
+        -0.1257004679472336,
+        -0.0024538480495518633,
+        -0.27945309339261903
+      ],
+      "rotation_body_from_proxy": [
+        [
+          -0.9261611676403025,
+          -0.3771279511670034,
+          1.931328237170238e-06
+        ],
+        [
+          8.241858947821701e-07,
+          3.0970901596649725e-06,
+          0.9999999999948644
+        ],
+        [
+          -0.3771279511710481,
+          0.9261611676371378,
+          -2.557581100681716e-06
+        ]
+      ],
+      "areas_m2": [
+        0.006517421547378934,
+        0.02387292766809311,
+        0.02445719206066166
+      ],
+      "selection_reason": "One union AABB per arm body; collision preferred, visual fallback only without collision."
+    },
+    {
+      "id": "link3",
+      "mass_owner": "link3",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_union_body_aabb",
+      "sources": [
+        {
+          "geom_id": 39,
+          "geom_name": "",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.13,
+        0.025,
+        0.025
+      ],
+      "center_body_m": [
+        -0.1145858697682372,
+        -0.002454034748818026,
+        -0.34405840690842715
+      ],
+      "rotation_body_from_proxy": [
+        [
+          0.999999999997939,
+          6.263286072318961e-07,
+          1.9313282371871306e-06
+        ],
+        [
+          -1.9313266352942264e-06,
+          -2.5575823103009054e-06,
+          0.9999999999948646
+        ],
+        [
+          6.263335467596144e-07,
+          -0.9999999999965334,
+          -2.5575811006505123e-06
+        ]
+      ],
+      "areas_m2": [
+        0.001963495408493621,
+        0.010210176124166827,
+        0.010210176124166827
+      ],
+      "selection_reason": "One union AABB per arm body; collision preferred, visual fallback only without collision."
+    },
+    {
+      "id": "link4",
+      "mass_owner": "link4",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "visual_mesh_body_aabb",
+      "sources": [
+        {
+          "geom_id": 42,
+          "geom_name": "",
+          "mesh_name": "link4"
+        }
+      ],
+      "semiaxes_m": [
+        0.028493500339570703,
+        0.027999500427082404,
+        0.05600100098949804
+      ],
+      "center_body_m": [
+        0.019314126850053518,
+        -0.002454905861013694,
+        -0.34458363057118946
+      ],
+      "rotation_body_from_proxy": [
+        [
+          -2.3113141372210766e-06,
+          6.7200753643414934e-06,
+          0.9999999999747493
+        ],
+        [
+          0.9999999999940583,
+          2.557597848312776e-06,
+          2.311296949941699e-06
+        ],
+        [
+          -2.5575823161538835e-06,
+          0.9999999999741497,
+          -6.7200812756962325e-06
+        ]
+      ],
+      "areas_m2": [
+        0.004926017441434844,
+        0.005012927998690033,
+        0.0025063744783164997
+      ],
+      "selection_reason": "One union AABB per arm body; collision preferred, visual fallback only without collision."
+    },
+    {
+      "id": "link5",
+      "mass_owner": "link5",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "visual_mesh_body_aabb",
+      "sources": [
+        {
+          "geom_id": 43,
+          "geom_name": "",
+          "mesh_name": "link5_0"
+        },
+        {
+          "geom_id": 44,
+          "geom_name": "",
+          "mesh_name": "link5_1"
+        }
+      ],
+      "semiaxes_m": [
+        0.028983500728460013,
+        0.05719549818504336,
+        0.036930999118737984
+      ],
+      "center_body_m": [
+        0.07323269834250634,
+        -0.002738765021442176,
+        -0.33799061018254517
+      ],
+      "rotation_body_from_proxy": [
+        [
+          -2.311314137227193e-06,
+          0.9999999999372386,
+          -1.0962717738361331e-05
+        ],
+        [
+          0.9999999999940585,
+          2.3112860990320736e-06,
+          -2.5576076542059365e-06
+        ],
+        [
+          -2.557582316068301e-06,
+          -1.0962723649730922e-05,
+          -0.999999999936639
+        ]
+      ],
+      "areas_m2": [
+        0.006635944985535232,
+        0.0033627282290649946,
+        0.0052078990796838595
+      ],
+      "selection_reason": "One union AABB per arm body; collision preferred, visual fallback only without collision."
+    },
+    {
+      "id": "link6",
+      "mass_owner": "link6",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_union_body_aabb",
+      "sources": [
+        {
+          "geom_id": 45,
+          "geom_name": "",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.025,
+        0.08,
+        0.015
+      ],
+      "center_body_m": [
+        0.2120141302208989,
+        -0.0024536793372074857,
+        -0.3440601313466173
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0962718983487107e-05,
+          -1.6887297133964768e-06,
+          0.9999999999384837
+        ],
+        [
+          -1.4423923457311495e-06,
+          -0.9999999999975342,
+          -1.6887139009542458e-06
+        ],
+        [
+          0.9999999999388693,
+          -1.442373832746479e-06,
+          -1.0962721419316424e-05
+        ]
+      ],
+      "areas_m2": [
+        0.0037699111843077517,
+        0.0011780972450961724,
+        0.006283185307179587
+      ],
+      "selection_reason": "One union AABB per arm body; collision preferred, visual fallback only without collision."
+    },
+    {
+      "id": "left",
+      "mass_owner": "left",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_union_body_aabb",
+      "sources": [
+        {
+          "geom_id": 48,
+          "geom_name": "left_finger_pad",
+          "mesh_name": null
+        },
+        {
+          "geom_id": 49,
+          "geom_name": "",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.015,
+        0.002,
+        0.03900000000000001
+      ],
+      "center_body_m": [
+        0.2680141268399946,
+        -0.004453773905181008,
+        -0.34406074814376447
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0962718983487107e-05,
+          -1.6887297133964768e-06,
+          0.9999999999384837
+        ],
+        [
+          -1.4423923457311495e-06,
+          -0.9999999999975342,
+          -1.6887139009542458e-06
+        ],
+        [
+          0.9999999999388693,
+          -1.442373832746479e-06,
+          -1.0962721419316424e-05
+        ]
+      ],
+      "areas_m2": [
+        0.00024504422698000395,
+        0.0018378317023500293,
+        9.42477796076938e-05
+      ],
+      "selection_reason": "One union AABB per arm body; collision preferred, visual fallback only without collision."
+    },
+    {
+      "id": "right",
+      "mass_owner": "right",
+      "mass_note": "Owner mass is recorded once in bodies; proxy adds no mass.",
+      "method": "collision_union_body_aabb",
+      "sources": [
+        {
+          "geom_id": 51,
+          "geom_name": "right_finger_pad",
+          "mesh_name": null
+        },
+        {
+          "geom_id": 52,
+          "geom_name": "",
+          "mesh_name": null
+        }
+      ],
+      "semiaxes_m": [
+        0.015,
+        0.002,
+        0.03900000000000001
+      ],
+      "center_body_m": [
+        0.26801413359491344,
+        -0.0004537739051908708,
+        -0.3440607423742691
+      ],
+      "rotation_body_from_proxy": [
+        [
+          1.0962718983487107e-05,
+          -1.6887297133964768e-06,
+          0.9999999999384837
+        ],
+        [
+          -1.4423923457311495e-06,
+          -0.9999999999975342,
+          -1.6887139009542458e-06
+        ],
+        [
+          0.9999999999388693,
+          -1.442373832746479e-06,
+          -1.0962721419316424e-05
+        ]
+      ],
+      "areas_m2": [
+        0.00024504422698000395,
+        0.0018378317023500293,
+        9.42477796076938e-05
+      ],
+      "selection_reason": "One union AABB per arm body; collision preferred, visual fallback only without collision."
+    }
+  ],
+  "initial_joints": {
+    "main_joint": {
+      "qpos": [
+        0.0,
+        0.0,
+        0.48,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "type": 0
+    },
+    "rotor_joint_a00": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "rotor_joint_a10": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "rotor_joint_a20": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "rotor_joint_a30": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint1": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint2": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint3": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint4": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint5": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint6": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "endleft": {
+      "qpos": [
+        0.0
+      ],
+      "type": 2
+    },
+    "endright": {
+      "qpos": [
+        0.0
+      ],
+      "type": 2
+    }
+  },
+  "vehicle_sha256": "f580fecba3b44ee518c7ef8394cc69a90d137f3d0edd1ecc8af610d9c9a84ee2",
+  "geometry_sha256": "5f18a0e51921d8a271e45ae276ba4de8ed4b442d3fc7db994fcc578f3c9bd535",
+  "dependency_sha256": "1a5216b82c65cefcec4b87512fd25e30c329a55188540b4602e4c4deaa11dac2",
+  "assumptions_file_sha256": "b86ab3faf110609b7585285b05f4ccfd15f68c71e63c677c9ed4761ce3692960",
+  "reference_sha256": "613e8c2840f524ec5caf742a7d03a00dff930fc006669612953d1abc897f5e1a"
+}

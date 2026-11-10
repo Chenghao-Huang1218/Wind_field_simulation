@@ -1,0 +1,303 @@
+{
+  "kind": "x4_950_wind_increment_xy_v1",
+  "feature_version": "body_air_velocity_omega_6d_v1",
+  "architecture": "fixed nonnegative quadratic prior + 6-64-64-3 Tanh residual",
+  "normalization": {
+    "input_mean": [
+      -0.00031583384111153286,
+      0.012204578208601914,
+      0.013351156595469505,
+      -0.00737609829802946,
+      -0.0022483567365868657,
+      0.00735152470788171
+    ],
+    "input_std": [
+      1.4855926036612688,
+      1.482091639339204,
+      0.6774149819698096,
+      0.6492767511299483,
+      0.6369547857392512,
+      0.6268629439645248
+    ],
+    "full_scale": [
+      0.05,
+      0.061332693634785815,
+      0.05
+    ],
+    "delta_scale": [
+      0.05365797698427015,
+      0.05348280505030175,
+      0.05
+    ]
+  },
+  "prior_coefficients": [
+    0.01015143427705014,
+    0.014468320660912146,
+    0.018853661517661446
+  ],
+  "prior_source": "nominal \u00b1unit-axis least squares; not measured",
+  "prior_fit_samples": {
+    "air_velocity_body_m_s": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        -1.0,
+        -0.0,
+        -0.0
+      ],
+      [
+        -0.0,
+        -1.0,
+        -0.0
+      ],
+      [
+        -0.0,
+        -0.0,
+        -1.0
+      ]
+    ],
+    "omega_body_rad_s": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "full_acceleration_body_m_s2": [
+      [
+        -0.01015143427705014,
+        1.2462946501386337e-09,
+        7.934762027015472e-05
+      ],
+      [
+        -3.7075332110352702e-09,
+        -0.014468320660912146,
+        8.613185816659593e-09
+      ],
+      [
+        0.0005255018611801381,
+        -8.505370825004467e-09,
+        -0.018853661517661446
+      ],
+      [
+        0.01015143427705014,
+        -1.2462946501386337e-09,
+        -7.934762027015472e-05
+      ],
+      [
+        3.7075332110352702e-09,
+        0.014468320660912146,
+        -8.613185816659593e-09
+      ],
+      [
+        -0.0005255018611801381,
+        8.505370825004467e-09,
+        0.018853661517661446
+      ]
+    ]
+  },
+  "reference_sha256": "613e8c2840f524ec5caf742a7d03a00dff930fc006669612953d1abc897f5e1a",
+  "xml_mesh_dependencies": {
+    "xml_sha256": {
+      "src/wind_field_simulation/assets/robot_models/airbot_play/airbot_play.xml": "8b2ef8a853969ac063762e411bd0b5e5a70c23f9d21ca1d317836d826595956d",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/airbot_play_appendix.xml": "e0cf2bec6d363e6da84a4cf1f0bfddc4fca4ff3035c879aa4bb5d04e08b90ce8",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/airbot_play_control.xml": "9bc045389358c231d43ff7c14cef310c036388cd0ee189d564e036156224af1a",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/airbot_play_dependencies.xml": "2f5b9346e1d363226b4916321016b9d22fd71f3b8912d8bf8aebd322065450ed",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/airbot_play_sensor.xml": "befd07eafc29db0b5ca917e1c6d198f0c717b2d9cbda98d96a4e84e82fd580a6",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/quadrotor_950.xml": "bbbd3d251b816a0d07504b09c9f5f80b31d9b0812840c4d1173d2451430f78b7",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/quadrotor_950_control.xml": "b0377f309b4e3a3b4faf6309352f9e27ab993af10d3982df6937ad537195b7d0",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/quadrotor_950_dependencies.xml": "08dc1a18a2cdcdcdbc26c25a33ed4d1eb29a7b57f3a9e10026925e02e9bb8d89",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/quadrotor_950_sensor.xml": "aee0a15233516dc3395d8f09adec95a9f0da8032a6bb0c4576137e249e48d2f9",
+      "src/wind_field_simulation/assets/robot_models/scenes/ground.xml": "892768a6a5d5a4885daf853305c2cfbf84f9ca63cb6ff4f591d65b7b1bf8c66b",
+      "src/wind_field_simulation/assets/scenes/default/robot_quadrotor_950_with_arm.xml": "fe4171409c7230e1d888ad1ac3f5f2997b5160e6bfd2669bd68e571e3cec721c"
+    },
+    "mesh_sha256": {
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/arm_base_0.obj": "a8f4b3bd86b7b42f484f80b0d8abaf05bc32c3e769874539cd66db045291f2bc",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/arm_base_1.obj": "ef0ef26d2cf82e2fa82f8147ef47d37bdc76957e0c0c227a63d15cf38bb18d8d",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/left.obj": "ce1568a90e985b0c84964329998ce5155848d084ce203c5bb51d3bfa9cc3acd6",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link1.obj": "d448e9742660b9f96f3d9510f23f94c8079aa52a0697aa21756094fc18688c2a",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link2_0.obj": "fd147d883a2af6484ca8c4060eaf2d2a03d70e89598f367d143e15298b3a0717",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link2_1.obj": "b148bceb4e4277a7ce753ef904103df43302789f9b64d386fd24ded0232871b8",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link3_0.obj": "125db0b6739af668565a20dcfff16f9aa8202388b83e419d75520a7cf1d58edd",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link3_1.obj": "962261b0c1713e575cbcf3dfb4833b589bb0c35f2ffd395398e8e297d9126c1b",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link4.obj": "890ae19b7f80cd60ed44611e8be4da97f631acb44f5b9fee18668890c2c2603f",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link5_0.obj": "d1415fee7d55699d3c7650633e1e5f8d97d8d44396b26e1b9758706df207b85b",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link5_1.obj": "364754f401e71b72ede3148e49385a7571c5ad07d230ab9c6295d1a85c2dd010",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/link6.obj": "82b583ceb042427ed87afa714177a7377c17487689f9af5a03fd386f724b83d4",
+      "src/wind_field_simulation/assets/robot_models/airbot_play/meshes/right.obj": "91ac8322536db80bfd2db398e30d23dd1f15360f6b8158ad02fb62fb8cfcc709",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/meshes/quadrotor_950.stl": "9290469d593292a58d838555c8d5a84847b2a09b9c563b3c2ae442d51e32f568",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/meshes/rotor_link_1.STL": "4cdf6d923debd2511011af5acd31b28fe8fb109d4e43e4cb04c9668bdb40c64e",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/meshes/rotor_link_2.STL": "4cdf6d923debd2511011af5acd31b28fe8fb109d4e43e4cb04c9668bdb40c64e",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/meshes/rotor_link_3.STL": "4cdf6d923debd2511011af5acd31b28fe8fb109d4e43e4cb04c9668bdb40c64e",
+      "src/wind_field_simulation/assets/robot_models/quadrotor_950/meshes/rotor_link_4.STL": "4cdf6d923debd2511011af5acd31b28fe8fb109d4e43e4cb04c9668bdb40c64e"
+    }
+  },
+  "dataset_manifest_sha256": "dc84c9c2ed396644602d7859f94ae8e7ea7004f234889b1398da79ed50604ea6",
+  "dataset_archive_sha256": "0d31bdc0dd6f117ea035b5437c8a3628bdf6570624781082feaf91e48976eeb0",
+  "mass_total_kg": 8.000399999999999,
+  "arm_pose": {
+    "main_joint": {
+      "qpos": [
+        0.0,
+        0.0,
+        0.48,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "type": 0
+    },
+    "rotor_joint_a00": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "rotor_joint_a10": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "rotor_joint_a20": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "rotor_joint_a30": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint1": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint2": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint3": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint4": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint5": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "joint6": {
+      "qpos": [
+        0.0
+      ],
+      "type": 3
+    },
+    "endleft": {
+      "qpos": [
+        0.0
+      ],
+      "type": 2
+    },
+    "endright": {
+      "qpos": [
+        0.0
+      ],
+      "type": 2
+    }
+  },
+  "coordinates_units": "B FLU at root O; W ENU-like; WXYZ B\u2192W; m/s, rad/s, m/s\u00b2",
+  "wind_domain": "horizontal resultant 0\u20133 m/s; fixed initial arm geometry",
+  "training_config": {
+    "seed": 42,
+    "epochs": 200,
+    "batch_size": 1024,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "patience": 20,
+    "lr_patience": 5,
+    "lr_factor": 0.5,
+    "gradient_clip": 1.0,
+    "positive_work_weight": 0.01,
+    "torch_threads": 1
+  },
+  "sampling_seed": 7,
+  "best_validation_loss": 0.0003011801454704255,
+  "best_epoch": 200,
+  "epochs_executed": 200,
+  "training_seconds": 1.8491245189798065,
+  "device": "cpu",
+  "dtype": "float32",
+  "deterministic_algorithms": true,
+  "environment": {
+    "python": "3.12.13",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.4",
+    "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.39"
+  },
+  "source_sha256": {
+    "src/wind_field_simulation/training/sampling.py": "5efaa72f6961337b9472482219e9b92fb4f035c7dee81ae2d2726199df302c87",
+    "src/wind_field_simulation/training/dataset_v1.py": "3e8618ff7a5a9fd5804e775f421464ae912449c28a5801932e78b98c87ea4174",
+    "src/wind_field_simulation/training/train_v1.py": "f47bc671f272ebdecb81a4fef2647eea84042be0e5c5b00c3f03ffba20b1d056",
+    "src/wind_field_simulation/training/xml_parameters.py": "51e3f1d4f6c0021f7e4e751cdf0dff0c47e5fc05eb5f7a538ab2fc250db54a71",
+    "src/wind_field_simulation/training/__init__.py": "1a731d4be42e7570cbd1aa340a81b41f11e8649ba4ed8b03f3f1c6ff886f6b32",
+    "src/wind_field_simulation/training/reference_aerodynamics.py": "06b39cf649961714a919a2f63c32bb9c4a8e30f30b6d378c60c4c1ab305208cb",
+    "src/wind_field_simulation/training/evaluate_v1.py": "50f5a0b885ad65b0e363c7692a5d51ba4054bab615159371a6e47044fb7b2089",
+    "src/wind_field_simulation/training/model_v1.py": "f54d06d0e3d8e3bf025ff6e62a9cd55c6a0d190217f5317cf4070b18014eb78a"
+  },
+  "status": "pilot only; no runtime switch or true aerodynamic accuracy claim",
+  "checkpoint_sha256": "d7fb92c96b275245047e76cfdb4317d4ca72c5ef81529c854f686e221ad5996b"
+}

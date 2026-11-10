@@ -1,0 +1,29 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+build/
+dist/
+MUJOCO_LOG.TXT
+outputs/*
+!outputs/.gitkeep
+runtime/px4/*
+!runtime/px4/README.md
+!runtime/px4/bin/
+!runtime/px4/bin/**
+!runtime/px4/etc/
+!runtime/px4/etc/**
+third_party/PX4-Autopilot/build/
+# First GitHub version ships the verified SITL runtime, not the large source tree.
+/third_party/PX4-Autopilot/
+
+# Local tool state and credentials are not publication materials.
+/.codex/
+/.agents/
+/.aws/
+/.env
+/.env.*
+!/.env.example
+/.netrc
+/.git-credentials

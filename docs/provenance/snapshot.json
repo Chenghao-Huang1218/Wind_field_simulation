@@ -1,0 +1,29 @@
+{
+  "snapshot_date": "2026-11-10",
+  "px4_original_commit": "d421b08e425b8fec06093fb7025a648df665db26",
+  "px4_original_describe": "v1.17.0-alpha1-195-gd421b08e42-dirty",
+  "original_script_sha256": "1fe0c293316217b748a0d28d888efbfaa0261695f5bde79b5bd816fb3b1e02e2",
+  "source_exclusions": [
+    ".agents",
+    ".aws",
+    ".codex",
+    ".git",
+    ".pytest_cache",
+    ".superpowers",
+    ".vscode",
+    "MUJOCO_LOG.TXT",
+    "build",
+    "dev_huang"
+  ],
+  "git_metadata": "Original history omitted; prepare_px4_snapshot.py creates local snapshot metadata for PX4 build compatibility.",
+  "runtime": "Copied existing build; no new compilation or SITL launch performed.",
+  "python_reference": {
+    "python": "3.12",
+    "mujoco": "3.6.0",
+    "numpy": "2.4.4",
+    "torch": "2.11.0+cu128",
+    "matplotlib": "3.10.9",
+    "pymavlink": "2.4.47 (bundled source)",
+    "rotorpy_parameter_source": "2.1.2"
+  }
+}

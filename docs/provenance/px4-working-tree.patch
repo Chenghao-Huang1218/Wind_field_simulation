@@ -1,0 +1,281 @@
+diff --git a/CODE_OF_CONDUCT.md b/CODE_OF_CONDUCT.md
+deleted file mode 100644
+index 34f16ba21e..0000000000
+--- a/CODE_OF_CONDUCT.md
++++ /dev/null
+@@ -1,46 +0,0 @@
+-# Contributor Covenant Code of Conduct
+-
+-## Our Pledge
+-
+-In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+-
+-## Our Standards
+-
+-Examples of behavior that contributes to creating a positive environment include:
+-
+-* Using welcoming and inclusive language
+-* Being respectful of differing viewpoints and experiences
+-* Gracefully accepting constructive criticism
+-* Focusing on what is best for the community
+-* Showing empathy towards other community members
+-
+-Examples of unacceptable behavior by participants include:
+-
+-* The use of sexualized language or imagery and unwelcome sexual attention or advances
+-* Trolling, insulting/derogatory comments, and personal or political attacks
+-* Public or private harassment
+-* Publishing others' private information, such as a physical or electronic address, without explicit permission
+-* Other conduct which could reasonably be considered inappropriate in a professional setting
+-
+-## Our Responsibilities
+-
+-Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.
+-
+-Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful.
+-
+-## Scope
+-
+-This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event. Representation of a project may be further defined and clarified by project maintainers.
+-
+-## Enforcement
+-
+-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at lorenz@px4.io. The project team will review and investigate all complaints, and will respond in a way that it deems appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
+-
+-Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.
+-
+-## Attribution
+-
+-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4, available at [http://contributor-covenant.org/version/1/4][version]
+-
+-[homepage]: http://contributor-covenant.org
+-[version]: http://contributor-covenant.org/version/1/4/
+diff --git a/SECURITY.md b/SECURITY.md
+deleted file mode 100644
+index ed99e771bb..0000000000
+--- a/SECURITY.md
++++ /dev/null
+@@ -1,25 +0,0 @@
+-# Security Policy
+-
+-## Supported Versions
+-
+-The following is a list of versions the development team is currently supporting.
+-
+-| Version | Supported          |
+-| ------- | ------------------ |
+-| 1.4.x   | :white_check_mark: |
+-| 1.3.3   | :white_check_mark: |
+-| < 1.3   | :x:                |
+-
+-## Reporting a Vulnerability
+-
+-We currently only receive security vulnerability reports through GitHub.
+-
+-To begin a report, please go to the top-level repository, for example, PX4/PX4-Autopilot,
+-and click on the Security tab. If you are on mobile, click the ... dropdown menu, and then click Security.
+-
+-Click Report a Vulnerability to open the advisory form. Fill in the advisory details form.
+-Make sure your title is descriptive, and the development team can find all of the relevant details needed
+-to verify on the description box. We recommend you add as much data as possible. We welcome logs,
+-screenshots, photos, and videos, anything that can help us verify and identify the issues being reported.
+-
+-At the bottom of the form, click Submit report. The maintainer team will be notified and will get back to you ASAP.
+diff --git a/Tools/simulation/gz b/Tools/simulation/gz
+--- a/Tools/simulation/gz
++++ b/Tools/simulation/gz
+@@ -1 +1 @@
+-Subproject commit 6d5b110124d6d9f7544d3ddba5d3d6067181c8ff
++Subproject commit 6d5b110124d6d9f7544d3ddba5d3d6067181c8ff-dirty
+diff --git a/src/modules/ekf2/EKF/aid_sources/magnetometer/mag_control.cpp b/src/modules/ekf2/EKF/aid_sources/magnetometer/mag_control.cpp
+index d03229f7c2..907fb80391 100644
+--- a/src/modules/ekf2/EKF/aid_sources/magnetometer/mag_control.cpp
++++ b/src/modules/ekf2/EKF/aid_sources/magnetometer/mag_control.cpp
+@@ -75,9 +75,11 @@ void Ekf::controlMagFusion(const imuSample &imu_sample)
+ 			_mag_lpf.reset(mag_sample.mag);
+ 			_mag_counter = 1;
+ 
+-			if (!_control_status.flags.in_air) {
++			if (!_control_status.flags.in_air && !_control_status.flags.ev_yaw) {
+ 				// Assume that a reset on the ground is caused by a change in mag calibration
+-				// Clear alignment to force a clean reset
++				// Clear alignment to force a clean reset, unless external vision owns yaw.
++				// Active EV yaw does not reinitialise yaw_align; clearing it here would
++				// permanently stop NED EV position fusion after a landing calibration.
+ 				_control_status.flags.yaw_align = false;
+ 			}
+ 
+diff --git a/src/modules/ekf2/test/test_EKF_externalVision.cpp b/src/modules/ekf2/test/test_EKF_externalVision.cpp
+index f87151eeaf..f5fc81aa29 100644
+--- a/src/modules/ekf2/test/test_EKF_externalVision.cpp
++++ b/src/modules/ekf2/test/test_EKF_externalVision.cpp
+@@ -109,6 +109,49 @@ TEST_F(EkfExternalVisionTest, checkVisionFusionLogic)
+ 	EXPECT_FALSE(_ekf->isGlobalHorizontalPositionValid());
+ }
+ 
++TEST_F(EkfExternalVisionTest, nedVisionSurvivesRepeatedLandingMagCalibration)
++{
++	_sensor_simulator.runSeconds(_tilt_align_time);
++	_ekf_wrapper.enableExternalVisionPositionFusion();
++	_ekf_wrapper.enableExternalVisionHeadingFusion();
++	_sensor_simulator._vio.setPositionFrameToLocalNED();
++	_sensor_simulator.startExternalVision();
++	_sensor_simulator.runSeconds(3);
++	ASSERT_TRUE(_ekf->control_status_flags().yaw_align);
++	ASSERT_TRUE(_ekf_wrapper.isIntendingExternalVisionPositionFusion());
++	ASSERT_TRUE(_ekf_wrapper.isIntendingExternalVisionHeadingFusion());
++
++	for (int flight = 0; flight < 3; ++flight) {
++		SCOPED_TRACE(flight);
++		_ekf->set_vehicle_at_rest(false);
++		_ekf->set_in_air_status(true);
++		_sensor_simulator.runSeconds(2);
++		_ekf->set_in_air_status(false);
++		_ekf->set_vehicle_at_rest(true);
++
++		// EKF2 marks the next mag sample reset when landing/disarming applies
++		// learned calibration. Inject that event through the public sensor API.
++		_sensor_simulator._mag.stop();
++		_sensor_simulator.runMicroseconds(20000);
++		_ekf->setMagData(magSample{_sensor_simulator.getTime(), Vector3f(0.2f, 0.f, 0.4f), true});
++		_sensor_simulator.runMicroseconds(200000);
++		_sensor_simulator._mag.start();
++		_sensor_simulator.runSeconds(8); // Exceed the horizontal aiding timeout.
++
++		EXPECT_TRUE(_ekf->control_status_flags().yaw_align);
++		EXPECT_TRUE(_ekf_wrapper.isIntendingExternalVisionHeadingFusion());
++		EXPECT_TRUE(_ekf_wrapper.isIntendingExternalVisionPositionFusion());
++		EXPECT_TRUE(_ekf->isLocalHorizontalPositionValid());
++	}
++
++	// Preserving alignment must not keep position valid when EV actually stops.
++	_sensor_simulator.stopExternalVision();
++	_sensor_simulator.runSeconds(12);
++	EXPECT_FALSE(_ekf_wrapper.isIntendingExternalVisionHeadingFusion());
++	EXPECT_FALSE(_ekf_wrapper.isIntendingExternalVisionPositionFusion());
++	EXPECT_FALSE(_ekf->isLocalHorizontalPositionValid());
++}
++
+ TEST_F(EkfExternalVisionTest, visionVelocityReset)
+ {
+ 	_sensor_simulator.runSeconds(_tilt_align_time);
+diff --git a/src/modules/simulation/simulator_mavlink/SimulatorMavlink.cpp b/src/modules/simulation/simulator_mavlink/SimulatorMavlink.cpp
+index bc51eb9322..abe8585ba3 100644
+--- a/src/modules/simulation/simulator_mavlink/SimulatorMavlink.cpp
++++ b/src/modules/simulation/simulator_mavlink/SimulatorMavlink.cpp
+@@ -57,6 +57,8 @@
+ #include <arpa/inet.h>
+ 
+ #include <limits>
++#include <cstdlib>
++#include <cstring>
+ 
+ static int _fd;
+ static unsigned char _buf[2048];
+@@ -91,6 +93,10 @@ static constexpr vehicle_odometry_s vehicle_odometry_empty {
+ SimulatorMavlink::SimulatorMavlink() :
+ 	ModuleParams(nullptr)
+ {
++	const char *float_feedback = std::getenv("PX4_SIM_FLOAT_STATE");
++	_float_feedback_enabled = float_feedback && std::strcmp(float_feedback, "1") == 0;
++	PX4_INFO("local feedback: %s", _float_feedback_enabled ? "paired float NED" : "legacy HIL integer");
++
+ 	for (int i = 0; i < actuator_outputs_s::NUM_ACTUATOR_OUTPUTS; ++i) {
+ 		char param_name[17];
+ 		snprintf(param_name, sizeof(param_name), "%s_%s%d", "PWM_MAIN", "FUNC", i + 1);
+@@ -387,6 +393,16 @@ void SimulatorMavlink::handle_message(const mavlink_message_t *msg)
+ 		handle_message_hil_state_quaternion(msg);
+ 		break;
+ 
++	case MAVLINK_MSG_ID_LOCAL_POSITION_NED:
++		if (_float_feedback_enabled) {
++			mavlink_local_position_ned_t state{};
++			mavlink_msg_local_position_ned_decode(msg, &state);
++			_float_feedback.update(state.time_boot_ms, msg->sysid, msg->compid, hrt_absolute_time(),
++					       {{state.x, state.y, state.z, state.vx, state.vy, state.vz}});
++		}
++
++		break;
++
+ 	case MAVLINK_MSG_ID_RAW_RPM:
+ 		mavlink_raw_rpm_t rpm_mavlink;
+ 		mavlink_msg_raw_rpm_decode(msg, &rpm_mavlink);
+@@ -603,6 +619,15 @@ void SimulatorMavlink::handle_message_hil_state_quaternion(const mavlink_message
+ 	/* local position */
+ 	vehicle_local_position_s hil_lpos{};
+ 	{
++		std::array<float, 6> float_state{};
++
++		if (_float_feedback_enabled && !_float_feedback.consume(static_cast<uint32_t>(hil_state.time_usec / 1000),
++				msg->sysid, msg->compid, timestamp, float_state)) {
++			// Do not publish quantized local state when the selected float sample
++			// is absent, stale, invalid or from another sender. No old-result reuse.
++			return;
++		}
++
+ 		hil_lpos.timestamp = timestamp;
+ 
+ 		double lat = hil_state.lat * 1e-7;
+@@ -643,6 +668,23 @@ void SimulatorMavlink::handle_message_hil_state_quaternion(const mavlink_message
+ 		hil_lpos.hagl_max_xy = std::numeric_limits<float>::infinity();
+ 
+ 		// Publish simulator truth to both ground-truth and controller-facing topics.
++		if (_float_feedback_enabled) {
++			// The sender already uses the SAME local origin as its setpoints.
++			// Never rebase float coordinates to the first received vehicle pose.
++			hil_lpos.x = float_state[0];
++			hil_lpos.y = float_state[1];
++			hil_lpos.z = float_state[2];
++			hil_lpos.vx = float_state[3];
++			hil_lpos.vy = float_state[4];
++			hil_lpos.vz = float_state[5];
++			hil_lpos.xy_global = false;
++			hil_lpos.z_global = false;
++			hil_lpos.ref_lat = NAN;
++			hil_lpos.ref_lon = NAN;
++			hil_lpos.ref_alt = NAN;
++			hil_lpos.ref_timestamp = 0;
++		}
++
+ 		_lpos_ground_truth_pub.publish(hil_lpos);
+ 		_vehicle_local_position_pub.publish(hil_lpos);
+ 	}
+@@ -1604,6 +1646,17 @@ int SimulatorMavlink::publish_distance_topic(const mavlink_distance_sensor_t *di
+ 
+ int SimulatorMavlink::start(int argc, char *argv[])
+ {
++	const char *float_feedback = std::getenv("PX4_SIM_FLOAT_STATE");
++
++	if (float_feedback && std::strcmp(float_feedback, "1") == 0) {
++		int32_t ekf_enabled = 1;
++
++		if (param_get(param_find("EKF2_EN"), &ekf_enabled) != 0 || ekf_enabled != 0) {
++			PX4_ERR("float simulation feedback requires EKF2_EN=0; refusing competing state publishers");
++			return PX4_ERROR;
++		}
++	}
++
+ 	_instance = new SimulatorMavlink();
+ 
+ 	if (_instance) {
+diff --git a/src/modules/simulation/simulator_mavlink/SimulatorMavlink.hpp b/src/modules/simulation/simulator_mavlink/SimulatorMavlink.hpp
+index 1042004bd0..a62320fea6 100644
+--- a/src/modules/simulation/simulator_mavlink/SimulatorMavlink.hpp
++++ b/src/modules/simulation/simulator_mavlink/SimulatorMavlink.hpp
+@@ -72,6 +72,7 @@
+ #include <uORB/topics/vehicle_attitude.h>
+ #include <uORB/topics/vehicle_global_position.h>
+ #include <uORB/topics/vehicle_local_position.h>
++#include "LocalPositionFeedback.hpp"
+ #include <uORB/topics/vehicle_odometry.h>
+ #include <uORB/topics/vehicle_status.h>
+ #include <uORB/topics/vehicle_command.h>
+@@ -275,6 +276,8 @@ private:
+ 	uORB::Subscription _battery_status_sub{ORB_ID(battery_status)};
+ 	// hil map_ref data
+ 	MapProjection _global_local_proj_ref{};
++	bool _float_feedback_enabled{false};
++	LocalPositionFeedback _float_feedback{};
+ 	float _global_local_alt0{NAN};
+ 
+ 	vehicle_status_s _vehicle_status{};

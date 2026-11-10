@@ -1,0 +1,26 @@
+{
+  "scope": "real checkpoint through production adapter/app; no PX4 or flight",
+  "checkpoint_sha256": "d7fb92c96b275245047e76cfdb4317d4ca72c5ef81529c854f686e221ad5996b",
+  "dataset_manifest_sha256": "dc84c9c2ed396644602d7859f94ae8e7ea7004f234889b1398da79ed50604ea6",
+  "holdout_pairs": 500,
+  "holdout_error": {
+    "count": 500,
+    "axis_rmse_m_s2": [
+      0.0006554636092060785,
+      0.0006173253034701606
+    ],
+    "vector_error_mean_m_s2": 0.0005739857913806704,
+    "vector_error_p95_m_s2": 0.0017169889872776967,
+    "vector_error_max_m_s2": 0.00628674141399181,
+    "reference_nonzero_vector_rms_m_s2": 0.07403726384353244,
+    "normalized_nonzero_vector_rmse": 0.012819310048597347
+  },
+  "raw_z_max_abs_m_s2": 0.07339590219071666,
+  "actual_force_z_max_abs_n": 0.0,
+  "zero_wind_states_checked": 3000,
+  "zero_wind_raw_max_abs_m_s2": 0.0,
+  "xy_ema_force_pipeline_max_error_n": 0.0,
+  "zero_apply_retains_xy_ema_decay": true,
+  "wind_off_resets_force_and_filter": true,
+  "check_seconds": 0.9046435480122454
+}

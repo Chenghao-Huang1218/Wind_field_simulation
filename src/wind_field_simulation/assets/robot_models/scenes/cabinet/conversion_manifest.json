@@ -1,0 +1,601 @@
+{
+  "source": "E:\\博士科研\\空中机械手\\ambench-main\\source\\ambench\\ambench\\assets\\objects\\cabinet.usd",
+  "units": "meters",
+  "up_axis": "Z",
+  "joint_range": [
+    -0.6000000238418579,
+    0.0
+  ],
+  "joint_axis": [
+    1.3435885659607294e-07,
+    0.9999999999999909,
+    0.0
+  ],
+  "unique_geometries": 36,
+  "removed_duplicate_visuals": 36,
+  "geometries": [
+    {
+      "name": "cabinet_geom_00",
+      "source": "/hexa_scorpion_2dofarm_cabinet/drawer/drawer/visuals/_geom_0/_geom_0",
+      "moving": false,
+      "attributes": {
+        "pos": "0.8999999762 0 0.5199999996",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.3000000119 0.5799999833 0.009999999776",
+        "name": "cabinet_geom_00",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_01",
+      "source": "/hexa_scorpion_2dofarm_cabinet/drawer/drawer/visuals/_geom_1/_geom_1",
+      "moving": false,
+      "attributes": {
+        "pos": "1.189999968 0 0.650000006",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.009999999776 0.5799999833 0.1400000006",
+        "name": "cabinet_geom_01",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_02",
+      "source": "/hexa_scorpion_2dofarm_cabinet/drawer/drawer/visuals/_geom_2/_geom_2",
+      "moving": false,
+      "attributes": {
+        "pos": "0.6099999845 0 0.650000006",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.009999999776 0.5799999833 0.1400000006",
+        "name": "cabinet_geom_02",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_03",
+      "source": "/hexa_scorpion_2dofarm_cabinet/drawer/drawer/visuals/_geom_3/_geom_3",
+      "moving": false,
+      "attributes": {
+        "pos": "0.8999999762 0.5699999928 0.650000006",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.3000000119 0.009999999776 0.1400000006",
+        "name": "cabinet_geom_03",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_04",
+      "source": "/hexa_scorpion_2dofarm_cabinet/drawer/drawer/visuals/_geom_4/_geom_4",
+      "moving": false,
+      "attributes": {
+        "pos": "0.8999999762 -0.5699999928 0.650000006",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.3000000119 0.009999999776 0.1400000006",
+        "name": "cabinet_geom_04",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_05",
+      "source": "/hexa_scorpion_2dofarm_cabinet/drawer/drawer/visuals/_geom_10/_geom_10",
+      "moving": false,
+      "attributes": {
+        "pos": "0.5499999821 -0.200000003 0.7399999946",
+        "quat": "0.7071067933 0 0.7071067691 0",
+        "type": "cylinder",
+        "size": "0.01999999955 0.05000000075",
+        "name": "cabinet_geom_05",
+        "material": "cabinet_metal",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_06",
+      "source": "/hexa_scorpion_2dofarm_cabinet/drawer/drawer/visuals/_geom_11/_geom_11",
+      "moving": false,
+      "attributes": {
+        "pos": "0.5499999821 0.200000003 0.7399999946",
+        "quat": "0.7071067933 0 0.7071067691 0",
+        "type": "cylinder",
+        "size": "0.01999999955 0.05000000075",
+        "name": "cabinet_geom_06",
+        "material": "cabinet_metal",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_07",
+      "source": "/hexa_scorpion_2dofarm_cabinet/drawer/drawer/visuals/_geom_12/_geom_12",
+      "moving": false,
+      "attributes": {
+        "pos": "0.5099999905 0 0.7399999946",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.009999999776 0.200000003 0.009999999776",
+        "name": "cabinet_geom_07",
+        "material": "cabinet_metal",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_08",
+      "source": "/hexa_scorpion_2dofarm_cabinet/lateral_cabinet/lateral_cabinet/visuals/_geom_16/_geom_16",
+      "moving": false,
+      "attributes": {
+        "pos": "0.8999999762 0 0.810000021",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.3000000119 0.6000000238 0.009999999776",
+        "name": "cabinet_geom_08",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_09",
+      "source": "/hexa_scorpion_2dofarm_cabinet/lateral_cabinet/lateral_cabinet/visuals/_geom_17/_geom_17",
+      "moving": false,
+      "attributes": {
+        "pos": "1.189999968 0 0.9400000274",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.009999999776 0.6000000238 0.1400000006",
+        "name": "cabinet_geom_09",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_10",
+      "source": "/hexa_scorpion_2dofarm_cabinet/lateral_cabinet/left_door/visuals/_geom_20/_geom_20",
+      "moving": false,
+      "attributes": {
+        "pos": "0.6100000143 0.2899999917 0.950000057",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.009999999776 0.2800000012 0.1299999952",
+        "name": "cabinet_geom_10",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_11",
+      "source": "/hexa_scorpion_2dofarm_cabinet/lateral_cabinet/left_door/visuals/_geom_21/_geom_21",
+      "moving": false,
+      "attributes": {
+        "pos": "0.5500000156 0.08999998868 1.030000061",
+        "quat": "0.7071067933 0 0.7071067691 0",
+        "type": "cylinder",
+        "size": "0.01999999955 0.05000000075",
+        "name": "cabinet_geom_11",
+        "material": "cabinet_metal",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_12",
+      "source": "/hexa_scorpion_2dofarm_cabinet/lateral_cabinet/left_door/visuals/_geom_22/_geom_22",
+      "moving": false,
+      "attributes": {
+        "pos": "0.5500000156 0.08999998868 0.8500000536",
+        "quat": "0.7071067933 0 0.7071067691 0",
+        "type": "cylinder",
+        "size": "0.01999999955 0.05000000075",
+        "name": "cabinet_geom_12",
+        "material": "cabinet_metal",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_13",
+      "source": "/hexa_scorpion_2dofarm_cabinet/lateral_cabinet/left_door/visuals/_geom_23/_geom_23",
+      "moving": false,
+      "attributes": {
+        "pos": "0.5100000128 0.08999998868 0.9400000572",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.009999999776 0.009999999776 0.09000000358",
+        "name": "cabinet_geom_13",
+        "material": "cabinet_metal",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_14",
+      "source": "/hexa_scorpion_2dofarm_cabinet/lateral_cabinet/right_door/visuals/_geom_28/_geom_28",
+      "moving": false,
+      "attributes": {
+        "pos": "0.6100000143 -0.2899999917 0.950000057",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.009999999776 0.2800000012 0.1299999952",
+        "name": "cabinet_geom_14",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_15",
+      "source": "/hexa_scorpion_2dofarm_cabinet/lateral_cabinet/right_door/visuals/_geom_29/_geom_29",
+      "moving": false,
+      "attributes": {
+        "pos": "0.5500000156 -0.08999998868 1.030000061",
+        "quat": "0.7071067933 0 0.7071067691 0",
+        "type": "cylinder",
+        "size": "0.01999999955 0.05000000075",
+        "name": "cabinet_geom_15",
+        "material": "cabinet_metal",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_16",
+      "source": "/hexa_scorpion_2dofarm_cabinet/lateral_cabinet/right_door/visuals/_geom_30/_geom_30",
+      "moving": false,
+      "attributes": {
+        "pos": "0.5500000156 -0.08999998868 0.8500000536",
+        "quat": "0.7071067933 0 0.7071067691 0",
+        "type": "cylinder",
+        "size": "0.01999999955 0.05000000075",
+        "name": "cabinet_geom_16",
+        "material": "cabinet_metal",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_17",
+      "source": "/hexa_scorpion_2dofarm_cabinet/lateral_cabinet/right_door/visuals/_geom_31/_geom_31",
+      "moving": false,
+      "attributes": {
+        "pos": "0.5100000128 -0.08999998868 0.9400000572",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.009999999776 0.009999999776 0.09000000358",
+        "name": "cabinet_geom_17",
+        "material": "cabinet_metal",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_18",
+      "source": "/hexa_scorpion_2dofarm_cabinet/pulling_cabinet/pulling_cabinet/visuals/_geom_36/_geom_36",
+      "moving": false,
+      "attributes": {
+        "pos": "0.8999999762 0 1.100000042",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.3000000119 0.6000000238 0.009999999776",
+        "name": "cabinet_geom_18",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_19",
+      "source": "/hexa_scorpion_2dofarm_cabinet/pulling_cabinet/pulling_cabinet/visuals/_geom_37/_geom_37",
+      "moving": false,
+      "attributes": {
+        "pos": "1.189999968 0 1.230000049",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.009999999776 0.6000000238 0.1400000006",
+        "name": "cabinet_geom_19",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_20",
+      "source": "/hexa_scorpion_2dofarm_cabinet/pulling_cabinet/pulling_cabinet/visuals/_geom_38/_geom_38",
+      "moving": false,
+      "attributes": {
+        "pos": "0.6099999845 -0.2899999917 1.240000039",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.009999999776 0.2800000012 0.1299999952",
+        "name": "cabinet_geom_20",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_21",
+      "source": "/hexa_scorpion_2dofarm_cabinet/pulling_cabinet/pulling_door/visuals/_geom_42/_geom_42",
+      "moving": true,
+      "attributes": {
+        "pos": "0 0 0.009999999776",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.009999999776 0.2800000012 0.1299999952",
+        "name": "cabinet_geom_21",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_22",
+      "source": "/hexa_scorpion_2dofarm_cabinet/pulling_cabinet/pulling_door/visuals/_geom_43/_geom_43",
+      "moving": true,
+      "attributes": {
+        "pos": "-0.05999999866 0.200000003 0.09000000358",
+        "quat": "0.7071067933 0 0.7071067691 0",
+        "type": "cylinder",
+        "size": "0.01999999955 0.05000000075",
+        "name": "cabinet_geom_22",
+        "material": "cabinet_metal",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_23",
+      "source": "/hexa_scorpion_2dofarm_cabinet/pulling_cabinet/pulling_door/visuals/_geom_44/_geom_44",
+      "moving": true,
+      "attributes": {
+        "pos": "-0.05999999866 0.200000003 -0.09000000358",
+        "quat": "0.7071067933 0 0.7071067691 0",
+        "type": "cylinder",
+        "size": "0.01999999955 0.05000000075",
+        "name": "cabinet_geom_23",
+        "material": "cabinet_metal",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_24",
+      "source": "/hexa_scorpion_2dofarm_cabinet/pulling_cabinet/pulling_door/visuals/_geom_45/_geom_45",
+      "moving": true,
+      "attributes": {
+        "pos": "-0.1000000015 0.200000003 0",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.009999999776 0.009999999776 0.09000000358",
+        "name": "cabinet_geom_24",
+        "material": "cabinet_metal",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_25",
+      "source": "/hexa_scorpion_2dofarm_cabinet/pullup_drawer/pullup_drawer/visuals/_geom_50/_geom_50",
+      "moving": false,
+      "attributes": {
+        "pos": "0.8999999762 0 1.390000004",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.3000000119 0.6000000238 0.009999999776",
+        "name": "cabinet_geom_25",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_26",
+      "source": "/hexa_scorpion_2dofarm_cabinet/pullup_drawer/pullup_drawer/visuals/_geom_51/_geom_51",
+      "moving": false,
+      "attributes": {
+        "pos": "1.189999968 0 1.520000011",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.009999999776 0.6000000238 0.1400000006",
+        "name": "cabinet_geom_26",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_27",
+      "source": "/hexa_scorpion_2dofarm_cabinet/pullup_drawer/pullup_drawer/visuals/_geom_54/_geom_54",
+      "moving": false,
+      "attributes": {
+        "pos": "0.9099999759 0 1.670000017",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.2899999917 0.6000000238 0.009999999776",
+        "name": "cabinet_geom_27",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_28",
+      "source": "/hexa_scorpion_2dofarm_cabinet/pullup_drawer/pullup_door/visuals/_geom_56/_geom_56",
+      "moving": false,
+      "attributes": {
+        "pos": "0.6099999845 0 1.530000001",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.009999999776 0.5799999833 0.125",
+        "name": "cabinet_geom_28",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_29",
+      "source": "/hexa_scorpion_2dofarm_cabinet/pullup_drawer/pullup_door/visuals/_geom_57/_geom_57",
+      "moving": false,
+      "attributes": {
+        "pos": "0.5499999821 -0.200000003 1.450000003",
+        "quat": "0.7071067933 0 0.7071067691 0",
+        "type": "cylinder",
+        "size": "0.01999999955 0.05000000075",
+        "name": "cabinet_geom_29",
+        "material": "cabinet_metal",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_30",
+      "source": "/hexa_scorpion_2dofarm_cabinet/pullup_drawer/pullup_door/visuals/_geom_58/_geom_58",
+      "moving": false,
+      "attributes": {
+        "pos": "0.5499999821 0.200000003 1.450000003",
+        "quat": "0.7071067933 0 0.7071067691 0",
+        "type": "cylinder",
+        "size": "0.01999999955 0.05000000075",
+        "name": "cabinet_geom_30",
+        "material": "cabinet_metal",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_31",
+      "source": "/hexa_scorpion_2dofarm_cabinet/pullup_drawer/pullup_door/visuals/_geom_59/_geom_59",
+      "moving": false,
+      "attributes": {
+        "pos": "0.5099999905 0 1.450000003",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.009999999776 0.200000003 0.009999999776",
+        "name": "cabinet_geom_31",
+        "material": "cabinet_metal",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_32",
+      "source": "/hexa_scorpion_2dofarm_cabinet/worldBody/cabinet_base_a/visuals/cabinet_base_a/cabinet_base_a/cabinet_base_a",
+      "moving": false,
+      "attributes": {
+        "pos": "0.8999999762 0 0.25",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.3000000119 0.6000000238 0.25",
+        "name": "cabinet_geom_32",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_33",
+      "source": "/hexa_scorpion_2dofarm_cabinet/worldBody/cabinet_back/visuals/cabinet_back/cabinet_back/cabinet_back",
+      "moving": false,
+      "attributes": {
+        "pos": "1.210000038 0 0.8399999738",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.008999999613 0.6000000238 0.8399999738",
+        "name": "cabinet_geom_33",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_34",
+      "source": "/hexa_scorpion_2dofarm_cabinet/worldBody/__2/visuals/__2/__2/_",
+      "moving": false,
+      "attributes": {
+        "pos": "0.8999999762 0.5899999738 0.8399999738",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.3000000119 0.009999999776 0.8399999738",
+        "name": "cabinet_geom_34",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    },
+    {
+      "name": "cabinet_geom_35",
+      "source": "/hexa_scorpion_2dofarm_cabinet/worldBody/__3/visuals/__3/__3/_",
+      "moving": false,
+      "attributes": {
+        "pos": "0.8999999762 -0.5899999738 0.8399999738",
+        "quat": "1 0 0 0",
+        "type": "box",
+        "size": "0.3000000119 0.009999999776 0.8399999738",
+        "name": "cabinet_geom_35",
+        "material": "cabinet_wood",
+        "density": "1000",
+        "friction": "0.7 0.005 0.0001",
+        "condim": "3"
+      }
+    }
+  ],
+  "approximations": [
+    "Mass/inertia inferred from primitives with density 1000 kg/m^3; USD mass=0 means automatic, not zero physical mass.",
+    "Only task-active sliding door is movable; other doors/drawer fixed.",
+    "Task damping=10 retained; frictionloss=2 is a MuJoCo approximation, not an exact PhysX friction conversion.",
+    "Primitive visual geometry reused for collision; duplicate USD shapes deduplicated.",
+    "Textures retained, but MDL projected UV/material shading is approximated."
+  ]
+}

@@ -1,0 +1,414 @@
+{
+  "kind": "x4_950_pinn_pilot_evaluation_v1",
+  "status": "synthetic pilot diagnostic, not formal test or SITL",
+  "checkpoint_sha256": "d7fb92c96b275245047e76cfdb4317d4ca72c5ef81529c854f686e221ad5996b",
+  "dataset_manifest_sha256": "dc84c9c2ed396644602d7859f94ae8e7ea7004f234889b1398da79ed50604ea6",
+  "reference_sha256": "613e8c2840f524ec5caf742a7d03a00dff930fc006669612953d1abc897f5e1a",
+  "partitions": {
+    "train": {
+      "pinn": {
+        "count": 2000,
+        "axis_rmse_m_s2": [
+          0.0006007813328629078,
+          0.0006167518007414302
+        ],
+        "vector_error_mean_m_s2": 0.0006307339282477187,
+        "vector_error_p95_m_s2": 0.001712794614054506,
+        "vector_error_max_m_s2": 0.005568658264000367,
+        "reference_nonzero_vector_rms_m_s2": 0.08222485357449415,
+        "normalized_nonzero_vector_rmse": 0.011324446475895615
+      },
+      "zero_predictor": {
+        "count": 2000,
+        "axis_rmse_m_s2": [
+          0.05366254701996507,
+          0.053860219490842444
+        ],
+        "vector_error_mean_m_s2": 0.053116690120926055,
+        "vector_error_p95_m_s2": 0.1603955860073419,
+        "vector_error_max_m_s2": 0.36197924352327426,
+        "reference_nonzero_vector_rms_m_s2": 0.08222485357449415,
+        "normalized_nonzero_vector_rmse": 1.0
+      },
+      "full_body_axis_rmse_m_s2": [
+        0.0004174154138812192,
+        0.000613289297445061,
+        0.0005057743205241227
+      ]
+    },
+    "validation": {
+      "pinn": {
+        "count": 500,
+        "axis_rmse_m_s2": [
+          0.0006986249414092249,
+          0.0006618105136935857
+        ],
+        "vector_error_mean_m_s2": 0.0006185654295352022,
+        "vector_error_p95_m_s2": 0.0017677796079546872,
+        "vector_error_max_m_s2": 0.008338367224487544,
+        "reference_nonzero_vector_rms_m_s2": 0.08466520945356344,
+        "normalized_nonzero_vector_rmse": 0.01225653435117435
+      },
+      "zero_predictor": {
+        "count": 500,
+        "axis_rmse_m_s2": [
+          0.05216743955122455,
+          0.058678857057980406
+        ],
+        "vector_error_mean_m_s2": 0.0525395811349214,
+        "vector_error_p95_m_s2": 0.16743284734234523,
+        "vector_error_max_m_s2": 0.323173130895562,
+        "reference_nonzero_vector_rms_m_s2": 0.08466520945356344,
+        "normalized_nonzero_vector_rmse": 1.0
+      },
+      "full_body_axis_rmse_m_s2": [
+        0.0005624037905163513,
+        0.0006548269877434523,
+        0.0006690808908209285
+      ]
+    },
+    "pilot_holdout": {
+      "pinn": {
+        "count": 500,
+        "axis_rmse_m_s2": [
+          0.0006554639926778217,
+          0.0006173252541320936
+        ],
+        "vector_error_mean_m_s2": 0.0005739858104665876,
+        "vector_error_p95_m_s2": 0.0017170026674828175,
+        "vector_error_max_m_s2": 0.006286748215063534,
+        "reference_nonzero_vector_rms_m_s2": 0.07403726384353244,
+        "normalized_nonzero_vector_rmse": 0.01281931354141885
+      },
+      "zero_predictor": {
+        "count": 500,
+        "axis_rmse_m_s2": [
+          0.0525836877760467,
+          0.04656522923345687
+        ],
+        "vector_error_mean_m_s2": 0.043949853302599436,
+        "vector_error_p95_m_s2": 0.1446440237002031,
+        "vector_error_max_m_s2": 0.35034490325594936,
+        "reference_nonzero_vector_rms_m_s2": 0.07403726384353244,
+        "normalized_nonzero_vector_rmse": 1.0
+      },
+      "full_body_axis_rmse_m_s2": [
+        0.0004331357629055461,
+        0.00065914081843694,
+        0.0005479273563772187
+      ]
+    }
+  },
+  "heldout_groups": {
+    "wind_speed_m_s": {
+      "[0,1e-10)": {
+        "count": 50,
+        "axis_rmse_m_s2": [
+          0.0,
+          0.0
+        ],
+        "vector_error_mean_m_s2": 0.0,
+        "vector_error_p95_m_s2": 0.0,
+        "vector_error_max_m_s2": 0.0,
+        "reference_nonzero_vector_rms_m_s2": 0.0,
+        "normalized_nonzero_vector_rmse": null
+      },
+      "[1e-10,1)": {
+        "count": 200,
+        "axis_rmse_m_s2": [
+          0.0002809451121096356,
+          0.0002968744035490918
+        ],
+        "vector_error_mean_m_s2": 0.00028634868884951103,
+        "vector_error_p95_m_s2": 0.0007978349649496071,
+        "vector_error_max_m_s2": 0.0018125760125873456,
+        "reference_nonzero_vector_rms_m_s2": 0.01460881816174093,
+        "normalized_nonzero_vector_rmse": 0.027978671678269815
+      },
+      "[1,2)": {
+        "count": 110,
+        "axis_rmse_m_s2": [
+          0.0005943990836474808,
+          0.0005487932983244205
+        ],
+        "vector_error_mean_m_s2": 0.0006555293489276054,
+        "vector_error_p95_m_s2": 0.0017956611602300248,
+        "vector_error_max_m_s2": 0.0027383575770416873,
+        "reference_nonzero_vector_rms_m_s2": 0.05546724807055192,
+        "normalized_nonzero_vector_rmse": 0.014585221038380199
+      },
+      "[2,3.00000001)": {
+        "count": 140,
+        "axis_rmse_m_s2": [
+          0.0010696005992706223,
+          0.000999246870421718
+        ],
+        "vector_error_mean_m_s2": 0.0011258209934382503,
+        "vector_error_p95_m_s2": 0.0024571835265854965,
+        "vector_error_max_m_s2": 0.006286748215063534,
+        "reference_nonzero_vector_rms_m_s2": 0.12205300857451822,
+        "normalized_nonzero_vector_rmse": 0.011992671972667951
+      }
+    },
+    "nonzero_wind_direction_deg": {
+      "[0,30)": {
+        "count": 50,
+        "axis_rmse_m_s2": [
+          0.0011508496399720797,
+          0.0009462524524373713
+        ],
+        "vector_error_mean_m_s2": 0.0010377671617613792,
+        "vector_error_p95_m_s2": 0.0021285268467795084,
+        "vector_error_max_m_s2": 0.006286748215063534,
+        "reference_nonzero_vector_rms_m_s2": 0.11326079171892595,
+        "normalized_nonzero_vector_rmse": 0.013154734412210935
+      },
+      "[30,60)": {
+        "count": 40,
+        "axis_rmse_m_s2": [
+          0.0006399938011540396,
+          0.0006000094804566173
+        ],
+        "vector_error_mean_m_s2": 0.0005894967486053649,
+        "vector_error_p95_m_s2": 0.0022086335962665012,
+        "vector_error_max_m_s2": 0.002650344082382315,
+        "reference_nonzero_vector_rms_m_s2": 0.059740003036718066,
+        "normalized_nonzero_vector_rmse": 0.014684807586896817
+      },
+      "[60,90)": {
+        "count": 20,
+        "axis_rmse_m_s2": [
+          0.00027466144102168303,
+          0.0005840422752641293
+        ],
+        "vector_error_mean_m_s2": 0.0005207606120033661,
+        "vector_error_p95_m_s2": 0.001140356768322864,
+        "vector_error_max_m_s2": 0.0018125760125873456,
+        "reference_nonzero_vector_rms_m_s2": 0.014425899238032516,
+        "normalized_nonzero_vector_rmse": 0.04473914668831027
+      },
+      "[90,120)": {
+        "count": 20,
+        "axis_rmse_m_s2": [
+          0.0006169857206506649,
+          0.0005941832949506079
+        ],
+        "vector_error_mean_m_s2": 0.0006715444988942455,
+        "vector_error_p95_m_s2": 0.0011685025325397713,
+        "vector_error_max_m_s2": 0.0027383575770416873,
+        "reference_nonzero_vector_rms_m_s2": 0.061447641618621075,
+        "normalized_nonzero_vector_rmse": 0.013939958757029743
+      },
+      "[120,150)": {
+        "count": 20,
+        "axis_rmse_m_s2": [
+          0.0005267035152842253,
+          0.0006445667654707656
+        ],
+        "vector_error_mean_m_s2": 0.0006837204737136811,
+        "vector_error_p95_m_s2": 0.0014871903700497133,
+        "vector_error_max_m_s2": 0.0019748065030450643,
+        "reference_nonzero_vector_rms_m_s2": 0.07623952189380274,
+        "normalized_nonzero_vector_rmse": 0.01091816768522014
+      },
+      "[150,180)": {
+        "count": 40,
+        "axis_rmse_m_s2": [
+          0.00039905738669553857,
+          0.00041742088915829723
+        ],
+        "vector_error_mean_m_s2": 0.0003906744268919244,
+        "vector_error_p95_m_s2": 0.001055082095894562,
+        "vector_error_max_m_s2": 0.0019136672592716692,
+        "reference_nonzero_vector_rms_m_s2": 0.025367967642266617,
+        "normalized_nonzero_vector_rmse": 0.022764272577013377
+      },
+      "[180,210)": {
+        "count": 70,
+        "axis_rmse_m_s2": [
+          0.0006592955801071382,
+          0.00037875116239660265
+        ],
+        "vector_error_mean_m_s2": 0.0004011862383433328,
+        "vector_error_p95_m_s2": 0.0013695545323441213,
+        "vector_error_max_m_s2": 0.004585138212043872,
+        "reference_nonzero_vector_rms_m_s2": 0.04610391792805323,
+        "normalized_nonzero_vector_rmse": 0.016491962164817426
+      },
+      "[210,240)": {
+        "count": 20,
+        "axis_rmse_m_s2": [
+          0.0013402575500911153,
+          0.0014440076316943598
+        ],
+        "vector_error_mean_m_s2": 0.0014772140847966325,
+        "vector_error_p95_m_s2": 0.004446412133197876,
+        "vector_error_max_m_s2": 0.004638090287382121,
+        "reference_nonzero_vector_rms_m_s2": 0.16762182568392253,
+        "normalized_nonzero_vector_rmse": 0.011753476373857255
+      },
+      "[240,270)": {
+        "count": 40,
+        "axis_rmse_m_s2": [
+          0.0003076514504369686,
+          0.0003463896708569017
+        ],
+        "vector_error_mean_m_s2": 0.00038340316010086067,
+        "vector_error_p95_m_s2": 0.0010391391825356746,
+        "vector_error_max_m_s2": 0.0010819558101075916,
+        "reference_nonzero_vector_rms_m_s2": 0.028963114437124834,
+        "normalized_nonzero_vector_rmse": 0.01599577301532729
+      },
+      "[270,300)": {
+        "count": 60,
+        "axis_rmse_m_s2": [
+          0.0005205064658407375,
+          0.0006194148090891611
+        ],
+        "vector_error_mean_m_s2": 0.0006846914991002245,
+        "vector_error_p95_m_s2": 0.0015329530002050958,
+        "vector_error_max_m_s2": 0.0015839461707390073,
+        "reference_nonzero_vector_rms_m_s2": 0.0769424967412178,
+        "normalized_nonzero_vector_rmse": 0.010515314954399363
+      },
+      "[300,330)": {
+        "count": 20,
+        "axis_rmse_m_s2": [
+          0.0005403689424448998,
+          0.0002869556933197296
+        ],
+        "vector_error_mean_m_s2": 0.0003911873419055652,
+        "vector_error_p95_m_s2": 0.0009925532282680988,
+        "vector_error_max_m_s2": 0.002067444548889015,
+        "reference_nonzero_vector_rms_m_s2": 0.03259490154097401,
+        "normalized_nonzero_vector_rmse": 0.018770882870282883
+      },
+      "[330,360)": {
+        "count": 50,
+        "axis_rmse_m_s2": [
+          0.0006153920107338465,
+          0.0006480950411947231
+        ],
+        "vector_error_mean_m_s2": 0.0007301701372996456,
+        "vector_error_p95_m_s2": 0.00169677457498111,
+        "vector_error_max_m_s2": 0.002439113546962408,
+        "reference_nonzero_vector_rms_m_s2": 0.08247604316617367,
+        "normalized_nonzero_vector_rmse": 0.010836110049598231
+      }
+    },
+    "max_abs_roll_pitch_deg": {
+      "[0,10)": {
+        "count": 108,
+        "axis_rmse_m_s2": [
+          0.0004616578557222651,
+          0.0005439248606944622
+        ],
+        "vector_error_mean_m_s2": 0.0004978814619175792,
+        "vector_error_p95_m_s2": 0.001555338206897711,
+        "vector_error_max_m_s2": 0.0024470171815435624,
+        "reference_nonzero_vector_rms_m_s2": 0.06824298801545382,
+        "normalized_nonzero_vector_rmse": 0.011326904527756523
+      },
+      "[10,20.00000001)": {
+        "count": 392,
+        "axis_rmse_m_s2": [
+          0.0006994872419872842,
+          0.0006360612521320899
+        ],
+        "vector_error_mean_m_s2": 0.0005949533350668246,
+        "vector_error_p95_m_s2": 0.0018334071232502167,
+        "vector_error_max_m_s2": 0.006286748215063534,
+        "reference_nonzero_vector_rms_m_s2": 0.07545446476982844,
+        "normalized_nonzero_vector_rmse": 0.01311144128637107
+      }
+    }
+  },
+  "provisional_gates": {
+    "axis_rmse_limit_m_s2": 0.05,
+    "vector_p95_limit_m_s2": 0.1,
+    "normalized_nonzero_limit": 0.05,
+    "absolute_pass": true,
+    "normalized_pass": true
+  },
+  "zero_wind": {
+    "states_checked": 3000,
+    "max_abs_increment_m_s2": 0.0,
+    "raw_identical_pair_difference_max_m_s2": 0.0,
+    "all_projected_z_exact_zero": true,
+    "full_acceleration_at_rest_body_m_s2": [
+      -4.8895042709773406e-05,
+      -7.100021321093664e-05,
+      5.207350568525726e-06
+    ]
+  },
+  "zero_omega_full_work": {
+    "pair_arms_checked": 600,
+    "positive_fraction_above_1e_minus_8": 0.0016666666666666668,
+    "max_m2_s3": 4.953762047855802e-07
+  },
+  "latency": {
+    "device": "CPU",
+    "processor": "x86_64",
+    "torch_threads": 1,
+    "warmup_calls_each": 50,
+    "measured_calls_each": 1000,
+    "batch_pairs": 1,
+    "scope": "public pair call with frame conversion/projection, no EMA/clip; teacher includes torque",
+    "analytic_float64": {
+      "mean_ms": 0.5860371230000001,
+      "p50_ms": 0.580689,
+      "p95_ms": 0.63542115,
+      "max_ms": 0.846371
+    },
+    "pinn_float32": {
+      "mean_ms": 0.43216155700000003,
+      "p50_ms": 0.4296025,
+      "p95_ms": 0.46728195,
+      "max_ms": 0.76019
+    }
+  },
+  "sampling": {
+    "seed": 7,
+    "generation_seconds": 0.10757212905446067,
+    "array_memory_bytes": 1416000,
+    "wind_speed_min_max_m_s": [
+      0.0,
+      2.9999999999999996
+    ],
+    "zero_wind_pairs": 410,
+    "zero_omega_pairs": 300,
+    "speed_histogram_edges": [
+      0,
+      0.5,
+      1,
+      1.5,
+      2,
+      2.5,
+      3.00000001
+    ],
+    "speed_histogram": [
+      620,
+      420,
+      400,
+      420,
+      380,
+      760
+    ],
+    "direction_histogram_nonzero_30deg": [
+      390,
+      230,
+      60,
+      210,
+      70,
+      230,
+      290,
+      400,
+      70,
+      210,
+      270,
+      160
+    ],
+    "force_abs_max_n": 3.420725064675516,
+    "label_abs_max_m_s2": 0.3223840983240112
+  }
+}

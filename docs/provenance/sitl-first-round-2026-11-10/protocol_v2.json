@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-10",
+  "scope": "real local PX4 SITL headless production-loop comparison; no training",
+  "backends": [
+    "analytic",
+    "pinn"
+  ],
+  "conditions": [
+    {
+      "wind_enabled": false,
+      "speed_m_s": 0
+    },
+    {
+      "wind_enabled": true,
+      "wind_world_m_s": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "repeats": [
+    4,
+    5,
+    6
+  ],
+  "observation_s": 70,
+  "analysis_settle_s": 5,
+  "analysis_duration_s": 60,
+  "wind_activation_after_flying_s": 10,
+  "warmup": "fresh heartbeat after >=10s, timeout60s",
+  "shared_parameter_seed_sha256": "d26c2bbaf50b6ae5fbd9f0e81e8e1d5ce08e30901706e83a77809b1c6d0ce9da",
+  "source_sha256": {
+    "src/wind_field_simulation/simulation.py": "3b0d880f90147baa5fb76fa8579f0a416d8c40273d413ee837d3523a646d44ed",
+    "src/wind_field_simulation/wind_backends.py": "08a998cc6e670b1e62edd934dab836ff6b680c1a58e2e49072c66589baf8b89b",
+    "src/wind_field_simulation/training/reference_aerodynamics.py": "06b39cf649961714a919a2f63c32bb9c4a8e30f30b6d378c60c4c1ab305208cb",
+    "runtime/px4/bin/px4": "db1c803bb28077856f8989b059c12421e0c8d3815be69aa3bb81b3262ae735ca",
+    "outputs/closed_loop/sitl_compare_2026-11-10/run_case.py": "54c2ea4630559c974e104dc0200d09202d1b249f1599ae90725dd66c795c17eb",
+    "outputs/closed_loop/sitl_compare_2026-11-10/run_matrix.py": "7f24d5105bde914abafe59ce0781c9f488f37eb9c7d3a79e3efbd2d6f003b6a6"
+  },
+  "excluded_probes": [
+    "analytic_hover_w0_x_r1: startup heartbeat deadline before flight",
+    "analytic_hover_w0_x_r2: failed during landing due HIL signed-int16 packing; retained uncounted",
+    "pinn_hover_w0_x_r3: default instance0/address conflict before flight"
+  ],
+  "limitations": [
+    "No GUI/mouse/window closure validation",
+    "No real-aircraft aerodynamic calibration",
+    "Legacy HIL acceleration scale preserved for existing PX4 receiver; only signed-int16 encoding saturates",
+    "Measurement settlement is time trimming, not automatic stability certification"
+  ],
+  "px4_instance": 6,
+  "sim_tcp_port": 4566,
+  "command_udp_port": 14586,
+  "mavlink_target_system": 7,
+  "amendment": "Use official PX4 instance6/ports to avoid default instance contention; identical copied seed, no flight control parameter overrides."
+}

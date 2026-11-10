@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-10",
+  "python_suite": {
+    "passed": 104,
+    "skipped": 0,
+    "seconds": 8.48
+  },
+  "compiled_cpp_contract": "passed; pairing, sender/stamp mismatch, 100 ms boundary, backwards time, NaN/Inf, single-use, float preservation",
+  "official_main_files_checked": 13154,
+  "official_main_existing_files_modified": 4,
+  "official_gazebo_files_checked": 194,
+  "official_gazebo_files_modified": 0,
+  "minimal_patch_apply_check": "passed; seven payload files reproduced exactly",
+  "required_before_after_file_hashes": "six identical",
+  "original_project_key_file_hashes": "unchanged",
+  "saved_px4_state_file_hashes": "four unchanged",
+  "runtime_binary": "rebuilt, ldd resolved, px4 -h exit 0, removed MPCWRENCH string absent",
+  "build_followup": "standard wrapper rerun without URL-redirect variables; no pending build work",
+  "review": "fresh-context source/build-target review: no important correctness findings; runtime promotion/docs self-checked",
+  "sitl_flight": "not performed",
+  "real_panel_exit_integration": "unverified"
+}

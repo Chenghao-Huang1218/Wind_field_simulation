@@ -1,0 +1,746 @@
+{
+  "protected_files": {
+    "src/wind_field_simulation/assets/checkpoints/best_model.pt": {
+      "sha256": "68031a86d60a1f94d3898080011bdac80ce1ee8667bcea4567ec3522a30c1614",
+      "matches_baseline": true
+    },
+    "src/wind_field_simulation/assets/checkpoints/normalizer.pt": {
+      "sha256": "3fac1b26b5e3cc900fbe1151c4d54dc38b8eddd607754e832c89e01d0421308b",
+      "matches_baseline": true
+    },
+    "src/wind_field_simulation/assets/configs/X4-950.params": {
+      "sha256": "c617918cb608402c40d3732a56647295723e0129e5e9902553894eda1e4b5071",
+      "matches_baseline": true
+    },
+    "third_party/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/10016_none_iris": {
+      "sha256": "71747634f00077fa76df98d164306eef5acc0ba2be1d7e3b6d77f7a5151c2ed3",
+      "matches_baseline": true
+    },
+    "third_party/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/CMakeLists.txt": {
+      "sha256": "a825142490c06cc8acca4d93e893ffe01f0b40422dd72c6faaa5b77e9ef5f480",
+      "matches_baseline": true
+    },
+    "third_party/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/x4_950_params.defaults": {
+      "sha256": "ad89e0cd55605cda176ef1acc81b3c0da690dd4a500be77b3a8a550a04da8e95",
+      "matches_baseline": true
+    },
+    "third_party/PX4-Autopilot/src/modules/simulation/simulator_mavlink/SimulatorMavlink.cpp": {
+      "sha256": "4ca83c2c487cbb419d7e4520b7fb843e190a0b2254c9fc4e6efb06be86fea1bf",
+      "matches_baseline": true
+    },
+    "third_party/PX4-Autopilot/src/modules/simulation/simulator_mavlink/SimulatorMavlink.hpp": {
+      "sha256": "5907a5ca4453bc4cd8c981bbf84677dd4f8c3531e9b3a7033a9b201d8861a7d9",
+      "matches_baseline": true
+    },
+    "third_party/PX4-Autopilot/src/modules/simulation/simulator_mavlink/LocalPositionFeedback.hpp": {
+      "sha256": "f2ba8fc0a8748241d30f43f9a245e4266614876eed4b13514c33be0207a8ac7b",
+      "matches_baseline": true
+    },
+    "third_party/PX4-Autopilot/dev_huang/X4-950.params": {
+      "sha256": "c617918cb608402c40d3732a56647295723e0129e5e9902553894eda1e4b5071",
+      "matches_baseline": true
+    },
+    "runtime/px4/bin/px4": {
+      "sha256": "db1c803bb28077856f8989b059c12421e0c8d3815be69aa3bb81b3262ae735ca",
+      "matches_baseline": true
+    },
+    "runtime/px4/bin/px4-alias.sh": {
+      "sha256": "71a75c3933707c57894390205416b333ddf3b26d4b20b27e0bb8610e5a2e6b8e",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/extras/actuators.json.xz": {
+      "sha256": "989f22defbfa6d59fdad77a5587a10e9dfc77ed81f4bb6b6f6d341d44c65b0d4",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/extras/all_events.json.xz": {
+      "sha256": "4cbc229258afe26940d99553ba5a94f1bd1c47f4e85b17877835be1fff5a94b6",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/extras/component_general.json.xz": {
+      "sha256": "69855efaaf9373ecfafb9db9236db0afa5ac886b11aeea57312178d5ed0d0612",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/extras/parameters.json.xz": {
+      "sha256": "f345a50e2d34c892c17b0d256a186fec92e6ab71fbfa2c11999c69ddffe9aa3e",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/10015_gazebo-classic_iris": {
+      "sha256": "9d2d8fc2d47fa2df4f6c5f2919cde9bc8fcd513efe4ee6362cf5874bc1c0ae1e",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/10016_none_iris": {
+      "sha256": "71747634f00077fa76df98d164306eef5acc0ba2be1d7e3b6d77f7a5151c2ed3",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/10017_jmavsim_iris": {
+      "sha256": "9d1de9fcc2bdf98ae6a784a94a2bcbb4d91058f74561abb061fd3662934c3ff9",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/10018_gazebo-classic_iris_foggy_lidar": {
+      "sha256": "ebf0445fe56d0e57ed25959c1fd98459f6b5daf9a91bff9b5c41877571af1f47",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/10019_gazebo-classic_omnicopter": {
+      "sha256": "99b6207a8353ace57f43ebcbe1a05c39d91586d5f3c8d3a839c4ef5c9b89e27b",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/10030_gazebo-classic_px4vision": {
+      "sha256": "86ad560c6cd481691b9782cc89cbf8e90f5c61a7f664c8f1fb1ac550340d1754",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/10040_sihsim_quadx": {
+      "sha256": "812ba7678498c18b05390233ca9bfb042a63e215bd70271085962131fc16008b",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/10041_sihsim_airplane": {
+      "sha256": "1541503171a0c8d9ecb70a4afafe430966d804b3988264073f4cdeaa4e26f54f",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/10042_sihsim_xvert": {
+      "sha256": "5a4eb9c6d1f919fcc8c80e527ca024b6bc7abe35e9e9a35775bcc765fc5efd7c",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/10043_sihsim_standard_vtol": {
+      "sha256": "e61788a035dc74155ca234f9fa77d33b494ad62135af36482fa6ba5761ebed37",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/10044_sihsim_hex": {
+      "sha256": "08343bdb708eb057d97d3ec74e27a036fc365b64b23e5715abb03ab993b676e0",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/10045_sihsim_rover_ackermann": {
+      "sha256": "1bf2823c3d13fafaa026a5d6fef18667469d2c27277e5420af669d5ad418cd62",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1010_gazebo-classic_iris_opt_flow": {
+      "sha256": "cf34856c3b463a9f2ddbcff2ff683b241b06301110e9844ff3005a5820859b44",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1010_gazebo-classic_iris_opt_flow.post": {
+      "sha256": "8b622367299a6ed48a92937f0ea4e3087e5783fa7121b8833006791fb09ba1e5",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1011_gazebo-classic_iris_irlock": {
+      "sha256": "84aa9ac234786b3344fc01c38e02d3cc8dcdb50a20af7009a0c15b9c70b202c7",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1012_gazebo-classic_iris_rplidar": {
+      "sha256": "e40998dc9a359afd3977769b436ded4a1b0427664cbd89a5f0b67f75496bdc8f",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1013_gazebo-classic_iris_vision": {
+      "sha256": "d2157f6cc34f2bb2ef83dd7d7cf0eae1bab1af1c38e335f0b82df8655ac57ae5",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1013_gazebo-classic_iris_vision.post": {
+      "sha256": "2a2cb498f49b74b72c4b67b657088f2e886202823db818b081f1895950920600",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1015_gazebo-classic_iris_depth_camera": {
+      "sha256": "fde8407e95b4cbf3838dd9656671f356640ec379c980d27e23caab870722bded",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1016_gazebo-classic_iris_downward_depth_camera": {
+      "sha256": "429b19949105e8a23033abc55579c9a050d9d01251675470df11883184b3d6cc",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1017_gazebo-classic_iris_opt_flow_mockup": {
+      "sha256": "4f1cd2593862043cffafa723810875308bc18cf116225bb46672d20fe99f35b6",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1019_gazebo-classic_iris_dual_gps": {
+      "sha256": "988fe53eda969f534d5a476c05a85009a23fa0f2dd5a093c451ae4152c5c37b2",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1021_gazebo-classic_uuv_hippocampus": {
+      "sha256": "f0eca440f39fc87b52172dab32ed1618543aa20a1850eb3f52d3408dd77b7d52",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1022_gazebo-classic_uuv_bluerov2_heavy": {
+      "sha256": "0f8320f2645eb2d309e809b8833437d5a8fffe5d04977b3b2d4299c1574eb149",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1030_gazebo-classic_plane": {
+      "sha256": "40887cade79612ac963b93a3f1de7d08c65fdc015af4a509a7b5463bbb29212f",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1031_gazebo-classic_plane_cam": {
+      "sha256": "c99030fbc9dd70018fc2ba0fd1439bbfd145789446215e9ce4997271c388e195",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1031_gazebo-classic_plane_cam.post": {
+      "sha256": "b424a3f68a2e7c9a0dc9a6f5caa973811ea7bb1c81ca09a11b37b0209b714748",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1032_gazebo-classic_plane_catapult": {
+      "sha256": "1147503ad674a37f596f8ba86b4af2d9f158dc501e44ca435e990f4b86ae5ec3",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1033_jsbsim_rascal": {
+      "sha256": "a54118917699c735471a6ce85b46304b47faae4e503d5b57ba2a9dbe6b4a5ad1",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1034_flightgear_rascal-electric": {
+      "sha256": "a54118917699c735471a6ce85b46304b47faae4e503d5b57ba2a9dbe6b4a5ad1",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1035_gazebo-classic_techpod": {
+      "sha256": "394c124e1a70abaaa1ff382281516c4e6e33fda0754698c8ab17afccff30fe1a",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1036_jsbsim_malolo": {
+      "sha256": "a54118917699c735471a6ce85b46304b47faae4e503d5b57ba2a9dbe6b4a5ad1",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1037_gazebo-classic_believer": {
+      "sha256": "5c8d7c49b78a3131fcfc6cfa7e16d9e38d44cd741c4a6fa4d82f2ff4f448d5a5",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1038_gazebo-classic_glider": {
+      "sha256": "848c29f5aeaf2387909f6755a52fa78ab881b2ec6c1a51a96d13c0df5d9679ca",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1039_gazebo-classic_advanced_plane": {
+      "sha256": "6c085df2e1e4ef2c86b10392b74609aa231afae20ffac150f82da5540c356ab9",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1040_gazebo-classic_standard_vtol": {
+      "sha256": "46e125172d2ce84b512f809e24409cf035f57a2219d9834887a8052b81e85a93",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1041_gazebo-classic_tailsitter": {
+      "sha256": "c30a4eab3c78878e7ecb03c22ae05cffaa322209c71b6a039f2c5992bdb7f695",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1042_gazebo-classic_tiltrotor": {
+      "sha256": "026f72173a786b9762b1246e4945617503dedbd2fcd442a3723313465886d7fc",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1043_gazebo-classic_standard_vtol_drop": {
+      "sha256": "13d3a497bd18441ce09dfe551442e4a0d9213bd2e7d9655d78c491f8332ecd5e",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1044_gazebo-classic_plane_lidar": {
+      "sha256": "855b3bd9ba3fe5ffb014d53b47cacce5cdef35015c2f0926b67395c15919a7c9",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1045_gazebo-classic_quadtailsitter": {
+      "sha256": "292fbefaa882ad9b947729ea6e59ba838ebd88bc979ef8e9cdd05abd62cdd866",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1062_flightgear_tf-r1": {
+      "sha256": "296ca0a57ca2587212695031e59c9a5f35d2f3a779b31f5c1e7dc509f08aef41",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/1070_gazebo-classic_boat": {
+      "sha256": "921a79a112da36bc138c03e235b2e515d2994d7b0d5244ccbc25a2bab28fe974",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/17001_flightgear_tf-g1": {
+      "sha256": "77eaa089c3e9df71d2f928f87c7bcab09581bc13f7852b3d2213c2dfee82bf0c",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/17002_flightgear_tf-g2": {
+      "sha256": "f6ef0af968d7774ca1a33813710df6856f061175e200b4859128fa82214a78c0",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/2507_gazebo-classic_cloudship": {
+      "sha256": "66e63c6cc85105d2ca6ba41c692471a9b0139a83e9daf4b7278ee097111b1aa3",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/3010_jsbsim_quadrotor_x": {
+      "sha256": "39a3f18832a04f216f8add47e05775cef6a62e263c1820c7b87869b300de7ce9",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/3011_jsbsim_hexarotor_x": {
+      "sha256": "4333f09f2702a8113b6b89fd2fea1029681c1e89f4966e0210aade92e12a6fbe",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4001_gz_x500": {
+      "sha256": "20ff202101deda060f73b66e08ad047c28f13edbe0d99c389ec663c977e3a4be",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4002_gz_x500_depth": {
+      "sha256": "1311a755121cf4145c67435cbea53e8394441a4560e072ec414cee2c842b7b33",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4003_gz_rc_cessna": {
+      "sha256": "6b746721c8d73bb4bee03301ace7c8b37093b7e8de5173fec71dc6567b5e7619",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4004_gz_standard_vtol": {
+      "sha256": "1ee1bc9ed6290ecf1aab4572191c22039981d02de9491dcb3e9c954e35a5bffe",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4005_gz_x500_vision": {
+      "sha256": "d1e54a76b38af04d2ddd8b3228a3928ab86de46411588fe454a9fc267221edf2",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4006_gz_px4vision": {
+      "sha256": "df418fa58a6b9adfd6a628410ff5975974b5beec03cab3961c4da1e2acfc727b",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4008_gz_advanced_plane": {
+      "sha256": "93bfdcbd0c8f8f61e99240bcf7a4b28173d2992c3f0dca2107aec553de8c6ab8",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4009_gz_r1_rover": {
+      "sha256": "d41974584a553eae80acda93c9d41c46f2fe66773c84f8a0e8cfa15f0b5f0143",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4010_gz_x500_mono_cam": {
+      "sha256": "25c6208075d24f64300b357594bccb77826f00aa07b02e2ccec492e575772d0d",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4011_gz_lawnmower": {
+      "sha256": "4af157d87163e82140d2e45d9c47b4d2aefdfa5bc40f8cc432b9154a16a270bd",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4013_gz_x500_lidar_2d": {
+      "sha256": "4f263c9d56e83dc400d63fa5eb1b87fe4295c7e7fde4aa77db0237950ef07abe",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4014_gz_x500_mono_cam_down": {
+      "sha256": "8bb8c14c642674c51d09d594bfd5728b3bdaabd4b64eb0fb0b38a13782839158",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4016_gz_x500_lidar_down": {
+      "sha256": "be2ad8355f401275db619927bc403c736059aa5a2db8d51d9da892c90fab9cf3",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4017_gz_x500_lidar_front": {
+      "sha256": "489315d772d58a6a54cb40e03b53f7e3f25c14ee9a69bfdad539e251136b03e7",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4018_gz_quadtailsitter": {
+      "sha256": "bc8b892945a16e52149d191cf867c727aa7d974098dc23dae18d64a49b6304f3",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4019_gz_x500_gimbal": {
+      "sha256": "a3504ec83b581429fbbe47c8dcb1a9814f0f6343b7821c4933cc3dff37cc84a0",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4020_gz_tiltrotor": {
+      "sha256": "64e973a5919fe56144f0f4dbacb29f7142fed28f9d24dd1b884b42dedb76e6f2",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/4021_gz_x500_flow": {
+      "sha256": "dd4b19accb3594ab3ef197966e88f6e88621d1b21cb1009345444affcc3363a3",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/50000_gz_rover_differential": {
+      "sha256": "a589a639285ab595ee9d929acdf338f1727a9c1eb34186c2ecf97cb76744632e",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/51000_gz_rover_ackermann": {
+      "sha256": "5a5fb8748b3589fcb771e1868fd1eb5d22298fb4cb26c1bb246fcb3e64fba4b0",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/52000_gz_rover_mecanum": {
+      "sha256": "e8fdcefe4b277f639075e7f2e92e8c2e825703f40e50c89259c512c78764fd52",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/60002_gz_uuv_bluerov2_heavy": {
+      "sha256": "769ee670c00d700561c9cb93afc45d81103dc75caa14b72c47e25f10d0e23170",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/6011_gazebo-classic_typhoon_h480": {
+      "sha256": "ac0238c5a80ecedc558eb79b955b9b6fb0f1a692d6ff16995842077c940a0352",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/6011_gazebo-classic_typhoon_h480.post": {
+      "sha256": "08c7b16bce89ddd862128f25ec0bb1cc9d0cc27883d2e196d11ec8978146e87d",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/70000_gz_atmos": {
+      "sha256": "0121bffbd58ef307be9af2ae1dcde19d232d49a3427d7594025fc730d8fdfeb3",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/8011_gz_omnicopter": {
+      "sha256": "8ba807ee84b8b03c300eaae0a2e75786bb6926d0fc37a32fd8c3bc065112f768",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/airframes/x4_950_params.defaults": {
+      "sha256": "ad89e0cd55605cda176ef1acc81b3c0da690dd4a500be77b3a8a550a04da8e95",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/px4-rc.gzsim": {
+      "sha256": "dba9b8e3bfd4a5e7fef6cdb6ba7d6a23d593884886b6b91d132568f0ea4038eb",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/px4-rc.jmavsim": {
+      "sha256": "305f7c28a2d41b80092a49742523c68b6b13e8c1d1e6c0ee7e8d15c05c49b7de",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/px4-rc.mavlink": {
+      "sha256": "ae7ddfc7f0a8428aa33b53e909862c9f499ca065013c05dbdabf9ef2172899c9",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/px4-rc.mavlinksim": {
+      "sha256": "c73f2b7fb9e34cecb5f91ee2c235d83104770828709d357b1e796f74040d80d1",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/px4-rc.sihsim": {
+      "sha256": "d502a359413443cbc631aea20f685518fddd2a644d2ed063f59ec383a26808c4",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/px4-rc.simulator": {
+      "sha256": "6a1c29d1d5ab59e726914072ac2bdaadc23bc15750104fa62a761e4f577445b2",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/rc.replay": {
+      "sha256": "91dc8fa3717a3fc0e6a8889a0c33fe2d36583d3f78010b97e15d12455c5d471f",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d-posix/rcS": {
+      "sha256": "8f7c3edd7ab4622f42f30b281584464b325c947e21152c4fcac0cb4acba17705",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/1001_rc_quad_x.hil": {
+      "sha256": "30ce0b63c4e820aef11da6a85614c2eb68baf3a8ee27012135db2d238a483a2b",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/1002_standard_vtol.hil": {
+      "sha256": "59fd2a582fc0df8714f1632add4a1d8848bb44b898956c898125fb37393a4a8f",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/11001_hexa_cox": {
+      "sha256": "2cd422066d0caf128cab7c28335b0a235abe5c04e503716e64e2435574f2c30f",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/1100_rc_quad_x_sih.hil": {
+      "sha256": "23fccc56d453a6584b9dd73c75b10fa8a349b576c4efc554748c95d218f357ae",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/1101_rc_plane_sih.hil": {
+      "sha256": "46f80f4fb51224d2fcfe325bd27f79b45f7dec4dbb6c83b99a6990902ea6ff05",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/1102_tailsitter_duo_sih.hil": {
+      "sha256": "e9c98e40fbdd2b2715c1b021bdfa4d64d77ac7cdc1271187fe4153ef2b51038e",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/1103_standard_vtol_sih.hil": {
+      "sha256": "dfd150c19fbd9725bb68686d4b94198919abb2d8c4bc2a55fd6ef56b77c5c887",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/1104_standard_ackermann_sih.hil": {
+      "sha256": "9ee830f59906790f80c49ae4105faa82f4bc2d1deedda8d08a7e41e899ed6854",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/12001_octo_cox": {
+      "sha256": "0c4e4d57888881879d6dd9bee2333061eb22fd2e207bfe3ec9cc52a219792086",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/13000_generic_vtol_standard": {
+      "sha256": "287cfc7ad98bf46a5ecc24cfe9e869e53dc75dadccda445366f6001ebacd24a3",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/13030_generic_vtol_quad_tiltrotor": {
+      "sha256": "cf13e5d80e71109d64ea74391182a6a8a4eaf7df2b61d4d7f3c304a9386dd058",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/13100_generic_vtol_tiltrotor": {
+      "sha256": "7070c5615fa683867693e39e0be4da94128dee75772631cef8f522647eb3c9ec",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/13200_generic_vtol_tailsitter": {
+      "sha256": "6bba2d210f16d9a0486392c14fb463fb831f488d3efb4b058b55ec8786b5451e",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/14001_generic_mc_with_tilt": {
+      "sha256": "5ea24961f641a70e6ebc542d31a5fbb966a0c70672fa91af625a174a87329b51",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/16001_helicopter": {
+      "sha256": "c2aed7ad39ba14f8c008214261dd709588697180b9505b1874879723c176a149",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/17002_TF-AutoG2": {
+      "sha256": "9baa34b40538bddd0bb3c2744417d433206d7ed69f1954e9207e27b4536578bb",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/17003_TF-G2": {
+      "sha256": "502e4b3abac3f8ee6bca4135a9520364f7f78ba25f8fb542729a86f8fff63fc7",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/18001_TF-B1": {
+      "sha256": "dba9fbf65444f34e274942c11d9611ed600650459b5fb226d1bed8a1548923f7",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/2100_standard_plane": {
+      "sha256": "c8e9c0158ee9afef3144cde8072c5b673adb912ac56a5dbcdf22a6590ce0f245",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/2106_albatross": {
+      "sha256": "40337a16958a962526e84280a8f25167ec46a08bef1aa37639af4b9d5d74f303",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/24001_dodeca_cox": {
+      "sha256": "a043d2118bfecfbc45dc97ed6b1eb6556a0e93aae1b155dfaa3e2bd049c6b283",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/2507_cloudship": {
+      "sha256": "dcd6bcf6a23c48750f52ee53aa960be7ddfebd717564a994abd15d04d152e7a5",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/3000_generic_wing": {
+      "sha256": "c6a4c18e99de04a18cf0779d55a61d2c20c2e1aede89250d17eb8f1b5eff3c2e",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/4001_quad_x": {
+      "sha256": "7abe62d67261afeab738d907dd54083d1d659c48a9d00e6356e611546e94b3d2",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/4014_s500": {
+      "sha256": "5095235886f85160e165bb76744062134e7499fb302ae750aa2d8f2457e65c24",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/4015_holybro_s500": {
+      "sha256": "a92daf63c9f966cc6458a9cc36985eb231492021e82022a9db517dcf959a6a63",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/4016_holybro_px4vision": {
+      "sha256": "2d73dd9acf9080aacbe2bb1899ee4c6225999fd79d873da2ed36a15024eb1cf5",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/4017_nxp_hovergames": {
+      "sha256": "bc60e5ea95fe440bd12800e3db8ec7f69b7f08c49948b1fbfb7fd159545df0ed",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/4019_x500_v2": {
+      "sha256": "c0b865ec322134cf79f2c8718b567e5cfbdbb409784fd2af54a5a6c4b173b505",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/4020_holybro_px4vision_v1_5": {
+      "sha256": "18ca37219bc355a91ae5394836e4f9c4eeacb4c3eebf69f4453922506d1d73e2",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/4041_beta75x": {
+      "sha256": "42de9a1488ca1608d1ad868b6ec0c9ac40601c744c84107382132755703ab6e6",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/4050_generic_250": {
+      "sha256": "43a620dab0769bf9769a2e5ca99be86b86f16b017683264d9509d4f094f96318",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/4052_holybro_qav250": {
+      "sha256": "3fd28313ec18f6c9f959428ff17de98f9c580e4f4958c273fb13dac1a2ad4020",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/4053_holybro_kopis2": {
+      "sha256": "572abb8efdb81b17315692e6f0dc27f149303d6f1afb7be976ba6fef2ff3a571",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/4061_atl_mantis_edu": {
+      "sha256": "2632a94680b7067feefebd9490c5b43280556225fad78b22e256de2c8e0ab377",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/4071_ifo": {
+      "sha256": "2d3f4154c3f5cf131c08bbcbed1c64ba7d67a0022071de18f6ee9dc9335d24bd",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/4073_ifo-s": {
+      "sha256": "97815d02f335dc38a91c808b93d5d8da6afcf73a53d3ee93f278e245a3ad3038",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/4500_clover4": {
+      "sha256": "46e07f01ff359ce1b90c31bc89eeba018e2ee1b0aaa31e1482ac9126b6a635d5",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/4601_droneblocks_dexi_5": {
+      "sha256": "aabd2aec41d50ef49960afb3a83da305bb633782f3a46b01b758d32ac129525c",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/4901_crazyflie21": {
+      "sha256": "3f733f22aa91cc2bd0b380b97ca76c1a8fe2d1626473f991a14cce5ffacd07b0",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/50000_generic_rover_differential": {
+      "sha256": "659423ec4e3844e9c5ad3c588a50a682d2b418d763b5c1ced844afd1971fdb48",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/50001_aion_robotics_r1_rover": {
+      "sha256": "0bc14b47ed4b98954197a260b0b15152660462120d756f83cddbc7d8d51a7709",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/5001_quad_+": {
+      "sha256": "16a43f147f9f91207a9aac3852be3df7ed647b6d9981cb30dad2159083fdac80",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/51000_generic_rover_ackermann": {
+      "sha256": "0633927089b5174616149b0a31c7c972a89b6d77130ebd7f0a325fed617d00d6",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/51001_axial_scx10_2_trail_honcho": {
+      "sha256": "2cef0e9185da8e2d302ab872dc00de1cfbb313f77aa5d6553c70553056841264",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/51002_nxp_b3rb": {
+      "sha256": "8fdd0cfe349d7e45c8eefb562205acc6e3be0b7a91939c8f6a87ff6364da527a",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/52000_generic_rover_mecanum": {
+      "sha256": "088f3ba2ab98f53ea306bb784704befd005744e33f564f0e1278cb6d7e09f25b",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/60000_uuv_generic": {
+      "sha256": "641d5fca277d798f9d2cd663f3e74dae787e4e8739ddec3213543cd87f7fa025",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/60001_uuv_hippocampus": {
+      "sha256": "06884ebf8a3be790eafac8058035b1da0790b38f74546356b8169351f7650d8a",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/60002_uuv_bluerov2_heavy": {
+      "sha256": "fc46c6ad02b0140bbe152039d545ab00465c4a31997eb3375ceac33b140051f5",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/6001_hexa_x": {
+      "sha256": "8669a764fbf763ace09780368748398c0e69bc72b1f211e4e39a47f8748da0ba",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/6002_draco_r": {
+      "sha256": "2b3fcb8ed444e8072a1535750b5f7c6940d13ce9f0429d98ed9271974afc26b0",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/7001_hexa_+": {
+      "sha256": "db09cd25113f81b37dc8f7e0dcf7b4d5cdc8e0f6765d63bc02b60b8f60d76b83",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/8001_octo_x": {
+      "sha256": "d4fd87759c8c960c95a67de346fb799be1a5f54d6a09237e045291b91dd6cf70",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/airframes/9001_octo_+": {
+      "sha256": "98d214a020157a60113a577c18000f4f70fa3e5dfec1744f3eddc88b24c1f0a6",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.airship_apps": {
+      "sha256": "32a083ca058c23ed35b50a43bf68c9e4914071e9d9dab480ac00718065047694",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.airship_defaults": {
+      "sha256": "1a5d727d6894cf21210250e177d3a0509e8238621e3b47b21a4c66796141d248",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.autostart": {
+      "sha256": "01b2e5b9920ad07fa6d76e461de9eddc8854ac5449091c9a58c1df88ac9ad057",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.autostart.post": {
+      "sha256": "a7b3e808fb36bf8971bf01e5b1e46d1372597c902337d042205e5744a8e45c9b",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.autostart_ext": {
+      "sha256": "38cb91c7921f91bd22639bfc676f6b5caf5a4786b7fbf426bf47d059650ad4c6",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.balloon_apps": {
+      "sha256": "9980f1c36efaaf6452265a714e8a741eb5e0c9c22f72faa487981da8961dfed6",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.balloon_defaults": {
+      "sha256": "dc2f409ece49bb73123444c2f321893b1094c809c9d0fe93ebc69cb43c3f6fd2",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.filepaths": {
+      "sha256": "aca52056bd94298d35857078d2f91efe1f104b102e2b03c059e2657ca96370cd",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.fw_apps": {
+      "sha256": "af0411f7cdfa8989ae6518e0687c58328701f46a149b99ae6054171a6bc7f9e7",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.fw_defaults": {
+      "sha256": "10abe3578afc68023af339b586ae40a5ea7dde9172009c5f27fbc5c83ef7146f",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.heli_defaults": {
+      "sha256": "70840ad486ae93df6fba23996045fda160b48459442794410f557b7429ea0f7b",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.logging": {
+      "sha256": "53aea58c2e64c28bf62fc22a56b3e5e260a526e69db47be7e6490dcc395c3e78",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.mc_apps": {
+      "sha256": "eafb14086405fa15d60d371d027e7a83e3b5fe0b04868b4dc24f48754762a9d1",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.mc_defaults": {
+      "sha256": "7b2cd6724104c10ffd048b53656e36e61aaeccfbb9e9c1ab09ad0261f478f711",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.rover_ackermann_apps": {
+      "sha256": "f77559bfae6a59cdbc4e0c5cee364b5830a85b391a0734d2079ba4aac94b3360",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.rover_ackermann_defaults": {
+      "sha256": "eabb275785f46ed48118f92883735e4472132ed39b8f104f36080bd3b93c5ee2",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.rover_differential_apps": {
+      "sha256": "3abeab278d80f4e65e4b2f3e1dce7c6b064d364545c24718730390f428e15f8f",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.rover_differential_defaults": {
+      "sha256": "6919f023bfa86cfb0d1212b2152755db92313c9a1cf26ae6ebc857726ed44b37",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.rover_mecanum_apps": {
+      "sha256": "39a86e4c312f4bfdaaaf18497b883c4e44ecc89614ea419629901d60c1c29d0a",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.rover_mecanum_defaults": {
+      "sha256": "466b2a4da5063f12ed33d87c304aaf587f79c79b2c86bf6ad0707f32ea0febb7",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.sensors": {
+      "sha256": "bf0c463aab50d990ac39c488708f4e302b1fbf03c556d899c9319db9b86505f5",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.serial": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.sysinit": {
+      "sha256": "408e8bd8e3e4fbf7aee0ecc649c2335a666f1166bf2e1a076c7019cdadb3ee49",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.thermal_cal": {
+      "sha256": "c86f979c67de973c27c49fac57aa7ec9f1b284e61936dd0a36d923e428a1db10",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.uuv_apps": {
+      "sha256": "f464eeaa2ba54a8c30eb4b4e643421b66d699b8ca74559138dc2a6510be26671",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.uuv_defaults": {
+      "sha256": "d75720864ea6c966f13cc11c4d22befca12518507a1c7074e2ac8d6deb233530",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.vehicle_setup": {
+      "sha256": "f257b860906f7758c2d286a1bf8f706478ab045369bea084148e6a8f02bbb1ee",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.vtol_apps": {
+      "sha256": "5c5f95bfac70e53df948849a2123f1507e06c0d3108053a9f955d1fb0986d3ab",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rc.vtol_defaults": {
+      "sha256": "3f02908764d25387b9d44f3e4b2602b6744d847d0a59197ffda8d430939d1dec",
+      "matches_baseline": true
+    },
+    "runtime/px4/etc/init.d/rcS": {
+      "sha256": "dcb98ee77f8c459a3046c16343dbaad77f4992ad11c48c5422d9532bcaed74f4",
+      "matches_baseline": true
+    }
+  },
+  "all_protected_match": true,
+  "frozen_reference_sha256": "613e8c2840f524ec5caf742a7d03a00dff930fc006669612953d1abc897f5e1a",
+  "corrected_training_sources_match_current": true,
+  "initial_and_corrected_state_dict_identical": true,
+  "comparison_note": "Same data/hyperparameters; sign-preserving work-loss repair. No holdout tuning. Constraint inactive on these training mini-batches; exact state dict equality checked, not assumed.",
+  "corrected_checkpoint_sha256": "d7fb92c96b275245047e76cfdb4317d4ca72c5ef81529c854f686e221ad5996b"
+}

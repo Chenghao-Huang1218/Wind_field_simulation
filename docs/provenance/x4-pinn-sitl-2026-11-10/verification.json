@@ -1,0 +1,18 @@
+{
+  "offline_suite": {
+    "passed": 220,
+    "skipped": 0,
+    "seconds": 28.69
+  },
+  "real_sitl_runs": 24,
+  "completed_flight_and_launcher_cleanup": 24,
+  "sources_consistent_across_all_runs": true,
+  "all_metadata_ema_alpha": 0.05,
+  "all_metadata_acceleration_limit_m_s2": 6,
+  "learned_core_ast_unchanged": true,
+  "new_training_performed": false,
+  "default_backend": "pinn",
+  "candidate_backend": "pinn-x4",
+  "px4_source_modified": false,
+  "formal_scope": "hover OFF/+X1/2/3 m/s,3 independent restarts per backend; no GUI or real-aircraft claims"
+}

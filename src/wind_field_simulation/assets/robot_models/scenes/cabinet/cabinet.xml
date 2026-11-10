@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="ambench_cabinet">
+  <asset>
+    <texture name="cabinet_wood_tex" type="2d" file="textures/light-wood.png" />
+    <material name="cabinet_wood" texture="cabinet_wood_tex" texrepeat="1 1" texuniform="true" rgba="1 1 1 1" roughness="0.5" />
+    <texture name="cabinet_metal_tex" type="2d" file="textures/metal.png" />
+    <material name="cabinet_metal" texture="cabinet_metal_tex" texrepeat="1 1" texuniform="true" rgba="1 1 1 1" roughness="0.5" />
+  </asset>
+  <worldbody>
+    <body name="cabinet" pos="1.5 0 0">
+      <body name="cabinet_fixed">
+        <geom pos="0.8999999762 0 0.5199999996" quat="1 0 0 0" type="box" size="0.3000000119 0.5799999833 0.009999999776" name="cabinet_geom_00" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="1.189999968 0 0.650000006" quat="1 0 0 0" type="box" size="0.009999999776 0.5799999833 0.1400000006" name="cabinet_geom_01" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.6099999845 0 0.650000006" quat="1 0 0 0" type="box" size="0.009999999776 0.5799999833 0.1400000006" name="cabinet_geom_02" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.8999999762 0.5699999928 0.650000006" quat="1 0 0 0" type="box" size="0.3000000119 0.009999999776 0.1400000006" name="cabinet_geom_03" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.8999999762 -0.5699999928 0.650000006" quat="1 0 0 0" type="box" size="0.3000000119 0.009999999776 0.1400000006" name="cabinet_geom_04" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.5499999821 -0.200000003 0.7399999946" quat="0.7071067933 0 0.7071067691 0" type="cylinder" size="0.01999999955 0.05000000075" name="cabinet_geom_05" material="cabinet_metal" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.5499999821 0.200000003 0.7399999946" quat="0.7071067933 0 0.7071067691 0" type="cylinder" size="0.01999999955 0.05000000075" name="cabinet_geom_06" material="cabinet_metal" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.5099999905 0 0.7399999946" quat="1 0 0 0" type="box" size="0.009999999776 0.200000003 0.009999999776" name="cabinet_geom_07" material="cabinet_metal" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.8999999762 0 0.810000021" quat="1 0 0 0" type="box" size="0.3000000119 0.6000000238 0.009999999776" name="cabinet_geom_08" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="1.189999968 0 0.9400000274" quat="1 0 0 0" type="box" size="0.009999999776 0.6000000238 0.1400000006" name="cabinet_geom_09" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.6100000143 0.2899999917 0.950000057" quat="1 0 0 0" type="box" size="0.009999999776 0.2800000012 0.1299999952" name="cabinet_geom_10" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.5500000156 0.08999998868 1.030000061" quat="0.7071067933 0 0.7071067691 0" type="cylinder" size="0.01999999955 0.05000000075" name="cabinet_geom_11" material="cabinet_metal" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.5500000156 0.08999998868 0.8500000536" quat="0.7071067933 0 0.7071067691 0" type="cylinder" size="0.01999999955 0.05000000075" name="cabinet_geom_12" material="cabinet_metal" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.5100000128 0.08999998868 0.9400000572" quat="1 0 0 0" type="box" size="0.009999999776 0.009999999776 0.09000000358" name="cabinet_geom_13" material="cabinet_metal" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.6100000143 -0.2899999917 0.950000057" quat="1 0 0 0" type="box" size="0.009999999776 0.2800000012 0.1299999952" name="cabinet_geom_14" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.5500000156 -0.08999998868 1.030000061" quat="0.7071067933 0 0.7071067691 0" type="cylinder" size="0.01999999955 0.05000000075" name="cabinet_geom_15" material="cabinet_metal" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.5500000156 -0.08999998868 0.8500000536" quat="0.7071067933 0 0.7071067691 0" type="cylinder" size="0.01999999955 0.05000000075" name="cabinet_geom_16" material="cabinet_metal" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.5100000128 -0.08999998868 0.9400000572" quat="1 0 0 0" type="box" size="0.009999999776 0.009999999776 0.09000000358" name="cabinet_geom_17" material="cabinet_metal" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.8999999762 0 1.100000042" quat="1 0 0 0" type="box" size="0.3000000119 0.6000000238 0.009999999776" name="cabinet_geom_18" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="1.189999968 0 1.230000049" quat="1 0 0 0" type="box" size="0.009999999776 0.6000000238 0.1400000006" name="cabinet_geom_19" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.6099999845 -0.2899999917 1.530000039" quat="1 0 0 0" type="box" size="0.009999999776 0.2800000012 0.1299999952" name="cabinet_geom_20" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.8999999762 0 1.390000004" quat="1 0 0 0" type="box" size="0.3000000119 0.6000000238 0.009999999776" name="cabinet_geom_25" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="1.189999968 0 1.520000011" quat="1 0 0 0" type="box" size="0.009999999776 0.6000000238 0.1400000006" name="cabinet_geom_26" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.9099999759 0 1.670000017" quat="1 0 0 0" type="box" size="0.2899999917 0.6000000238 0.009999999776" name="cabinet_geom_27" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.6099999845 0 1.240000001" quat="1 0 0 0" type="box" size="0.009999999776 0.5799999833 0.125" name="cabinet_geom_28" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.5499999821 -0.200000003 1.160000003" quat="0.7071067933 0 0.7071067691 0" type="cylinder" size="0.01999999955 0.05000000075" name="cabinet_geom_29" material="cabinet_metal" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.5499999821 0.200000003 1.160000003" quat="0.7071067933 0 0.7071067691 0" type="cylinder" size="0.01999999955 0.05000000075" name="cabinet_geom_30" material="cabinet_metal" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.5099999905 0 1.160000003" quat="1 0 0 0" type="box" size="0.009999999776 0.200000003 0.009999999776" name="cabinet_geom_31" material="cabinet_metal" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.8999999762 0 0.25" quat="1 0 0 0" type="box" size="0.3000000119 0.6000000238 0.25" name="cabinet_geom_32" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="1.210000038 0 0.8399999738" quat="1 0 0 0" type="box" size="0.008999999613 0.6000000238 0.8399999738" name="cabinet_geom_33" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.8999999762 0.5899999738 0.8399999738" quat="1 0 0 0" type="box" size="0.3000000119 0.009999999776 0.8399999738" name="cabinet_geom_34" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="0.8999999762 -0.5899999738 0.8399999738" quat="1 0 0 0" type="box" size="0.3000000119 0.009999999776 0.8399999738" name="cabinet_geom_35" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+      </body>
+      <body name="pulling_door" pos="0.5799999833 0.2899999917 1.520000019">
+        <joint name="pull_door_slide" type="slide" axis="1.343588566e-07 1 0" range="-0.6000000238 0" damping="10" frictionloss="0.2" stiffness="0" />
+        <geom pos="0 0 0.009999999776" quat="1 0 0 0" type="box" size="0.009999999776 0.2800000012 0.1299999952" name="cabinet_geom_21" material="cabinet_wood" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="-0.05999999866 0.200000003 0.09000000358" quat="0.7071067933 0 0.7071067691 0" type="cylinder" size="0.01999999955 0.05000000075" name="cabinet_geom_22" material="cabinet_metal" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="-0.05999999866 0.200000003 -0.09000000358" quat="0.7071067933 0 0.7071067691 0" type="cylinder" size="0.01999999955 0.05000000075" name="cabinet_geom_23" material="cabinet_metal" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <geom pos="-0.1000000015 0.200000003 0" quat="1 0 0 0" type="box" size="0.009999999776 0.009999999776 0.09000000358" name="cabinet_geom_24" material="cabinet_metal" density="1000" friction="0.7 0.005 0.0001" condim="3" />
+        <site name="door_handle" pos="-0.1000000015 0.200000003 0" size="0.012" rgba="1 0.2 0.1 0.6" group="3" />
+      </body>
+    </body>
+  </worldbody>
+  <contact>
+    <exclude body1="cabinet_fixed" body2="pulling_door" />
+  </contact>
+</mujoco>

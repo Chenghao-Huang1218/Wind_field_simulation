@@ -1,0 +1,5 @@
+{
+  "reference_config": "outputs/pinn/x4_950_wind_v1/reference_config.json",
+  "sampling_seed": 7,
+  "split_counts": [2000, 500, 500]
+}

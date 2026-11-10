@@ -1,0 +1,196 @@
+ M .vscode/settings.json
+ M .vscode/tasks.json
+ D CODE_OF_CONDUCT.md
+ D SECURITY.md
+ m Tools/simulation/gz
+ M dev_huang/apps/configs/robot_quadrotor_950_with_arm.xml
+ D dev_huang/apps/robot_control_agent/2026-08-17-rc-l1-mpc-lctrl-handoff-design.md
+ D dev_huang/apps/robot_control_agent/2026-08-17-rc-l1-position-command-straight-line-design.md
+ D dev_huang/apps/robot_control_agent/2026-08-17-rc-l1-position-command-straight-line-plan.md
+ D dev_huang/apps/robot_control_agent/2026-08-18-rc-l1-approx-gazebo-model-design.md
+ D dev_huang/apps/robot_control_agent/2026-08-18-rc-l1-approx-gazebo-model-plan.md
+ D "dev_huang/apps/robot_control_agent/experiment_data/mpc\346\226\271\346\241\210\344\270\200.png"
+ D "dev_huang/apps/robot_control_agent/experiment_data/mpc\346\226\271\346\241\210\344\270\211.png"
+ D "dev_huang/apps/robot_control_agent/experiment_data/mpc\346\226\271\346\241\210\344\270\211_figure8.png"
+ D "dev_huang/apps/robot_control_agent/experiment_data/\344\273\205px4.png"
+ M dev_huang/apps/robot_control_agent/outer_position_mpc/roarm_m3/control_core.py
+ M dev_huang/apps/robot_control_agent/outer_position_mpc/roarm_m3/gripper.py
+ M dev_huang/apps/robot_control_agent/outer_position_mpc/roarm_m3/runtime.py
+ D "dev_huang/apps/robot_control_agent/plan/Outer position MPC improvement.md"
+ M dev_huang/apps/robot_control_agent/px4_mujoco_wind_simulation.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/CMakeLists.txt
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/README.md
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/config/l_ctrl_sitl_overrides.yaml
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/config/odom_identity_enu.yaml
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/config/trajectory.yaml
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/docs/gate1-unit-test-report.md
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/docs/gate2-frame-contract-report.md
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/docs/gate3-sitl-flight-report.md
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/docs/gate4-sitl-fault-report.md
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/docs/hybrid-sitl-runbook.md
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/docs/manual-start-readiness-report.md
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/launch/hybrid_control.launch
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/launch/hybrid_observe.launch
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/launch/real_trajectory_only.launch
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/package.xml
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/scripts/rc_l1_hybrid_launcher
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/scripts/sitl_odom_adapter
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/scripts/straight_line_trajectory_node
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/setup.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/src/rc_l1_position_command/__init__.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/src/rc_l1_position_command/diagnostics.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/src/rc_l1_position_command/mission.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/src/rc_l1_position_command/odom_adapter.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/src/rc_l1_position_command/preflight.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/src/rc_l1_position_command/readiness.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/src/rc_l1_position_command/ros_contract.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/src/rc_l1_position_command/trajectory.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/src/rc_l1_position_command/trajectory_node.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/__init__.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/command_capture.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/launch_files.test
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/odom_adapter.test
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/test_command_capture.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/test_diagnostics.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/test_mission.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/test_odom_adapter.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/test_odom_adapter_ros.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/test_preflight.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/test_readiness.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/test_ros_contract.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/test_rostest_entrypoints.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/test_runbook_contract.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/test_trajectory.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/test_trajectory_node_adapter.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/test_trajectory_node_ros.py
+ D dev_huang/apps/robot_control_agent/rc_l1_position_command/test/trajectory_node.test
+ M dev_huang/apps/robot_control_agent/test/test_l1_wrench_plotter.py
+ D dev_huang/apps/robot_control_agent/test/test_robot_control_agent_with_MPPIpx4.py
+ M dev_huang/apps/robot_control_agent/test/test_robot_wholebody_outer_position.py
+ M dev_huang/apps/robot_control_agent/test/test_uav_control_with_MPCpx4_outer_position_mpc.py
+ M dev_huang/apps/robot_control_agent/test/test_x4_950_gz_model.py
+ M src/modules/ekf2/EKF/aid_sources/magnetometer/mag_control.cpp
+ M src/modules/ekf2/test/test_EKF_externalVision.cpp
+ M src/modules/simulation/simulator_mavlink/SimulatorMavlink.cpp
+ M src/modules/simulation/simulator_mavlink/SimulatorMavlink.hpp
+?? MUJOCO_LOG.TXT
+?? dev_huang/apps/configs/robot_quadrotor_950_with_roarm_m3.xml
+?? dev_huang/apps/robot_control_agent/experiment_data/uav_PX4_trajectory_circle_20260926_142606.png
+?? dev_huang/apps/robot_control_agent/experiment_data/uav_attitude_thrust_MPC_trajectory_circle_20260926_145228.png
+?? dev_huang/apps/robot_control_agent/experiment_data/uav_outer_position_MPC_trajectory_circle_20260926_140604.png
+?? dev_huang/apps/robot_control_agent/experiment_data/uav_torque_thrust_MPC_trajectory_circle_20260926_143426.png
+?? dev_huang/apps/robot_control_agent/outer_position_mpc/MANUAL_CAPTURE.md
+?? dev_huang/apps/robot_control_agent/outer_position_mpc/README.md
+?? dev_huang/apps/robot_control_agent/outer_position_mpc/roarm_m3/README.md
+?? dev_huang/apps/robot_control_agent/outer_position_mpc/roarm_m3/contact_diagnostics.py
+?? dev_huang/apps/robot_control_agent/outer_position_mpc/roarm_m3/experiment_data/wholebody_outer_position_mpc_20260929_174059.csv
+?? dev_huang/apps/robot_control_agent/outer_position_mpc/roarm_m3/experiment_data/wholebody_outer_position_mpc_20260929_191902.csv
+?? dev_huang/apps/robot_control_agent/outer_position_mpc/roarm_m3/experiment_data/wholebody_outer_position_mpc_20260929_192809.csv
+?? dev_huang/apps/robot_control_agent/outer_position_mpc/roarm_m3/experiment_data/wholebody_outer_position_mpc_20260929_202928.csv
+?? dev_huang/apps/robot_control_agent/outer_position_mpc/roarm_m3/experiment_data/wholebody_outer_position_mpc_20260930_095358.csv
+?? dev_huang/apps/robot_control_agent/outer_position_mpc/roarm_m3/experiment_data/wholebody_outer_position_mpc_20260930_095528.csv
+?? dev_huang/apps/robot_control_agent/outer_position_mpc/roarm_m3/experiment_data/wholebody_outer_position_mpc_20260930_155109.csv
+?? dev_huang/apps/robot_control_agent/outer_position_mpc/roarm_m3/experiment_data/wholebody_outer_position_mpc_20261001_102143.csv
+?? dev_huang/apps/robot_control_agent/outer_position_mpc/roarm_m3/experiment_data/wholebody_outer_position_mpc_20261001_104431.csv
+?? dev_huang/apps/robot_control_agent/outer_position_mpc/roarm_m3/experiment_data/wholebody_outer_position_mpc_20261001_144458.csv
+?? dev_huang/apps/robot_control_agent/outer_position_mpc/roarm_m3/experiment_data/wholebody_outer_position_mpc_20261001_150902.csv
+?? dev_huang/apps/robot_control_agent/outer_position_mpc/roarm_m3/experiment_data/wholebody_outer_position_mpc_20261001_162224.csv
+?? dev_huang/apps/robot_control_agent/plan/BENCH_PLAN.md
+?? dev_huang/apps/robot_control_agent/plan/HITL_PLAN.md
+?? dev_huang/apps/robot_control_agent/plan/Outer_position_MPC.md
+?? dev_huang/apps/robot_control_agent/plan/REALFLY_PLAN.md
+?? dev_huang/apps/robot_control_agent/plan/SITL_PLAN.md
+?? dev_huang/apps/robot_control_agent/plan/evidence/circle_tracking0910/README.md
+?? dev_huang/apps/robot_control_agent/plan/evidence/circle_tracking0910/circle_tracking0910.py
+?? dev_huang/apps/robot_control_agent/plan/evidence/circle_tracking0910/test_circle_tracking0910.py
+?? dev_huang/apps/robot_control_agent/plan/evidence/circle_tracking0910/test_results.txt
+?? dev_huang/apps/robot_control_agent/plan/evidence/vendor_trajectory_20261020/candidate/Prometheus/Modules/tutorial_demo/basic/takeoff_land/src/takeoff_land.cpp
+?? dev_huang/apps/robot_control_agent/plan/evidence/vendor_trajectory_20261020/candidate/Prometheus/Modules/uav_control/utils/uav_command_pub.cpp
+?? dev_huang/apps/robot_control_agent/plan/evidence/vendor_trajectory_20261020/candidate_test_results.txt
+?? dev_huang/apps/robot_control_agent/plan/evidence/vendor_trajectory_20261020/compile_only.py
+?? dev_huang/apps/robot_control_agent/plan/evidence/vendor_trajectory_20261020/deployment_metadata.json
+?? dev_huang/apps/robot_control_agent/plan/evidence/vendor_trajectory_20261020/minimal_fixes.patch
+?? dev_huang/apps/robot_control_agent/plan/evidence/vendor_trajectory_20261020/original/Prometheus/Modules/tutorial_demo/CMakeLists.txt
+?? dev_huang/apps/robot_control_agent/plan/evidence/vendor_trajectory_20261020/original/Prometheus/Modules/tutorial_demo/basic/takeoff_land/src/takeoff_land.cpp
+?? dev_huang/apps/robot_control_agent/plan/evidence/vendor_trajectory_20261020/original/Prometheus/Modules/uav_control/include/controller_test.h
+?? dev_huang/apps/robot_control_agent/plan/evidence/vendor_trajectory_20261020/original/Prometheus/Modules/uav_control/utils/uav_command_pub.cpp
+?? dev_huang/apps/robot_control_agent/plan/evidence/vendor_trajectory_20261020/original/p600_experiment/config/prometheus_control_config/uav_command_pub.yaml
+?? dev_huang/apps/robot_control_agent/plan/evidence/vendor_trajectory_20261020/original/p600_experiment/launch_basic/uav_command_pub.launch
+?? dev_huang/apps/robot_control_agent/plan/evidence/vendor_trajectory_20261020/original_test_results.txt
+?? dev_huang/apps/robot_control_agent/plan/evidence/vendor_trajectory_20261020/originals.tar.gz
+?? dev_huang/apps/robot_control_agent/plan/evidence/vendor_trajectory_20261020/test_minimal_fixes.py
+?? dev_huang/apps/robot_control_agent/plan/evidence/vendor_trajectory_20261020/verification_results.json
+?? dev_huang/apps/robot_control_agent/test/check_roarm_m3_solver.py
+?? dev_huang/apps/robot_control_agent/test/fixtures/outer_position_reference_latest.json
+?? dev_huang/apps/robot_control_agent/test/fixtures/preallocation_failed_transitions_20260921.json
+?? dev_huang/apps/robot_control_agent/test/fixtures/reference_internal_motion_20260926.json
+?? dev_huang/apps/robot_control_agent/test/float_feedback_receiver_test.cpp
+?? dev_huang/apps/robot_control_agent/test/preallocation_test_support.py
+?? dev_huang/apps/robot_control_agent/test/test_ee_panel_trajectories.py
+?? dev_huang/apps/robot_control_agent/test/test_fast_preallocation.py
+?? dev_huang/apps/robot_control_agent/test/test_fast_preallocation_integration.py
+?? dev_huang/apps/robot_control_agent/test/test_fast_reference_progress.py
+?? dev_huang/apps/robot_control_agent/test/test_fastpreallocation_entry.py
+?? dev_huang/apps/robot_control_agent/test/test_float_sim_feedback.py
+?? dev_huang/apps/robot_control_agent/test/test_measured_arm_reference.py
+?? dev_huang/apps/robot_control_agent/test/test_outer_position_diagnostics.py
+?? dev_huang/apps/robot_control_agent/test/test_outer_position_joint_reference.py
+?? dev_huang/apps/robot_control_agent/test/test_outer_position_logging_opt_in.py
+?? dev_huang/apps/robot_control_agent/test/test_outer_position_reference_cases.py
+?? dev_huang/apps/robot_control_agent/test/test_outer_position_reference_continuation.py
+?? dev_huang/apps/robot_control_agent/test/test_outer_position_reference_variant.py
+?? dev_huang/apps/robot_control_agent/test/test_outer_position_rk4_variant.py
+?? dev_huang/apps/robot_control_agent/test/test_outer_position_solver_evidence.py
+?? dev_huang/apps/robot_control_agent/test/test_preallocation_async.py
+?? dev_huang/apps/robot_control_agent/test/test_preallocation_auxiliary.py
+?? dev_huang/apps/robot_control_agent/test/test_preallocation_repair.py
+?? dev_huang/apps/robot_control_agent/test/test_preallocation_runtime.py
+?? dev_huang/apps/robot_control_agent/test/test_preallocation_unbounded_workspace.py
+?? dev_huang/apps/robot_control_agent/test/test_px4_mujoco_wind_diagnostics.py
+?? dev_huang/apps/robot_control_agent/test/test_reference_fastpreallocation_entry.py
+?? dev_huang/apps/robot_control_agent/test/test_roarm_contact_diagnostics.py
+?? dev_huang/apps/robot_control_agent/test/test_roarm_m3_diagnostics.py
+?? dev_huang/apps/robot_control_agent/test/test_roarm_m3_entry.py
+?? dev_huang/apps/robot_control_agent/test/test_roarm_m3_future_reference.py
+?? dev_huang/apps/robot_control_agent/test/test_roarm_m3_gripper.py
+?? dev_huang/apps/robot_control_agent/test/test_roarm_m3_joint_reference_mode.py
+?? dev_huang/apps/robot_control_agent/test/test_roarm_m3_kinematics.py
+?? dev_huang/apps/robot_control_agent/test/test_roarm_m3_m5_export.py
+?? dev_huang/apps/robot_control_agent/test/test_roarm_m3_model.py
+?? dev_huang/apps/robot_control_agent/test/test_roarm_m3_mpc.py
+?? dev_huang/apps/robot_control_agent/test/test_roarm_m3_official_limits.py
+?? dev_huang/apps/robot_control_agent/test/test_roarm_m3_reference.py
+?? dev_huang/apps/robot_control_agent/test/test_roarm_m3_schedule_tolerance.py
+?? dev_huang/apps/robot_control_agent/test/test_roarm_m3_short_diagonal.py
+?? dev_huang/apps/robot_control_agent/test/test_roarm_m3_small_circle.py
+?? dev_huang/apps/robot_control_agent/test/test_roarm_m3_support_blocks.py
+?? dev_huang/apps/robot_control_agent/test/test_stable_joint_wls.py
+?? dev_huang/apps/robot_control_agent/test/test_stable_reference_allocator.py
+?? dev_huang/apps/robot_control_agent/test/test_stable_reference_manager.py
+?? dev_huang/apps/robot_control_agent/test/test_uav_attitude_thrust_mpc.py
+?? dev_huang/robot_models/roarm_m3/README.md
+?? dev_huang/robot_models/roarm_m3/actuators.xml
+?? dev_huang/robot_models/roarm_m3/body.xml
+?? dev_huang/robot_models/roarm_m3/contacts.xml
+?? dev_huang/robot_models/roarm_m3/dependencies.xml
+?? dev_huang/robot_models/roarm_m3/quadrotor_950_body.xml
+?? dev_huang/robot_models/roarm_m3/sensors.xml
+?? dev_huang/robot_models/roarm_m3/source/assets/base_link.stl
+?? dev_huang/robot_models/roarm_m3/source/assets/gripper_left_link.stl
+?? dev_huang/robot_models/roarm_m3/source/assets/gripper_link.stl
+?? dev_huang/robot_models/roarm_m3/source/assets/link1.stl
+?? dev_huang/robot_models/roarm_m3/source/assets/link2.stl
+?? dev_huang/robot_models/roarm_m3/source/assets/link3.stl
+?? dev_huang/robot_models/roarm_m3/source/assets/link4.stl
+?? dev_huang/robot_models/roarm_m3/source/assets/link5.stl
+?? dev_huang/robot_models/roarm_m3/source/roarm_m3.xml
+?? dev_huang/robot_models/roarm_m3/source/scene.xml
+?? dev_huang/robot_models/roarm_m3/source_hashes.json
+?? dev_huang/robot_models/scenes/cabinet/LICENSE.source
+?? dev_huang/robot_models/scenes/cabinet/README.md
+?? dev_huang/robot_models/scenes/cabinet/README.source.md
+?? dev_huang/robot_models/scenes/cabinet/cabinet.xml
+?? dev_huang/robot_models/scenes/cabinet/conversion_manifest.json
+?? dev_huang/robot_models/scenes/cabinet/textures/light-wood.png
+?? dev_huang/robot_models/scenes/cabinet/textures/metal.png
+?? src/modules/simulation/simulator_mavlink/LocalPositionFeedback.hpp

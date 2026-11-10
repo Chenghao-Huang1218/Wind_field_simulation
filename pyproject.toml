@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wind-field-simulation"
+version = "0.1.0"
+description = "MuJoCo and PX4 SITL quadrotor wind-field experiments"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["mujoco==3.6.0", "numpy==2.4.4", "torch==2.11.0", "matplotlib==3.10.9", "lxml>=4.9", "pyserial>=3.5"]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "build>=1.2"]
+
+[project.scripts]
+wind-field-sim = "wind_field_simulation.simulation:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["wind_field_simulation*", "pymavlink*"]
+exclude = ["pymavlink.tests*", "pymavlink.examples*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+wind_field_simulation = ["assets/**/*", "_vendor/LICENSE*"]
+pymavlink = ["COPYING", "dialects/**/*.xml", "generator/**/*.xsd", "generator/**/*h", "generator/**/*hpp", "generator/**/*py", "generator/**/*xml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

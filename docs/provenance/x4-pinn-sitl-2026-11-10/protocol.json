@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-10",
+  "scope": "real local PX4 SITL, headless production loop, new pilot vs analytic",
+  "backends": [
+    "analytic",
+    "pinn-x4"
+  ],
+  "wind_speed_m_s": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "wind_direction": "world +X; OFF at speed0",
+  "repeats": [
+    1,
+    2,
+    3
+  ],
+  "conditions": "hover only; no circle, figure8 or other wind directions",
+  "observation_s": 70,
+  "analysis_settle_s": 5,
+  "analysis_duration_s": 60,
+  "wind_activation_after_flying_s": 10,
+  "order_seed": 7,
+  "order_policy": "seeded condition order within each repeat; backend pair order alternates",
+  "px4_instance": 6,
+  "sim_tcp_port": 4566,
+  "command_udp_port": 14586,
+  "mavlink_target_system": 7,
+  "offline_suite": {
+    "passed": 220,
+    "duration_s": 28.69
+  },
+  "offline_actual_adapter_report": "offline_check.json",
+  "checkpoint_sha256": "d7fb92c96b275245047e76cfdb4317d4ca72c5ef81529c854f686e221ad5996b",
+  "source_sha256": {
+    "src/wind_field_simulation/simulation.py": "6b5be049768f3abcaff14a71d3ed4b0bd8fda86182629ba82a8a2a664b1065dd",
+    "src/wind_field_simulation/wind_backends.py": "8b7b3b435d5896ef1ea571c90fa75a3747c0c4ece23c06ac5bee4d025740f678",
+    "src/wind_field_simulation/training/model_v1.py": "1e27b2cf10be41310b2aa2a638d1e627189eb9c37c3552812ed9ddf0f79f846c",
+    "src/wind_field_simulation/training/sampling.py": "125cab4d8d83f88f0a4c41094f56777fe83d24c5b299bbc5e22bf35e3b342310",
+    "src/wind_field_simulation/training/reference_aerodynamics.py": "06b39cf649961714a919a2f63c32bb9c4a8e30f30b6d378c60c4c1ab305208cb",
+    "outputs/closed_loop/x4_pinn_compare_2026-11-10/run_case.py": "e2dcae358e4964bd092638d72f7f236908a5cfb4f9b89a243a534f059353fa00",
+    "runtime/px4/bin/px4": "db1c803bb28077856f8989b059c12421e0c8d3815be69aa3bb81b3262ae735ca",
+    "outputs/closed_loop/x4_pinn_compare_2026-11-10/seed_parameters.bson": "d26c2bbaf50b6ae5fbd9f0e81e8e1d5ce08e30901706e83a77809b1c6d0ce9da"
+  },
+  "shared_force_path_ast_unchanged": true,
+  "rmse_substitution_gate_m": "RMSE_pinn-RMSE_analytic <= max(.1*RMSE_analytic,.02m)",
+  "limitations": [
+    "Synthetic reference fit only, not calibrated aerodynamics",
+    "No interactive GUI/EXIT validation",
+    "No candidate default switch",
+    "settle-s is fixed time trimming, not automatic stability certification"
+  ],
+  "driver_matrix_sha256": "b11a904d9348ff1e922a796048000825c814d5da4bcbdeea7815b3f93d0e01b1",
+  "planned_cases_sha256": "4a3713f5733bb5ed308ee3b86aed20a692ab379b062a62889cc86afd1fb42012"
+}

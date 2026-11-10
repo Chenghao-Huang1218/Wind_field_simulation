@@ -1,0 +1,28 @@
+<!-- Copyright (c) 2026 Polyu-ISE RAIDS Lab. All rights reserved. -->
+
+<mujocoinclude>
+  <default>
+
+    <default class="rcdrone">
+      <default class="drone_visual">
+        <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+      </default>
+      <default class="drone_collision">
+        <geom group="3" contype="1" conaffinity="1" rgba="1 0 0 0"/>
+      </default>
+    </default>
+
+  </default>
+
+  <asset>
+    <material name="paint_metallic_dark" specular="0.4" shininess="0.6" rgba="0.1 0.1 0.1 1"/>
+  </asset>
+
+  <asset>
+    <mesh name="quadrotor_950_base" file="meshes/quadrotor_950.stl" scale="1 1 1"/>
+    <mesh name="quadrotor_950_rotor_link_1" file="meshes/rotor_link_1.STL" scale="1 1 1"/>
+    <mesh name="quadrotor_950_rotor_link_2" file="meshes/rotor_link_2.STL" scale="1 1 1"/>
+    <mesh name="quadrotor_950_rotor_link_3" file="meshes/rotor_link_3.STL" scale="1 1 1"/>
+    <mesh name="quadrotor_950_rotor_link_4" file="meshes/rotor_link_4.STL" scale="1 1 1"/>
+  </asset>
+</mujocoinclude>

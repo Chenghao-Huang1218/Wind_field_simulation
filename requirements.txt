@@ -1,0 +1,8 @@
+# Python 3.12 reference runtime. pymavlink and the required PINN/RotorPy code
+# are included under src; do not install a conflicting pymavlink distribution.
+mujoco==3.6.0
+numpy==2.4.4
+torch==2.11.0
+matplotlib==3.10.9
+lxml>=4.9
+pyserial>=3.5

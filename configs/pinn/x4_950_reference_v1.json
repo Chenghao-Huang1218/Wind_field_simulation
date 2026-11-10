@@ -1,0 +1,28 @@
+{
+  "kind": "x4_950_component_drag_reference_v1",
+  "assumptions": {
+    "status": "simulation assumptions, not identified physical parameters",
+    "density_kg_m3": 1.225,
+    "cd_axes": [1.0, 1.0, 1.0],
+    "area_rule": "ellipsoid axial reference areas: pi * r_j * r_k",
+    "geometry_policy": "aircraft collision pieces; one body AABB for each arm part; mesh fallback only without collision",
+    "pose": "XML qpos0; fixed aerodynamic geometry, no change to multibody dynamics",
+    "wind_max_horizontal_m_s": 3.0,
+    "wind_z_m_s": 0.0,
+    "applied_force_z_n": 0.0,
+    "excluded_effects": ["rotor blade drag", "induced flow", "wake interference", "ground/wall effects", "moving arm", "additional payload", "applied aerodynamic torque"],
+    "limitations": "Additive proxies ignore occlusion and can overlap at component junctions; collision bounds may omit physical details. Axiswise quadratic drag is an explicit approximation."
+  },
+  "inspection_state_domain": {
+    "root_horizontal_speed_max_m_s": 3.0,
+    "root_vertical_velocity_m_s": [-1.0, 1.0],
+    "roll_pitch_max_deg": 20.0,
+    "yaw_deg": [-180.0, 180.0],
+    "angular_speed_max_rad_s": 1.5,
+    "status": "proposed offline inspection domain; not a verified flight envelope"
+  },
+  "sources": {
+    "drag_equation": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-equation/",
+    "mjcf": "https://mujoco.readthedocs.io/en/3.6.0/XMLreference.html"
+  }
+}

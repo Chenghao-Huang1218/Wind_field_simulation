@@ -1,0 +1,146 @@
+[
+  {
+    "case": "analytic_hover_w0_x_r1",
+    "backend": "analytic",
+    "speed": 0,
+    "repeat": 1
+  },
+  {
+    "case": "pinn-x4_hover_w0_x_r1",
+    "backend": "pinn-x4",
+    "speed": 0,
+    "repeat": 1
+  },
+  {
+    "case": "analytic_hover_w2_x_r1",
+    "backend": "analytic",
+    "speed": 2,
+    "repeat": 1
+  },
+  {
+    "case": "pinn-x4_hover_w2_x_r1",
+    "backend": "pinn-x4",
+    "speed": 2,
+    "repeat": 1
+  },
+  {
+    "case": "analytic_hover_w1_x_r1",
+    "backend": "analytic",
+    "speed": 1,
+    "repeat": 1
+  },
+  {
+    "case": "pinn-x4_hover_w1_x_r1",
+    "backend": "pinn-x4",
+    "speed": 1,
+    "repeat": 1
+  },
+  {
+    "case": "analytic_hover_w3_x_r1",
+    "backend": "analytic",
+    "speed": 3,
+    "repeat": 1
+  },
+  {
+    "case": "pinn-x4_hover_w3_x_r1",
+    "backend": "pinn-x4",
+    "speed": 3,
+    "repeat": 1
+  },
+  {
+    "case": "pinn-x4_hover_w3_x_r2",
+    "backend": "pinn-x4",
+    "speed": 3,
+    "repeat": 2
+  },
+  {
+    "case": "analytic_hover_w3_x_r2",
+    "backend": "analytic",
+    "speed": 3,
+    "repeat": 2
+  },
+  {
+    "case": "pinn-x4_hover_w1_x_r2",
+    "backend": "pinn-x4",
+    "speed": 1,
+    "repeat": 2
+  },
+  {
+    "case": "analytic_hover_w1_x_r2",
+    "backend": "analytic",
+    "speed": 1,
+    "repeat": 2
+  },
+  {
+    "case": "pinn-x4_hover_w2_x_r2",
+    "backend": "pinn-x4",
+    "speed": 2,
+    "repeat": 2
+  },
+  {
+    "case": "analytic_hover_w2_x_r2",
+    "backend": "analytic",
+    "speed": 2,
+    "repeat": 2
+  },
+  {
+    "case": "pinn-x4_hover_w0_x_r2",
+    "backend": "pinn-x4",
+    "speed": 0,
+    "repeat": 2
+  },
+  {
+    "case": "analytic_hover_w0_x_r2",
+    "backend": "analytic",
+    "speed": 0,
+    "repeat": 2
+  },
+  {
+    "case": "analytic_hover_w0_x_r3",
+    "backend": "analytic",
+    "speed": 0,
+    "repeat": 3
+  },
+  {
+    "case": "pinn-x4_hover_w0_x_r3",
+    "backend": "pinn-x4",
+    "speed": 0,
+    "repeat": 3
+  },
+  {
+    "case": "analytic_hover_w3_x_r3",
+    "backend": "analytic",
+    "speed": 3,
+    "repeat": 3
+  },
+  {
+    "case": "pinn-x4_hover_w3_x_r3",
+    "backend": "pinn-x4",
+    "speed": 3,
+    "repeat": 3
+  },
+  {
+    "case": "analytic_hover_w1_x_r3",
+    "backend": "analytic",
+    "speed": 1,
+    "repeat": 3
+  },
+  {
+    "case": "pinn-x4_hover_w1_x_r3",
+    "backend": "pinn-x4",
+    "speed": 1,
+    "repeat": 3
+  },
+  {
+    "case": "analytic_hover_w2_x_r3",
+    "backend": "analytic",
+    "speed": 2,
+    "repeat": 3
+  },
+  {
+    "case": "pinn-x4_hover_w2_x_r3",
+    "backend": "pinn-x4",
+    "speed": 2,
+    "repeat": 3
+  }
+]

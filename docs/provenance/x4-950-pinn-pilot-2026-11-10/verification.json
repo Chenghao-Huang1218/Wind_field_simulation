@@ -1,0 +1,9 @@
+{
+  "pytest_command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 MPLBACKEND=Agg /home/raids/miniconda3/envs/env_uav/bin/python -m pytest -q",
+  "passed": 211,
+  "skipped": 0,
+  "duration_s": 26.67,
+  "candidate_sitl_executed": false,
+  "runtime_default_changed": false,
+  "plot_layout_issues": []
+}
