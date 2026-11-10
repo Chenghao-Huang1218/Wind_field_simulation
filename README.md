@@ -12,21 +12,19 @@
 
 ## 展示
 
-**[观看／下载演示视频（MP4，约 86 秒，17.6 MB）](docs/media/videos/Wind%20field%20simulation%20Demo.mp4)**
-
 | X4-950 + Airbot Play 模型 | 交互控制面板 |
 | --- | --- |
 | ![MuJoCo 中的四旋翼与机械臂](docs/media/images/MJCF%20model.png) | ![飞行、轨迹与水平风设置面板](docs/media/images/Control%20UI.png) |
 
-<details>
-<summary>查看圆轨迹跟踪示例</summary>
+| 演示视频（自动播放预览） | 圆轨迹跟踪示例 |
+| --- | --- |
+| [<img src="docs/media/videos/wind-field-simulation-preview.gif" width="420" alt="风场仿真视频动态预览；点击打开完整 MP4">](docs/media/videos/Wind%20field%20simulation%20Demo.mp4) | <img src="docs/media/images/Motion%20tracking.png" width="420" alt="圆轨迹目标与实际 XY 轨迹示例"> |
+| [观看／下载完整 MP4（约 86 秒，17.6 MB）](docs/media/videos/Wind%20field%20simulation%20Demo.mp4) | 灰色虚线：目标轨迹；红线：实际轨迹 |
 
-![圆轨迹目标与实际 XY 轨迹示例](docs/media/images/Motion%20tracking.png)
-
-</details>
+左侧为原视频 48–60 秒片段的 GIF 动态预览（12 秒、4 fps、静音），点击可打开完整 MP4。
 
 以上为功能展示，截图未标注完整实验条件，不作为定量气动精度或闭环性能结论。
-视频链接可打开 GitHub 文件页，不能内嵌播放时可下载后观看。
+完整视频链接打开 GitHub 文件页，不能播放时可下载后观看。
 
 新读者请先看 **[完整安装与依赖版本（中文）](docs/INSTALL.zh-CN.md)**，其中包括
 Ubuntu 24.04 系统库、Python 环境、依赖检查、双终端启动及常见问题。

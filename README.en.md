@@ -13,22 +13,21 @@ options. PX4 retains its native flight controllers.
 
 ## Demo
 
-**[Watch / download the demo (MP4, approximately 86 seconds, 17.6 MB)](docs/media/videos/Wind%20field%20simulation%20Demo.mp4)**
-
 | X4-950 + Airbot Play model | Interactive control panel |
 | --- | --- |
 | ![Quadrotor and arm in MuJoCo](docs/media/images/MJCF%20model.png) | ![Flight, trajectory and horizontal wind controls](docs/media/images/Control%20UI.png) |
 
-<details>
-<summary>View the circular trajectory tracking example</summary>
+| Demo video (animated preview) | Circular trajectory tracking example |
+| --- | --- |
+| [<img src="docs/media/videos/wind-field-simulation-preview.gif" width="420" alt="Animated wind simulation preview; click for the full MP4">](docs/media/videos/Wind%20field%20simulation%20Demo.mp4) | <img src="docs/media/images/Motion%20tracking.png" width="420" alt="Example target and actual XY trajectories"> |
+| [Watch / download the full MP4 (approximately 86 seconds, 17.6 MB)](docs/media/videos/Wind%20field%20simulation%20Demo.mp4) | Dashed gray: target; red: actual trajectory |
 
-![Example target and actual XY trajectories](docs/media/images/Motion%20tracking.png)
-
-</details>
+The left cell shows a 12-second GIF preview from 00:48–01:00 of the original
+recording (4 fps, silent). Click it to open the full MP4.
 
 These materials demonstrate features. The screenshots do not specify complete
 experimental conditions and do not establish aerodynamic accuracy or quantitative
-closed-loop performance. The video link opens its GitHub file page; download it
+closed-loop performance. The full video link opens its GitHub file page; download it
 if inline playback is unavailable.
 
 Start with the **[complete installation guide](docs/INSTALL.en.md)** for system
