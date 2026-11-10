@@ -229,18 +229,6 @@ X、Y 分量的正负号表示水平气流吹向，例如：
 
 更换机器或需要修改飞控时，参见 [PX4 源码与编译说明](docs/px4.md)。
 
-## 离线验证
-
-```bash
-PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 MPLBACKEND=Agg python -m pytest -q
-```
-
-关闭 pytest 自动加载是为了避免本机 ROS 等无关插件干扰测试。测试使用内存中的
-MAVLink 消息和无窗口图形后端，不启动 SITL、不建立真实飞控连接。
-运行包版不包含 PX4 源码时，依赖其头文件的单项 C++ 配对契约测试会明确跳过；
-完整源码开发目录仍执行该测试，其余离线测试不受影响。
-验证结果见 [迁移报告](docs/migration.md)。
-
 ## 独立 X4-950 气动参考
 
 已建立默认初始机械臂姿态的分部件二次阻力参考，风域为**水平合风速 0–3 m/s**。
@@ -419,13 +407,3 @@ python scripts/evaluate_x4_wind_pinn.py \
 新试训权重不会自动覆盖当前默认模型。需要试用时，先完成离线评估，再通过
 `--pinn-checkpoint` 选择新权重、`--reference-config` 选择其匹配参考，并按
 [SITL 对照步骤](docs/X4_PINN_INTEGRATION_2026-11-10.md) 单独进行闭环验证。
-
-## 来源与开源准备
-
-原项目保持原样。新项目运行代码通过包内路径读取资源，不依赖旧 PX4 或 PINN
-目录。首版仓库只提供已编译PX4运行包；飞控源码的官方基线、精简后补丁与校验清单，以及原始迁移记录，均位于
-[docs/provenance](docs/provenance)；历史归档记录不代表当前精简后源码。
-
-仓库已公开，但尚未替所有材料指定统一开源许可证。已有 XML 标有 RAIDS Lab
-版权声明，PINN 代码和权重的上游目录未找到顶层许可证；相应材料的再分发、修改等授权
-仍需权利人明确。第三方材料沿用其已有许可证，详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。

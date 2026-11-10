@@ -219,19 +219,6 @@ child started by this project's launcher. It does not terminate processes by
 name. Restart older launchers to enable the coordination. If overriding
 `PX4_STATE_DIR`, use the same value in both terminals.
 
-## Offline validation
-
-```bash
-PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 MPLBACKEND=Agg python -m pytest -q
-```
-
-Disabling automatic pytest plugins avoids interference from unrelated installed
-plugins. These tests use in-memory MAVLink messages and a noninteractive graphics
-backend; they do not start SITL or validate flight. The runtime-only repository
-explicitly skips the single C++ header contract test when PX4 sources are absent.
-The initial publication check passed **220 tests with 1 skipped**; the full local
-source checkout passed **221 tests**. See [migration records](docs/migration.md).
-
 ## Independent X4-950 aerodynamic reference
 
 The independent reference uses component-wise quadratic drag for the default
@@ -419,18 +406,3 @@ coordinate/unit conventions and reference/data fingerprints for compatibility ch
 New training does not overwrite the default checkpoint. To try a new candidate,
 evaluate it offline first, select it with `--pinn-checkpoint` and its matching
 `--reference-config`, then perform a separate [SITL comparison](docs/X4_PINN_INTEGRATION_2026-11-10.md).
-
-## Provenance and licensing
-
-Application resources are resolved within this project, independently of the
-original PX4 and neighboring PINN projects. The public repository contains the
-prebuilt PX4 runtime; official source baseline, adaptation patch and checksums
-are recorded under [docs/provenance](docs/provenance). Historical migration
-records are not a description of every current source modification.
-
-The repository is public, but a single license has not been assigned to all
-materials. Some XML assets carry RAIDS Lab copyright notices; no top-level
-license was found in the upstream PINN code/weight directory. Permission for
-reuse and redistribution of those materials still needs clarification from
-their rights holders. Existing third-party licenses remain applicable; see
-[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
