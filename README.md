@@ -81,17 +81,9 @@ cd /home/raids/Wind_field_simulation
 /home/raids/miniconda3/envs/env_uav/bin/python scripts/run_simulation.py --help
 ```
 
-`pymavlink` 随本项目安装；建议使用独立虚拟环境，避免与其他版本相互覆盖。
-只复制 RotorPy 所需的 Hummingbird 参数文件，因此不再需要安装完整 RotorPy。
-这些参数仅用于保持旧 `pinn` 回退的输入契约，并不代表 X4-950 的机体参数；
-默认新 `pinn-x4` 使用本项目 XML 派生的独立气动参考。
-
 ## PX4 SITL
 
-首版 GitHub 仓库包含仿真代码、模型、PINN 权重与冻结参考，以及已经验证的
-**PX4 SITL 运行包**：已编译的可执行文件 `runtime/px4/bin/px4` 及
-`runtime/px4/etc/` 启动资源。**本仓库不包含 PX4 源码**、构建缓存或
-`outputs/` 实验日志。本地完整源码不删除、不修改。
+本项目使用已编译的**PX4 SITL**。
 
 源码参考 **PX4 1.17**，可查看 [PX4 官方开源项目](https://github.com/PX4/PX4-Autopilot)
 及其 [1.17 版本分支](https://github.com/PX4/PX4-Autopilot/tree/release/1.17)。
@@ -148,15 +140,6 @@ cd /home/raids/Wind_field_simulation
 python scripts/run_simulation.py
 ```
 
-该命令默认加载新 **`pinn-x4`** 后端，以及项目内独立版本目录中的权重与冻结参考。
-显式回退仅需替换终端二的最后一行，终端一不变：
-
-```bash
-python scripts/run_simulation.py --wind-backend analytic
-# 或使用旧 PINN：
-python scripts/run_simulation.py --wind-backend pinn
-```
-
 启动时没有已配置的风扰参数：X、Y 两个输入框为空，`Wind ON/OFF` 开关禁用。
 必须先填写完整参数并点击 `Apply Wind`，仿真接受后才能开启风扰。
 运行中可继续修改风速和方向，无需重启程序。已安装本项目时，也可运行
@@ -168,12 +151,6 @@ python scripts/run_simulation.py --wind-backend pinn
 默认 TCP 端口为 4560，Offboard UDP 端口为 14580。启动脚本设置
 `PX4_SIM_MODEL=none_iris`、`PX4_SIM_FLOAT_STATE=1`，并将新状态写入 `outputs/px4/`。
 已有其他 SITL 实例占用端口时，应先自行结束对应实例。
-
-当前 PX4 源码只保留 MuJoCo 真值反馈、浮点局部位置配对、电机输出适配和
-X4-950 配置所需的本地修改，移除了未使用的历史控制入口及自定义 Gazebo 资源。
-项目内默认运行包已从精简后的源码重新编译。
-PX4 原生控制器使用 MuJoCo 状态真值，默认关闭 EKF2；该模式用于控制闭环测试。
-源码基线和保留补丁见 [PX4 说明](docs/px4.md)。
 
 ### 控制面板点击顺序
 
@@ -224,23 +201,8 @@ X、Y 分量的正负号表示水平气流吹向，例如：
 分量可能非零，可用于诊断，但不会作为垂直风扰施加。无人机升力、重力和高度控制
 继续按原模型运行。
 
-### 显示与退出说明
-
 蓝色风向标记使用“短杆＋实心三角箭头”，方向及箭头平面固定为世界 XY，
-沿已配置水平风向移动，不随无人机姿态倾斜。斜视相机下可能有正常的屏幕透视斜率，
-不表示存在 Z 风速或垂直风扰力。
-
-`--no-viewer`
-仅关闭 MuJoCo 三维窗口，仍保留 Matplotlib 面板，因此不等同于无图形界面模式。
-`--xml-path`、`--params-path` 仍支持自定义文件。
-
-点击 **EXIT** 后，仿真窗口会关闭，同时通知终端一的启动器结束它创建的 PX4 SITL
-子进程；两个终端随后回到命令提示符，终端窗口本身保留。启动器使用项目状态目录
-内的会话标识和文件锁进行退出联动，不会按进程名称批量结束其他 PX4 实例。
-更新到这一版本后，需要先结束旧的 SITL，再用 `bash scripts/run_px4_sitl.sh`
-重新启动终端一，才能启用退出联动。若自定义 `PX4_STATE_DIR`，两个终端须设置相同值。
-
-更换机器或需要修改飞控时，参见 [PX4 源码与编译说明](docs/px4.md)。
+沿已配置水平风向移动，不随无人机姿态倾斜。
 
 ## 独立 X4-950 气动参考
 

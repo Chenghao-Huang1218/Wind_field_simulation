@@ -77,12 +77,6 @@ python -m pip install torch==2.11.0 --index-url https://download.pytorch.org/whl
 python -m pip install -e '.[dev]'
 ```
 
-Use an isolated environment: the project installs its bundled `pymavlink`.
-Only the RotorPy Hummingbird parameters needed for the legacy model are bundled;
-the full RotorPy package is unnecessary. These parameters preserve the legacy
-input contract and do not describe the X4-950. The new backend uses its own
-XML-derived reference.
-
 On the original development machine, the existing Conda environment `env_uav`
 can be used instead, without installing the package first:
 
@@ -95,11 +89,7 @@ Its explicit activation commands are included below.
 
 ## PX4 SITL
 
-The first public version includes the application, models, weights, frozen
-reference and prebuilt **PX4 SITL runtime**: the compiled executable
-`runtime/px4/bin/px4` and startup resources under `runtime/px4/etc/`.
-**This repository does not include PX4 source code**, build caches or experiment
-outputs. The complete local development source tree is retained.
+This project uses precompiled **PX4 SITL**.
 
 For source reference, see **PX4 1.17** in the
 [official PX4 open-source project](https://github.com/PX4/PX4-Autopilot) and its
@@ -138,15 +128,6 @@ source .venv/bin/activate
 python scripts/run_simulation.py
 ```
 
-This loads **`pinn-x4`** and its bundled checkpoint/reference automatically.
-To choose a fallback, replace only the last command in terminal 2:
-
-```bash
-python scripts/run_simulation.py --wind-backend analytic
-# Or use the legacy PINN:
-python scripts/run_simulation.py --wind-backend pinn
-```
-
 On the original development machine, use the following complete commands instead:
 
 ```bash
@@ -174,9 +155,7 @@ After installing the package, `python -m wind_field_simulation` is also supporte
 
 The default ports are TCP **4560** and Offboard UDP **14580**. The launcher sets
 `PX4_SIM_MODEL=none_iris` and `PX4_SIM_FLOAT_STATE=1` and writes runtime state to
-`outputs/px4/`. The current control tests use MuJoCo truth feedback with EKF2
-disabled. They do not validate a full real-sensor estimation chain. The local
-PX4 adaptations and source baseline are described in [docs/px4.md](docs/px4.md).
+`outputs/px4/`.
 
 ### Control panel sequence
 
@@ -220,19 +199,9 @@ Raw three-axis predictions are retained for diagnostics, but Z is removed before
 force application and the Z filter state is cleared. Existing lift, gravity and
 altitude control remain active.
 
-### Display and shutdown
-
 The blue wind markers use a short shaft and filled triangular arrowhead, both
-fixed in the world XY plane. They do not tilt with vehicle attitude. Perspective
-can make a horizontal world line appear slanted on screen.
-
-`--no-viewer` disables only the MuJoCo 3D window; the Matplotlib panel remains.
-It is not a headless mode. `--xml-path` and `--params-path` allow custom assets.
-
-Exit coordination uses session identifiers and locks and manages only the SITL
-child started by this project's launcher. It does not terminate processes by
-name. Restart older launchers to enable the coordination. If overriding
-`PX4_STATE_DIR`, use the same value in both terminals.
+fixed in the world XY plane. They move along the configured horizontal wind
+direction and do not tilt with vehicle attitude.
 
 ## Independent X4-950 aerodynamic reference
 
