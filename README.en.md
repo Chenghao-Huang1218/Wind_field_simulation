@@ -87,7 +87,14 @@ input contract and do not describe the X4-950. The new backend uses its own
 XML-derived reference.
 
 On the original development machine, the existing Conda environment `env_uav`
-can be used instead. Its explicit activation commands are included below.
+can be used instead, without installing the package first:
+
+```bash
+cd /home/raids/Wind_field_simulation
+/home/raids/miniconda3/envs/env_uav/bin/python scripts/run_simulation.py --help
+```
+
+Its explicit activation commands are included below.
 
 ## PX4 SITL
 
@@ -166,6 +173,7 @@ horizontal components and click **Apply Wind** before enabling wind. CLI options
 `--wind-x` / `--wind-y` only prefill a draft; they do not apply or enable it.
 When either is provided, an unspecified horizontal component defaults to zero.
 Wind Z is fixed at zero; `--wind-z` is not supported.
+After installing the package, `python -m wind_field_simulation` is also supported.
 
 The default ports are TCP **4560** and Offboard UDP **14580**. The launcher sets
 `PX4_SIM_MODEL=none_iris` and `PX4_SIM_FLOAT_STATE=1` and writes runtime state to
@@ -244,8 +252,15 @@ python scripts/check_x4_950_reference.py
 ```
 
 The [reference report](docs/x4-950-reference-v1.md) describes the interface,
-29 component proxies, behavior checks and computational cost. The first real
-SITL comparison covered hover with wind OFF / +X 1 m/s, three restarts per
+29 component proxies, behavior checks and computational cost. To select the
+analytical backend, use the bundled reference and enable wind through Apply Wind
+and the panel toggle:
+
+```bash
+python scripts/run_simulation.py --wind-backend analytic
+```
+
+The first real SITL comparison covered hover with wind OFF / +X 1 m/s, three restarts per
 backend, for **12 complete runs** comparing the analytical and legacy backends.
 Their disturbance magnitudes differ, so this is not a ranking of real-world
 aerodynamic accuracy. See the [first-round report](docs/SITL_FIRST_ROUND_2026-11-10.md)
@@ -258,12 +273,12 @@ were not overwritten. Explicit checkpoint/reference overrides are supported:
 
 ```bash
 python scripts/run_simulation.py --wind-backend pinn-x4 \
-  --reference-config outputs/pinn/x4_950_wind_v1/reference_config.json \
-  --pinn-checkpoint outputs/pinn/x4_950_pilot_v1/training_corrected/candidate.pt
+  --reference-config src/wind_field_simulation/assets/checkpoints/x4_950_wind_v1/reference_config.json \
+  --pinn-checkpoint src/wind_field_simulation/assets/checkpoints/x4_950_wind_v1/candidate.pt
 ```
 
-These `outputs/` paths refer to original local experiment artifacts and are not
-included in the public repository. Normal use needs no overrides. An incompatible
+These paths explicitly select the bundled checkpoint and frozen reference,
+equivalent to the default launch. Normal use needs no overrides. An incompatible
 checkpoint/reference fails before connecting to PX4; there is no silent backend
 substitution. `--run-log PATH` optionally records comparison data at 50 Hz and
 rejects existing output files.

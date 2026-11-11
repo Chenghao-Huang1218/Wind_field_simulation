@@ -69,8 +69,11 @@ Python 依赖锁定与系统动态库 ABI、CPU 版 PyTorch 安装方法见
 下面的简短命令以已经取得仓库且安装好系统依赖为前提。
 
 ```bash
+cd ~/Wind_field_simulation
 python3.12 -m venv .venv
 source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cpu
 python -m pip install -e '.[dev]'
 ```
 
@@ -149,8 +152,13 @@ python scripts/run_simulation.py
 ```
 
 该命令默认加载新 **`pinn-x4`** 后端，以及项目内独立版本目录中的权重与冻结参考。
-显式回退仅需把终端二命令换成 `python scripts/run_simulation.py --wind-backend analytic`
-或 `python scripts/run_simulation.py --wind-backend pinn`（旧模型）。终端一不变。
+显式回退仅需替换终端二的最后一行，终端一不变：
+
+```bash
+python scripts/run_simulation.py --wind-backend analytic
+# 或使用旧 PINN：
+python scripts/run_simulation.py --wind-backend pinn
+```
 
 启动时没有已配置的风扰参数：X、Y 两个输入框为空，`Wind ON/OFF` 开关禁用。
 必须先填写完整参数并点击 `Apply Wind`，仿真接受后才能开启风扰。
@@ -254,8 +262,7 @@ Task 1–2 的接口、29 个几何代理选择、行为/计算成本检查及�
 解析启动示例（仍须在面板 Apply 后手动开风）：
 
 ```bash
-python scripts/run_simulation.py --wind-backend analytic \
-    --reference-config outputs/pinn/x4_950_wind_v1/reference_config.json
+python scripts/run_simulation.py --wind-backend analytic
 ```
 
 旧模型显式回退为 `python scripts/run_simulation.py --wind-backend pinn`。
@@ -267,20 +274,19 @@ python scripts/run_simulation.py --wind-backend analytic \
 
 用户随后授权的 **3,000 对样本 PINN pilot 已完成**：6 维机体系新网络试训练，
 500 对留出样本非零风归一化误差 1.28%，零风增量精确为 0。
-候选独立保存在 `outputs/pinn/x4_950_pilot_v1/training_corrected/candidate.pt`，
-pilot 阶段未替换旧权重；随后完成接入和对照，现已按用户要求设为默认，解析与旧PINN可显式回退，不修改PX4。
+pilot 候选已独立打包到下述版本目录，未替换旧权重；随后完成接入和对照，
+现已按用户要求设为默认，解析与旧 PINN 可显式回退，不修改 PX4。
 数据、误差、零风/软物理约束残差、CPU 耗时与复现命令见
 [pilot 报告](docs/X4_PINN_PILOT_2026-11-10.md)。合成参考拟合不代表实物气动精度。
 
 新 `pinn-x4` 已设为默认。其权重与参考打包在
 `src/wind_field_simulation/assets/checkpoints/x4_950_wind_v1/`，原旧模型文件未覆盖。
-默认启动无需传模型路径；也可显式覆盖路径来复现原实验版本。
-以下 `outputs/` 路径是原开发机实验产物，不随公开仓库提供；普通使用无需这些覆盖参数：
+默认启动无需传模型路径；以下显式选择仓库自带的权重和冻结参考，效果与默认启动相同：
 
 ```bash
 python scripts/run_simulation.py --wind-backend pinn-x4 \
-  --reference-config outputs/pinn/x4_950_wind_v1/reference_config.json \
-  --pinn-checkpoint outputs/pinn/x4_950_pilot_v1/training_corrected/candidate.pt
+  --reference-config src/wind_field_simulation/assets/checkpoints/x4_950_wind_v1/reference_config.json \
+  --pinn-checkpoint src/wind_field_simulation/assets/checkpoints/x4_950_wind_v1/candidate.pt
 ```
 
 仍须在面板 Apply 后手动开风；共用原 XY/EMA/限幅链路。
