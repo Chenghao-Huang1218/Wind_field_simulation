@@ -204,63 +204,6 @@ X、Y 分量的正负号表示水平气流吹向，例如：
 蓝色风向标记使用“短杆＋实心三角箭头”，方向及箭头平面固定为世界 XY，
 沿已配置水平风向移动，不随无人机姿态倾斜。
 
-## 独立 X4-950 气动参考
-
-已建立默认初始机械臂姿态的分部件二次阻力参考，风域为**水平合风速 0–3 m/s**。
-它已作为显式 `analytic` 回退后端接入，默认使用新 `pinn-x4`。空气密度、Cd 和等效几何
-均带明确假设；不能据合成结果宣称真实飞机气动精度。
-
-```bash
-python scripts/export_x4_950_parameters.py
-python scripts/check_x4_950_reference.py
-```
-
-Task 1–2 的接口、29 个几何代理选择、行为/计算成本检查及复现命令见
-[参考模型检查记录](docs/x4-950-reference-v1.md)。解析方案继续保留。
-
-解析启动示例（仍须在面板 Apply 后手动开风）：
-
-```bash
-python scripts/run_simulation.py --wind-backend analytic
-```
-
-旧模型显式回退为 `python scripts/run_simulation.py --wind-backend pinn`。
-可选 `--run-log PATH` 保存 50 Hz 对照日志，已有文件不会覆盖。
-完整双终端命令、无风/解析/旧 PINN 对照流程和汇总方法见
-[SITL 对照步骤](docs/analytic-wind-sitl-comparison.md)。
-已完成悬停 OFF/1 m/s +X 的首轮真实无窗口 SITL 对照（两后端各3次，12/12完整运行），
-结果、原始产物来源和未验证范围见 [首轮对照报告](docs/SITL_FIRST_ROUND_2026-11-10.md)。
-
-用户随后授权的 **3,000 对样本 PINN pilot 已完成**：6 维机体系新网络试训练，
-500 对留出样本非零风归一化误差 1.28%，零风增量精确为 0。
-pilot 候选已独立打包到下述版本目录，未替换旧权重；随后完成接入和对照，
-现已按用户要求设为默认，解析与旧 PINN 可显式回退，不修改 PX4。
-数据、误差、零风/软物理约束残差、CPU 耗时与复现命令见
-[pilot 报告](docs/X4_PINN_PILOT_2026-11-10.md)。合成参考拟合不代表实物气动精度。
-
-新 `pinn-x4` 已设为默认。其权重与参考打包在
-`src/wind_field_simulation/assets/checkpoints/x4_950_wind_v1/`，原旧模型文件未覆盖。
-默认启动无需传模型路径；以下显式选择仓库自带的权重和冻结参考，效果与默认启动相同：
-
-```bash
-python scripts/run_simulation.py --wind-backend pinn-x4 \
-  --reference-config src/wind_field_simulation/assets/checkpoints/x4_950_wind_v1/reference_config.json \
-  --pinn-checkpoint src/wind_field_simulation/assets/checkpoints/x4_950_wind_v1/candidate.pt
-```
-
-仍须在面板 Apply 后手动开风；共用原 XY/EMA/限幅链路。
-错误模型或参考版本在连接 PX4 前拒绝，不静默更换后端。
-旧模型回退：`python scripts/run_simulation.py --wind-backend pinn`；解析选择命令不变。
-解析回退可简写为 `python scripts/run_simulation.py --wind-backend analytic`，
-默认使用与新PINN相同的冻结参考。缺失/不匹配时直接报错，不静默更换模型。
-接口、范围和物理限制见 [模型卡](docs/models/x4-950-pinn-pilot-v1.md)。
-
-新PINN/解析的真实无窗口SITL对照已完成：悬停OFF/+X1/2/3m/s、每组3次重启，
-**24/24完整落地退出**，全部实际Fz=0、主窗限幅/超域占比0。
-配对位置RMSE差值通过预设门槛；完整施力路径未显示提速优势。
-离线220项验证、对照数据/图、双终端启动和回退命令见
-[接入与SITL报告](docs/X4_PINN_INTEGRATION_2026-11-10.md)。其它风向/轨迹与GUI仍需单独验证。
-
 ## PINN 的作用与训练方法
 
 ### 在仿真中的作用

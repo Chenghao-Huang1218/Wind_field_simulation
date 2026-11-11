@@ -203,62 +203,6 @@ The blue wind markers use a short shaft and filled triangular arrowhead, both
 fixed in the world XY plane. They move along the configured horizontal wind
 direction and do not tilt with vehicle attitude.
 
-## Independent X4-950 aerodynamic reference
-
-The independent reference uses component-wise quadratic drag for the default
-initial arm configuration and **horizontal wind speeds of 0–3 m/s**. It remains
-available through `--wind-backend analytic`. Air density, drag coefficients and
-equivalent geometry are explicit assumptions, not measured aircraft parameters.
-
-With the Python environment active, export and check it offline:
-
-```bash
-python scripts/export_x4_950_parameters.py
-python scripts/check_x4_950_reference.py
-```
-
-The [reference report](docs/x4-950-reference-v1.md) describes the interface,
-29 component proxies, behavior checks and computational cost. To select the
-analytical backend, use the bundled reference and enable wind through Apply Wind
-and the panel toggle:
-
-```bash
-python scripts/run_simulation.py --wind-backend analytic
-```
-
-The first real SITL comparison covered hover with wind OFF / +X 1 m/s, three restarts per
-backend, for **12 complete runs** comparing the analytical and legacy backends.
-Their disturbance magnitudes differ, so this is not a ranking of real-world
-aerodynamic accuracy. See the [first-round report](docs/SITL_FIRST_ROUND_2026-11-10.md)
-and [comparison procedure](docs/analytic-wind-sitl-comparison.md).
-
-The new PINN pilot used **3,000 paired samples**. It is now integrated and selected
-by default; its independent checkpoint and frozen reference are bundled under
-`src/wind_field_simulation/assets/checkpoints/x4_950_wind_v1/`. Legacy weights
-were not overwritten. Explicit checkpoint/reference overrides are supported:
-
-```bash
-python scripts/run_simulation.py --wind-backend pinn-x4 \
-  --reference-config src/wind_field_simulation/assets/checkpoints/x4_950_wind_v1/reference_config.json \
-  --pinn-checkpoint src/wind_field_simulation/assets/checkpoints/x4_950_wind_v1/candidate.pt
-```
-
-These paths explicitly select the bundled checkpoint and frozen reference,
-equivalent to the default launch. Normal use needs no overrides. An incompatible
-checkpoint/reference fails before connecting to PX4; there is no silent backend
-substitution. `--run-log PATH` optionally records comparison data at 50 Hz and
-rejects existing output files.
-
-The analytical/new-PINN comparison completed **24/24 real SITL runs**: hover,
-OFF / +X 1 / 2 / 3 m/s, three restarts per condition and backend, with touchdown
-and managed shutdown. Actual wind Fz was zero throughout; the main evaluation
-windows had no clipping or wind-domain violations. Paired position RMSE differences
-passed the predefined acceptance criterion. The complete force path showed no
-speed advantage for the new PINN. Other directions, trajectories and interactive
-GUI paths were not validated by that comparison. See the
-[integration and SITL report](docs/X4_PINN_INTEGRATION_2026-11-10.md) and
-[English model card](docs/models/x4-950-pinn-pilot-v1.md).
-
 ## What the PINN does and how it is trained
 
 ### Runtime role
