@@ -7,8 +7,8 @@
 支持开展无风基线与风扰条件下的飞行测试，观察无人机稳定性和轨迹跟踪表现。
 
 项目提供可配置风场、交互控制面板和预定义轨迹，包含 X4-950 四旋翼、Airbot Play
-机械臂及场景资源，默认使用 X4-950 PINN 气动代理生成外部风扰，
-并保留解析气动参考与旧 PINN 的显式回退，为风扰测试和仿真开发提供基础。
+机械臂及场景资源，使用适配X4-950机型的PINN气动扰动预测模型生成外部风扰，
+为风扰测试和仿真开发提供基础。
 
 ## 展示
 
@@ -20,8 +20,6 @@
 | --- | --- |
 | [<img src="docs/media/videos/wind-field-simulation-preview.gif" width="420" alt="风场仿真视频动态预览；点击打开完整 MP4">](docs/media/videos/Wind%20field%20simulation%20Demo.mp4) | <img src="docs/media/images/Motion%20tracking.png" width="420" alt="圆轨迹目标与实际 XY 轨迹示例"> |
 | [观看／下载完整 MP4（约 86 秒，17.6 MB）](docs/media/videos/Wind%20field%20simulation%20Demo.mp4) | 灰色虚线：目标轨迹；红线：实际轨迹 |
-
-左侧为原视频 48–60 秒片段的 GIF 动态预览（12 秒、4 fps、静音），点击可打开完整 MP4。
 
 以上为功能展示，截图未标注完整实验条件，不作为定量气动精度或闭环性能结论。
 完整视频链接打开 GitHub 文件页，不能播放时可下载后观看。
@@ -59,14 +57,13 @@ Wind_field_simulation/
 
 ## Python 环境
 
-参考环境为 Python 3.12，MuJoCo 3.6.0、NumPy 2.4.4、PyTorch 2.11.0、Matplotlib
-3.10.9。Python 解释器、这些通用库、GPU 驱动和操作系统动态库通过环境安装；不复制
-原 Conda 环境。项目专用代码、模型资源和权重随仓库提供；PX4 完整源码仅保留在本地开发目录。
-
-已测宿主为 Ubuntu 24.04.5 LTS / x86-64、glibc 2.39、Python 3.12.13。
-Python 依赖锁定与系统动态库 ABI、CPU 版 PyTorch 安装方法见
-[安装文档的版本表](docs/INSTALL.zh-CN.md#依赖版本与验证边界)。CUDA 不作为运行要求。
-下面的简短命令以已经取得仓库且安装好系统依赖为前提。
+| 组件 | 版本 |
+| --- | --- |
+| Python | 3.12.13 |
+| MuJoCo | 3.6.0 |
+| NumPy | 2.4.4 |
+| PyTorch | 2.11.0 |
+| Matplotlib | 3.10.9 |
 
 ```bash
 cd ~/Wind_field_simulation

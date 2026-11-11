@@ -7,9 +7,8 @@ trajectory tracking with and without wind disturbances. It includes an X4-950
 quadrotor with an Airbot Play arm, scene assets, an interactive control panel,
 configurable horizontal wind and predefined trajectories.
 
-The default aerodynamic backend is the new X4-950 `pinn-x4` surrogate. The
-independent analytical reference and the legacy PINN remain explicit fallback
-options. PX4 retains its native flight controllers.
+The project uses a PINN aerodynamic disturbance prediction model adapted to the
+X4-950 to generate external wind disturbances.
 
 ## Demo
 
@@ -21,9 +20,6 @@ options. PX4 retains its native flight controllers.
 | --- | --- |
 | [<img src="docs/media/videos/wind-field-simulation-preview.gif" width="420" alt="Animated wind simulation preview; click for the full MP4">](docs/media/videos/Wind%20field%20simulation%20Demo.mp4) | <img src="docs/media/images/Motion%20tracking.png" width="420" alt="Example target and actual XY trajectories"> |
 | [Watch / download the full MP4 (approximately 86 seconds, 17.6 MB)](docs/media/videos/Wind%20field%20simulation%20Demo.mp4) | Dashed gray: target; red: actual trajectory |
-
-The left cell shows a 12-second GIF preview from 00:48–01:00 of the original
-recording (4 fps, silent). Click it to open the full MP4.
 
 These materials demonstrate features. The screenshots do not specify complete
 experimental conditions and do not establish aerodynamic accuracy or quantitative
@@ -64,12 +60,13 @@ Wind_field_simulation/
 
 ## Environment
 
-The tested host is Ubuntu 24.04.5 LTS, x86-64, glibc 2.39 and Python 3.12.13.
-Core Python dependencies are MuJoCo **3.6.0**, NumPy **2.4.4**, PyTorch **2.11.0**
-and Matplotlib **3.10.9**. See the [dependency table](docs/INSTALL.en.md#dependency-versions-and-validation-boundaries)
-for native libraries and additional declared dependencies. GPU/CUDA is not required.
-
-After cloning and installing the system libraries in the installation guide:
+| Component | Version |
+| --- | --- |
+| Python | 3.12.13 |
+| MuJoCo | 3.6.0 |
+| NumPy | 2.4.4 |
+| PyTorch | 2.11.0 |
+| Matplotlib | 3.10.9 |
 
 ```bash
 cd ~/Wind_field_simulation
