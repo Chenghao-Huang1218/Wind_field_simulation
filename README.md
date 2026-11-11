@@ -86,11 +86,17 @@ cd /home/raids/Wind_field_simulation
 这些参数仅用于保持旧 `pinn` 回退的输入契约，并不代表 X4-950 的机体参数；
 默认新 `pinn-x4` 使用本项目 XML 派生的独立气动参考。
 
-## 手动启动仿真
+## PX4 SITL
 
 首版 GitHub 仓库包含仿真代码、模型、PINN 权重与冻结参考，以及已经验证的
-`runtime/px4/bin/` 和 `etc/` **PX4 SITL 运行包**；不包含庞大的 PX4 源码、
-构建缓存或 `outputs/` 实验日志。本地完整源码不删除、不修改。
+**PX4 SITL 运行包**：已编译的可执行文件 `runtime/px4/bin/px4` 及
+`runtime/px4/etc/` 启动资源。**本仓库不包含 PX4 源码**、构建缓存或
+`outputs/` 实验日志。本地完整源码不删除、不修改。
+
+源码参考 **PX4 1.17**，可查看 [PX4 官方开源项目](https://github.com/PX4/PX4-Autopilot)
+及其 [1.17 版本分支](https://github.com/PX4/PX4-Autopilot/tree/release/1.17)。
+本运行包包含本项目所需的 MuJoCo 状态反馈与 X4-950 配置适配，准确的编译基线和修改记录见
+[PX4 说明](docs/px4.md)。
 
 运行包面向 **Linux x86-64**，与本项目当前 MuJoCo/浮点反馈适配及 X4-950 参数匹配，
 无需先编译 PX4。它仍依赖宿主机动态库，包括 Gazebo Transport 13、Gazebo Messages 10、
@@ -98,6 +104,8 @@ Protobuf 与标准 C/C++ 库；依赖满足后可直接采用下面的双终端�
 可用 `ldd runtime/px4/bin/px4` 检查缺失依赖，已测环境与来源见
 [PX4 说明](docs/px4.md)。更换平台或重编译时需另行取得匹配的完整源码；
 本地构建脚本和源码/补丁记录保留，但源码不随首版仓库上传。
+
+## 手动启动仿真
 
 新机器按照安装文档创建 `.venv` 后，两个终端分别运行：
 

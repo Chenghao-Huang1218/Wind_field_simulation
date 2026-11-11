@@ -89,12 +89,20 @@ XML-derived reference.
 On the original development machine, the existing Conda environment `env_uav`
 can be used instead. Its explicit activation commands are included below.
 
-## Start the simulation
+## PX4 SITL
 
 The first public version includes the application, models, weights, frozen
-reference and prebuilt **PX4 SITL runtime** under `runtime/px4/bin/` and `etc/`.
-It omits the large PX4 source tree, build caches and experiment outputs. The
-complete local development source tree is retained.
+reference and prebuilt **PX4 SITL runtime**: the compiled executable
+`runtime/px4/bin/px4` and startup resources under `runtime/px4/etc/`.
+**This repository does not include PX4 source code**, build caches or experiment
+outputs. The complete local development source tree is retained.
+
+For source reference, see **PX4 1.17** in the
+[official PX4 open-source project](https://github.com/PX4/PX4-Autopilot) and its
+[1.17 release branch](https://github.com/PX4/PX4-Autopilot/tree/release/1.17).
+The bundled runtime includes this project's MuJoCo state-feedback and X4-950
+configuration adaptations. Its exact build baseline and modification records
+are documented in [docs/px4.md](docs/px4.md).
 
 The runtime targets **Linux x86-64** and requires matching native libraries,
 including Gazebo Transport 13, Gazebo Messages 10 and Protobuf. Run
@@ -102,6 +110,8 @@ including Gazebo Transport 13, Gazebo Messages 10 and Protobuf. Run
 The [installation guide](docs/INSTALL.en.md) provides the Ubuntu 24.04 procedure;
 [PX4 documentation](docs/px4.md) records source provenance and build requirements.
 Other platforms require matching sources and a separate build.
+
+## Start the simulation
 
 Open two terminals. If an earlier instance is still running, stop it with
 `Ctrl+C` in its own terminal first.
